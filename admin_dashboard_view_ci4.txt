@@ -1,0 +1,76 @@
+<!-- app/Views/admin/dashboard.php -->
+<?= $this->extend('layout/admin') ?>
+
+<?= $this->section('content') ?>
+<div class="p-8">
+    <div class="flex justify-between items-start mb-10">
+        <div>
+            <h1 class="text-4xl font-bold text-slate-900 mb-2">Platform Overview</h1>
+            <p class="text-slate-500">Here’s what’s happening across the directory today.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-white border px-4 py-2 rounded-lg">
+            <span class="text-slate-400">📅</span>
+            <span class="font-medium">Today</span>
+            <span class="text-slate-400 text-xs">▼</span>
+        </div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-4 gap-6 mb-10">
+        <div class="bg-white p-6 rounded-2xl border flex flex-col gap-4">
+            <div class="flex justify-between items-start">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">👥</div>
+                <span class="text-green-600 text-xs font-bold bg-green-50 px-2 py-1 rounded-full leading-none">+5.2%</span>
+            </div>
+            <div>
+                <p class="text-slate-500 text-sm mb-1 font-medium">Total Companies</p>
+                <p class="text-3xl font-bold">1,240</p>
+            </div>
+        </div>
+        <!-- Repeat for Pending, Active Enquiries, Categories -->
+    </div>
+
+    <div class="grid grid-cols-3 gap-8">
+        <!-- Pending Listings -->
+        <div class="col-span-2 bg-white border rounded-2xl">
+            <div class="p-6 border-b flex justify-between items-center">
+                <h3 class="font-bold text-xl leading-none">Pending Company Listings</h3>
+                <a href="/admin/companies" class="text-blue-600 text-sm font-semibold">View All</a>
+            </div>
+            <div class="divide-y">
+                <?php foreach($pending_agents as $agent): ?>
+                <div class="p-6 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-400">
+                            <?= substr($agent['name'], 0, 1) ?>
+                        </div>
+                        <div>
+                            <p class="font-bold leading-tight"><?= $agent['name'] ?></p>
+                            <p class="text-sm text-slate-400 leading-tight"><?= $agent['email'] ?></p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="px-4 py-2 border border-red-200 text-red-600 rounded-lg text-sm font-bold hover:bg-red-50">✕ Reject</button>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-bold hover:bg-blue-700">✓ Approve</button>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="bg-white border rounded-2xl p-6">
+            <h3 class="font-bold text-xl mb-6">Recent Activity</h3>
+            <div class="space-y-8 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-slate-100">
+                <div class="relative pl-8">
+                    <div class="absolute left-0 top-1.5 w-3 h-3 rounded-full bg-blue-500 border-2 border-white"></div>
+                    <p class="font-bold text-sm">Company Profile Updated</p>
+                    <p class="text-xs text-slate-500 mt-1">Sarah Jenkins updated their specialties to include...</p>
+                    <p class="text-[10px] text-slate-400 mt-2 uppercase font-bold">10 mins ago</p>
+                </div>
+                <!-- More activity items -->
+            </div>
+        </div>
+    </div>
+</div>
+<?= $this->endSection() ?>

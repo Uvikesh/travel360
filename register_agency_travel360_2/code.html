@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register Agency - travel360</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#002106",
+                    "on-surface-variant": "#424752",
+                    "background": "#f8f9fa",
+                    "surface-tint": "#115cb9",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1d",
+                    "secondary-fixed": "#83fc8e",
+                    "on-secondary-container": "#007327",
+                    "on-primary-fixed-variant": "#004491",
+                    "primary": "#003f87",
+                    "tertiary": "#004954",
+                    "primary-fixed-dim": "#acc7ff",
+                    "outline-variant": "#c2c6d4",
+                    "on-tertiary-fixed": "#001f25",
+                    "surface-container": "#edeeef",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-bright": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "primary-container": "#0056b3",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#00531a",
+                    "secondary-fixed-dim": "#66df75",
+                    "inverse-surface": "#2e3132",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "surface": "#f8f9fa",
+                    "inverse-primary": "#acc7ff",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#62d6ed",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-error": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#80f98b",
+                    "tertiary-container": "#006270",
+                    "on-tertiary-fixed-variant": "#004e5a",
+                    "secondary": "#006e25",
+                    "primary-fixed": "#d7e2ff",
+                    "on-tertiary-container": "#6ddff7",
+                    "tertiary-fixed": "#a4eeff",
+                    "on-primary-fixed": "#001a40",
+                    "outline": "#727784",
+                    "on-primary-container": "#bbd0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "max-width": "1280px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "sm": "16px",
+                    "xs": "8px",
+                    "margin-mobile": "16px",
+                    "base": "4px",
+                    "margin-desktop": "64px",
+                    "xl": "80px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface h-screen w-full overflow-hidden flex selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Split Screen Layout -->
+<div class="flex w-full h-full">
+<!-- Left Side: Aspirational Imagery (Hidden on Mobile/Tablet) -->
+<div class="hidden lg:flex lg:w-5/12 xl:w-1/2 relative bg-surface-container-high overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-[10s] ease-out hover:scale-100" data-alt="A breathtaking, wide-angle shot of a luxurious overwater bungalow resort in the Maldives at golden hour. The sky is a gradient of soft pinks and oranges, reflecting on the crystal clear, vibrant turquoise water. The lighting is warm and sun-drenched, creating a serene, aspirational mood perfect for a high-end travel brand. Professional architectural photography style with deep depth of field and high clarity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8FpQmECVUKJXZNUph0_DEFkd5gx8pOFw3OBGsUWydP5q7BR9Z7wByZaLJCCWPPjxbk1puObV6lzRGZLsyCg5DwG1dNfMaHxFBYYC6yCE6PrRliKm9KvkLV3rgosNJcIV7l0FYLBXQPpYcPxv2GUjIz3UrFq3F0_BhLEJQB-9zTLf-8wT0PSXzkbKtSr-IczOetpnrFezK7ewllFGL5XwEA5wLsPevZFItG-GUBuAQMB3FgCQdhah7')"></div>
+<!-- Gradient Overlay for Text Readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#001a40]/90 via-[#001a40]/40 to-transparent"></div>
+<!-- Content Over Image -->
+<div class="relative z-10 flex flex-col justify-end p-margin-desktop w-full h-full text-on-primary">
+<div class="mb-auto mt-lg">
+<!-- Brand Mark on Image -->
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight">travel360</span>
+</div>
+<div>
+<h2 class="font-display-lg text-display-lg mb-sm">Elevate your agency's reach.</h2>
+<p class="font-body-lg text-body-lg max-w-md opacity-90">
+                        Join the premier global directory for curated travel experiences. Connect with high-value clients seeking your specialized expertise.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Right Side: Form Container -->
+<div class="w-full lg:w-7/12 xl:w-1/2 flex items-center justify-center p-margin-mobile md:p-margin-desktop bg-surface-container-lowest overflow-y-auto">
+<div class="w-full max-w-[480px] py-xl">
+<!-- Mobile Brand Header (Visible only on mobile when image side is hidden) -->
+<div class="lg:hidden mb-lg text-center md:text-left">
+<span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">travel360</span>
+</div>
+<!-- Page Header -->
+<div class="mb-xl text-center md:text-left">
+<h1 class="font-headline-md text-headline-md text-on-surface mb-xs">Register Agency</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Create your account to list your services.</p>
+</div>
+<!-- Registration Form -->
+<form action="#" class="space-y-sm" method="POST">
+<!-- Agency Name -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-base" for="agency_name">Agency Name</label>
+<input class="w-full px-sm py-3 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" id="agency_name" name="agency_name" placeholder="Enter registered business name" required="" type="text"/>
+</div>
+<!-- Contact Name -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-base" for="contact_name">Contact Name</label>
+<input class="w-full px-sm py-3 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" id="contact_name" name="contact_name" placeholder="Your full name" required="" type="text"/>
+</div>
+<!-- Business Email -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-base" for="business_email">Business Email</label>
+<input class="w-full px-sm py-3 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" id="business_email" name="business_email" placeholder="work@youragency.com" required="" type="email"/>
+</div>
+<!-- Password with Strength Indicator -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-base" for="password">Password</label>
+<div class="relative">
+<input class="w-full px-sm py-3 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow pr-12" id="password" name="password" placeholder="Create a secure password" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors focus:outline-none" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined" data-icon="visibility_off" id="toggle_icon">visibility_off</span>
+</button>
+</div>
+<!-- Visual Strength Indicator (Static for design purposes) -->
+<div class="mt-2 flex gap-1 items-center">
+<div class="flex-1 h-1.5 bg-outline-variant rounded-full overflow-hidden">
+<div class="w-full h-full bg-error rounded-full"></div>
+</div>
+<div class="flex-1 h-1.5 bg-outline-variant rounded-full overflow-hidden">
+<div class="w-1/2 h-full bg-primary rounded-full"></div>
+</div>
+<div class="flex-1 h-1.5 bg-outline-variant rounded-full overflow-hidden"></div>
+</div>
+<p class="font-label-sm text-label-sm text-outline mt-1 text-right">Password strength: Fair</p>
+</div>
+<!-- Agency Category Dropdown -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-base" for="agency_category">Agency Category</label>
+<div class="relative">
+<select class="w-full px-sm py-3 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow appearance-none cursor-pointer" id="agency_category" name="agency_category" required="">
+<option disabled="" selected="" value="">Select primary category</option>
+<option value="tour_operator">Tour Operator</option>
+<option value="travel_agency">Retail Travel Agency</option>
+<option value="corporate_management">Corporate Travel Management</option>
+<option value="luxury_concierge">Luxury Concierge</option>
+<option value="destination_specialist">Destination Specialist</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-sm text-outline">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Terms and Conditions -->
+<div class="flex items-start pt-xs mb-md">
+<div class="flex items-center h-6">
+<input class="w-5 h-5 bg-surface-container-lowest border-outline-variant rounded text-primary focus:ring-primary focus:ring-2 cursor-pointer transition-colors" id="terms" name="terms" required="" type="checkbox"/>
+</div>
+<div class="ml-3">
+<label class="font-body-md text-[14px] leading-[20px] text-on-surface-variant cursor-pointer" for="terms">
+                                I agree to the <a class="text-primary hover:text-primary-container font-medium hover:underline transition-colors" href="#">Terms of Service</a> and <a class="text-primary hover:text-primary-container font-medium hover:underline transition-colors" href="#">Privacy Policy</a>.
+                            </label>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-sm">
+<button class="w-full py-3 px-sm bg-primary text-on-primary font-label-md text-label-md font-bold rounded-lg shadow-sm hover:shadow-md hover:bg-primary-container active:scale-[0.98] transition-all duration-200 ease-in-out" type="submit">
+                            Create Account
+                        </button>
+</div>
+</form>
+<!-- Footer Links -->
+<div class="mt-lg pt-lg border-t border-surface-variant text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Already have an account? 
+                        <a class="text-primary font-medium hover:text-primary-container hover:underline transition-colors" href="#">Sign In</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Minimal script for password toggle interaction -->
+<script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('toggle_icon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.textContent = 'visibility';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.textContent = 'visibility_off';
+            }
+        }
+    </script>
+</body></html>

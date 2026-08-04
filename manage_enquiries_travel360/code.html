@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Enquiries - Admin Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#b4c5ff",
+                      "tertiary-fixed": "#89f5e7",
+                      "on-primary-fixed": "#00174b",
+                      "primary": "#004ac6",
+                      "on-surface-variant": "#434655",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed": "#341100",
+                      "error-container": "#ffdad6",
+                      "background": "#faf8ff",
+                      "inverse-on-surface": "#eef0ff",
+                      "surface-bright": "#faf8ff",
+                      "secondary": "#9d4300",
+                      "on-tertiary-fixed": "#00201d",
+                      "inverse-surface": "#283044",
+                      "secondary-container": "#fd761a",
+                      "surface-dim": "#d2d9f4",
+                      "surface-container-low": "#f2f3ff",
+                      "primary-fixed": "#dbe1ff",
+                      "secondary-fixed-dim": "#ffb690",
+                      "outline-variant": "#c3c6d7",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed-dim": "#6bd8cb",
+                      "surface-container-highest": "#dae2fd",
+                      "on-tertiary-container": "#b3fff3",
+                      "tertiary-container": "#007b71",
+                      "tertiary": "#006058",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#131b2e",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-container": "#2563eb",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#eeefff",
+                      "on-secondary-container": "#5c2400",
+                      "on-secondary-fixed-variant": "#783200",
+                      "on-tertiary-fixed-variant": "#005049",
+                      "surface": "#faf8ff",
+                      "outline": "#737686",
+                      "surface-container": "#eaedff",
+                      "on-background": "#131b2e",
+                      "secondary-fixed": "#ffdbca",
+                      "surface-variant": "#dae2fd",
+                      "surface-tint": "#0053db",
+                      "surface-container-high": "#e2e7ff",
+                      "primary-fixed-dim": "#b4c5ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "margin": "32px",
+                      "gutter": "24px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "display-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .glass-panel {
+              background: rgba(255, 255, 255, 0.7);
+              backdrop-filter: blur(20px);
+              -webkit-backdrop-filter: blur(20px);
+          }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar (Hidden on Mobile) -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-on-background border-r border-outline-variant p-sm space-y-base z-40 p-6">
+<div class="mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-md">H</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">Admin Center</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Manage Platform</p>
+</div>
+</div>
+<ul class="flex-1 space-y-2">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">group</span>
+                    Travel Agents
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">category</span>
+                    Categories
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">map</span>
+                    Locations
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold transition-all cursor-pointer active:scale-98 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+                    Enquiries
+                </a>
+</li>
+</ul>
+<div class="mt-auto">
+<button class="w-full py-3 px-4 bg-surface text-primary border border-primary rounded-lg font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                Export Report
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-margin md:px-margin w-full h-16 sticky top-0 z-50 bg-surface dark:bg-on-background border-b border-outline-variant shadow-sm glass-panel">
+<div class="flex items-center gap-4">
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed md:hidden">Horizon Guide</div>
+<!-- Search Bar -->
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant w-64 focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-full placeholder-on-surface-variant text-on-surface" placeholder="Search enquiries..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant ml-2">
+<img alt="Administrator Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a corporate administrator in a modern office setting. The lighting is bright and even, highlighting a friendly yet professional demeanor. The background is slightly blurred showing contemporary glass partitions and light grey walls. The overall tone is approachable and efficient." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGSW7lvbUgAyWKxVevmnNbFkqCEZ8vrlAT8f8OVkIO0fS7p1aOzWpZ2Zmxk5vUHv83WdotziWSjJJeSYT4IvoZhQQro1Ejo07vBmYk7hDujU-uqYz2DwfoQJXqSX662VQhJ9iKAgbz1UrayBGSvGFjwSaMriL6i2xfZQGbog8fAgS4PnAPsDJk1dcz82i15RU48RO_2ZLqQU51YC38bfXiV2sHzD9Q6y3ltwYKD_XDXx_KXZSHI1Nd"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="flex-1 p-4 md:p-margin mx-auto w-full max-w-container-max space-y-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">User Enquiries</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Manage and respond to direct messages from travelers.</p>
+</div>
+<div class="flex gap-3">
+<select class="bg-surface border border-outline-variant text-on-surface rounded-lg px-4 py-2 font-label-sm text-label-sm focus:ring-primary focus:border-primary">
+<option>All Statuses</option>
+<option>Unread</option>
+<option>Replied</option>
+<option>Archived</option>
+</select>
+<button class="bg-surface border border-outline-variant text-on-surface rounded-lg px-4 py-2 font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filter
+                    </button>
+</div>
+</div>
+<!-- Bento-style Analytics Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Total Enquiries</p>
+<p class="font-headline-md text-headline-md text-on-surface">1,248</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Unread</p>
+<p class="font-headline-md text-headline-md text-secondary-container">42</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mark_email_unread</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Avg Response Time</p>
+<p class="font-headline-md text-headline-md text-tertiary">4.2 hrs</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+</div>
+</div>
+<!-- Enquiries Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Date</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Sender Name</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Email</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Message Preview</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/50">
+<!-- Row 1 (Unread) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group bg-primary-fixed/10">
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+                                        Oct 24, 2024
+                                    </div>
+</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface font-semibold">Sarah Jenkins</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant">sarah.j@example.com</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant max-w-xs truncate">I'm looking to book a 2-week itinerary in Kyoto for next spring. Can you help...</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container flex items-center justify-end gap-1 ml-auto">
+                                        View Full Message
+                                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface whitespace-nowrap">Oct 23, 2024</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface">Michael Chen</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant">m.chen88@domain.co</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant max-w-xs truncate">Question regarding the refund policy for the Mediterranean cruise package...</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container flex items-center justify-end gap-1 ml-auto">
+                                        View Full Message
+                                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface whitespace-nowrap">Oct 22, 2024</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface">Emma Thompson</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant">emmat@email.net</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant max-w-xs truncate">We are a family of four interested in the African Safari tours. Are there age res...</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container flex items-center justify-end gap-1 ml-auto">
+                                        View Full Message
+                                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface whitespace-nowrap">Oct 20, 2024</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface">David Rossi</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant">d.rossi@italy.it</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant max-w-xs truncate">Hello, I would like to update the dietary requirements for my upcoming flight to...</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container flex items-center justify-end gap-1 ml-auto">
+                                        View Full Message
+                                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface whitespace-nowrap">Oct 19, 2024</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface">Alice Wu</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant">awu.travels@gmail.com</td>
+<td class="py-4 px-6 font-body-md text-body-md text-on-surface-variant max-w-xs truncate">Following up on my previous request about adding an extra day to the Iceland...</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container flex items-center justify-end gap-1 ml-auto">
+                                        View Full Message
+                                        <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="bg-surface px-6 py-4 border-t border-outline-variant flex items-center justify-between">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Showing 1 to 5 of 1,248 entries</p>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-low disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-low">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-on-background border-t border-outline-variant w-full mt-auto py-md px-margin md:px-margin flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-label-md text-label-md font-semibold text-primary">Horizon Guide</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left">© 2024 Horizon Guide Travel Directory. All rights reserved.</p>
+<ul class="flex gap-4 font-label-sm text-label-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Support</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">System Status</a></li>
+</ul>
+</footer>
+</main>
+</body></html>

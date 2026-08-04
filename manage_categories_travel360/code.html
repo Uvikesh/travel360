@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>travel360 Admin Center - Manage Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed-dim": "#6bd8cb",
+                "inverse-primary": "#b4c5ff",
+                "on-secondary-fixed-variant": "#783200",
+                "on-error": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "outline": "#737686",
+                "surface": "#faf8ff",
+                "on-background": "#131b2e",
+                "surface-tint": "#0053db",
+                "on-surface-variant": "#434655",
+                "surface-variant": "#dae2fd",
+                "on-tertiary-container": "#b3fff3",
+                "tertiary-container": "#007b71",
+                "secondary-container": "#fd761a",
+                "tertiary-fixed": "#89f5e7",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed-dim": "#b4c5ff",
+                "background": "#faf8ff",
+                "on-primary-container": "#eeefff",
+                "on-tertiary-fixed": "#00201d",
+                "on-secondary-container": "#5c2400",
+                "on-secondary-fixed": "#341100",
+                "on-primary-fixed-variant": "#003ea8",
+                "primary-fixed": "#dbe1ff",
+                "primary-container": "#2563eb",
+                "tertiary": "#006058",
+                "outline-variant": "#c3c6d7",
+                "on-error-container": "#93000a",
+                "surface-dim": "#d2d9f4",
+                "inverse-surface": "#283044",
+                "secondary": "#9d4300",
+                "on-tertiary-fixed-variant": "#005049",
+                "on-primary": "#ffffff",
+                "error": "#ba1a1a",
+                "surface-container-low": "#f2f3ff",
+                "on-secondary": "#ffffff",
+                "on-surface": "#131b2e",
+                "surface-container-highest": "#dae2fd",
+                "secondary-fixed": "#ffdbca",
+                "surface-container": "#eaedff",
+                "surface-container-high": "#e2e7ff",
+                "on-primary-fixed": "#00174b",
+                "inverse-on-surface": "#eef0ff",
+                "secondary-fixed-dim": "#ffb690",
+                "primary": "#004ac6",
+                "error-container": "#ffdad6",
+                "surface-bright": "#faf8ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "margin": "32px",
+                "container-max": "1280px",
+                "base": "8px"
+        },
+        "fontFamily": {
+                "label-sm": [
+                        "Manrope"
+                ],
+                "body-lg": [
+                        "Manrope"
+                ],
+                "display-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Manrope"
+                ],
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "display-lg-mobile": [
+                        "Plus Jakarta Sans"
+                ]
+        },
+        "fontSize": {
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #faf8ff; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-on-background border-r border-outline-variant p-4 space-y-1 z-40">
+<div class="mb-12 px-2">
+<h1 class="font-headline-md text-headline-md text-primary">travel360 Admin Center</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Manage Platform</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-lg transition-all cursor-pointer active:scale-98 group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-lg transition-all cursor-pointer active:scale-98 group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">group</span>
+<span class="text-sm font-medium">Travel Companies</span>
+</a>
+<a class="flex items-center px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-bold transition-all cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined mr-3 text-on-primary-container" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="text-sm font-medium">Categories</span>
+</a>
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-lg transition-all cursor-pointer active:scale-98 group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">map</span>
+<span class="text-sm font-medium">Locations</span>
+</a>
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:text-primary hover:bg-surface-variant rounded-lg transition-all cursor-pointer active:scale-98 group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary transition-colors">mail</span>
+<span class="text-sm font-medium">Enquiries</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline-variant px-2">
+<div class="flex items-center mb-4">
+<img class="w-10 h-10 rounded-full object-cover mr-3 bg-surface-variant" data-alt="A professional headshot of an administrator for a modern travel directory platform. The lighting is bright and clean, reflecting a corporate yet approachable aesthetic. The background is a soft, out-of-focus office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQF--Mv6ui1uvL5SewnliulBx9nNCwHcGXxZuYnKGyPYS8T8YhbcQ_--tFf1CAJhPIlHH68ML6qyYZp9_z23j-ikRHGbspVye1FtsW73hZ8PveP3Um6V2iiXRE427gFOFcV65VsCEB-VOaoS18ttrx5eMM9nvFbH3GNYYGdhqy658tRVzLEKhhgovHFOWU3DY3NI-yxcybyPE6SmjIYR-Y8kUv_UEnI83WZwnAi5SHSMwfVox3QzQO"/>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface">Admin User</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-normal">admin@travel360.com</p>
+</div>
+</div>
+<button class="w-full py-2 bg-transparent border border-primary text-primary text-sm font-medium rounded-lg hover:bg-surface-variant transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined mr-2 text-[18px]">download</span>
+                Export Report
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-y-auto bg-surface-container-lowest">
+<!-- Header -->
+<header class="px-margin py-12 flex flex-col md:flex-row md:items-center justify-between border-b border-outline-variant/30 bg-surface-container-lowest sticky top-0 z-30">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-surface">Manage Categories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Organize and configure travel company specializations across the platform.</p>
+</div>
+<div class="mt-4 md:mt-0 flex gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="pl-10 pr-4 py-2 w-64 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-shadow" placeholder="Search categories..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary text-sm font-medium px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors flex items-center shadow-sm">
+<span class="material-symbols-outlined mr-2 text-[18px]">add</span>
+                    Add New Category
+                </button>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-margin flex-1">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Category Name</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Slug</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Companies</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">tour</span>
+</div>
+<span class="font-body-md text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Tour Operator</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface-variant">tour-operator</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">1,245</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-1 rounded hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-on-surface-variant hover:text-error p-1 rounded hover:bg-error-container transition-colors ml-1" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+<span class="font-body-md text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Travel Agency</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface-variant">travel-agency</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">892</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-1 rounded hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-on-surface-variant hover:text-error p-1 rounded hover:bg-error-container transition-colors ml-1" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">local_taxi</span>
+</div>
+<span class="font-body-md text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Taxi Service</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface-variant">taxi-service</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">430</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-outline mr-1.5"></span>
+                                        Inactive
+                                    </span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-1 rounded hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-on-surface-variant hover:text-error p-1 rounded hover:bg-error-container transition-colors ml-1" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">interpreter_mode</span>
+</div>
+<span class="font-body-md text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Professional Guide</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface-variant">professional-guide</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">2,104</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-1 rounded hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-on-surface-variant hover:text-error p-1 rounded hover:bg-error-container transition-colors ml-1" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">downhill_skiing</span>
+</div>
+<span class="font-body-md text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Adventure Sports</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface-variant">adventure-sports</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">156</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-1 rounded hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-on-surface-variant hover:text-error p-1 rounded hover:bg-error-container transition-colors ml-1" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">diamond</span>
+</div>
+<span class="font-body-md text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Luxury Rentals</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface-variant">luxury-rentals</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">89</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-1 rounded hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-on-surface-variant hover:text-error p-1 rounded hover:bg-error-container transition-colors ml-1" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-4 py-4 border-t border-outline-variant/30 flex items-center justify-between bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 1 to 6 of 24 categories</span>
+<div class="flex space-x-1">
+<button class="px-3 py-1 rounded border border-outline-variant/50 text-on-surface-variant hover:bg-surface-variant disabled:opacity-50 transition-colors" disabled="">Prev</button>
+<button class="px-3 py-1 rounded bg-primary text-on-primary">1</button>
+<button class="px-3 py-1 rounded border border-outline-variant/50 text-on-surface-variant hover:bg-surface-variant transition-colors">2</button>
+<button class="px-3 py-1 rounded border border-outline-variant/50 text-on-surface-variant hover:bg-surface-variant transition-colors">3</button>
+<span class="px-2 py-1 text-on-surface-variant">...</span>
+<button class="px-3 py-1 rounded border border-outline-variant/50 text-on-surface-variant hover:bg-surface-variant transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

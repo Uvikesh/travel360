@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>travel360 Directory - Find Your Company</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed-dim": "#6bd8cb",
+                "inverse-primary": "#b4c5ff",
+                "on-secondary-fixed-variant": "#783200",
+                "on-error": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "outline": "#737686",
+                "surface": "#faf8ff",
+                "on-background": "#131b2e",
+                "surface-tint": "#0053db",
+                "on-surface-variant": "#434655",
+                "surface-variant": "#dae2fd",
+                "on-tertiary-container": "#b3fff3",
+                "tertiary-container": "#007b71",
+                "secondary-container": "#fd761a",
+                "tertiary-fixed": "#89f5e7",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed-dim": "#b4c5ff",
+                "background": "#faf8ff",
+                "on-primary-container": "#eeefff",
+                "on-tertiary-fixed": "#00201d",
+                "on-secondary-container": "#5c2400",
+                "on-secondary-fixed": "#341100",
+                "on-primary-fixed-variant": "#003ea8",
+                "primary-fixed": "#dbe1ff",
+                "primary-container": "#2563eb",
+                "tertiary": "#006058",
+                "outline-variant": "#c3c6d7",
+                "on-error-container": "#93000a",
+                "surface-dim": "#d2d9f4",
+                "inverse-surface": "#283044",
+                "secondary": "#9d4300",
+                "on-tertiary-fixed-variant": "#005049",
+                "on-primary": "#ffffff",
+                "error": "#ba1a1a",
+                "surface-container-low": "#f2f3ff",
+                "on-secondary": "#ffffff",
+                "on-surface": "#131b2e",
+                "surface-container-highest": "#dae2fd",
+                "secondary-fixed": "#ffdbca",
+                "surface-container": "#eaedff",
+                "surface-container-high": "#e2e7ff",
+                "on-primary-fixed": "#00174b",
+                "inverse-on-surface": "#eef0ff",
+                "secondary-fixed-dim": "#ffb690",
+                "primary": "#004ac6",
+                "error-container": "#ffdad6",
+                "surface-bright": "#faf8ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "margin": "32px",
+                "container-max": "1280px",
+                "base": "8px",
+                "lg": "48px",
+                "max-width": "1280px",
+                "xs": "8px",
+                "margin-mobile": "16px",
+                "xl": "80px",
+                "margin-desktop": "64px",
+                "sm": "16px",
+                "md": "24px"
+        },
+        "fontFamily": {
+                "label-sm": [
+                        "Manrope"
+                ],
+                "body-lg": [
+                        "Manrope"
+                ],
+                "display-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Manrope"
+                ],
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "display-lg-mobile": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-md": ["Manrope"],
+                "headline-sm": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 max-w-max-width mx-auto shadow-sm bg-surface">
+<div class="text-headline-md font-headline-md font-bold text-primary">travel360</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Browse Companies</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">About</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-sm items-center">
+<button class="text-primary font-label-md text-label-md hover:bg-surface-container rounded-DEFAULT px-sm py-xs transition-colors">Login</button>
+<button class="bg-primary text-on-primary font-label-md text-label-md rounded-DEFAULT px-sm py-xs hover:bg-primary-container transition-colors scale-95 duration-150 ease-in-out">Register</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A breathtaking, wide-angle shot of a serene tropical beach destination at sunrise. The scene features crystal clear turquoise waters gently lapping onto pristine white sand. In the background, lush green hills rise dramatically. The lighting is soft and golden, conveying a sense of optimism, peace, and premium travel. The overall aesthetic is bright, high-quality, and aspirational, fitting for a modern travel directory." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVqgqxG6JdGEF6n1SbUMNPZKjzpfH_4pagL-oZOWq_V-e4JZiVbktJPpEwW1yVtHKgzF5QrtfB_fRJfXRD1l6uZa-oJ8T1iBqU_qk9og4Fq-RYHGz7sMDUf80be0ehKC59Drkp4IaJU4UdbCDLtEpjHwzaZGACqxhNK62YTykQUZJu_me735oTxcw78raY550tk6V3QlQ6U7m2-V-fXdQSApyug-qXPT9DLzd0b2LQ-07_fu4q5lPg')"></div>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<div class="relative z-10 w-full max-w-4xl text-center flex flex-col items-center gap-lg">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-white drop-shadow-md">Find your perfect travel company</h1>
+<!-- Search Bar -->
+<div class="bg-surface rounded-full p-sm shadow-[0px_10px_30px_rgba(0,0,0,0.1)] w-full flex flex-col md:flex-row gap-xs items-center justify-between">
+<div class="flex-grow flex items-center px-sm py-xs w-full">
+<span class="material-symbols-outlined text-outline mr-xs">location_on</span>
+<input class="w-full border-none focus:ring-0 text-body-md font-body-md bg-transparent text-on-surface placeholder:text-outline-variant" placeholder="Destination (e.g. Italy, Maldives)" type="text"/>
+</div>
+<div class="hidden md:block w-[1px] h-8 bg-surface-container-high"></div>
+<div class="flex-grow flex items-center px-sm py-xs w-full border-t md:border-t-0 border-surface-container-high">
+<span class="material-symbols-outlined text-outline mr-xs">person_search</span>
+<input class="w-full border-none focus:ring-0 text-body-md font-body-md bg-transparent text-on-surface placeholder:text-outline-variant" placeholder="Company Name or Specialty" type="text"/>
+</div>
+<button class="bg-primary text-on-primary rounded-full px-lg py-xs h-12 flex items-center justify-center font-label-md text-label-md hover:bg-primary-container transition-colors w-full md:w-auto mt-xs md:mt-0">
+                        Search
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Agents -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-xs">Featured Travel Companies</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Connect with top-rated experts for your next journey.</p>
+</div>
+<a class="text-primary font-label-md text-label-md hover:underline flex items-center" href="#">View all <span class="material-symbols-outlined text-[18px] ml-base">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Agent Card 1 -->
+<div class="bg-surface rounded-[16px] border border-surface-container-high p-sm flex flex-col items-center text-center hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<img class="w-24 h-24 rounded-full object-cover mb-sm border-2 border-surface" data-alt="A professional, high-quality headshot of a smiling female travel agent in her late 30s. She is wearing a crisp, modern navy blue blazer over a white blouse. The background is slightly out of focus, showing a bright, modern office space with subtle greenery. The lighting is flattering and soft, projecting reliability, expertise, and a welcoming professional demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrGibYHrXwb2d3aYDgT_GGPBkQ4Ao2bLEhRsf7FZc99GBjvdVTR-8kDXP6nZv6ebHA5u9FOVUSNbDhCsRCOR00TsOwNj7QIBhZBGuSRzW5nc4RWctaWd7BVcJYFYeoUthnHFERnaanPM-sU77-x0xg3PLkMi_vNW7nPXgG2fgo-flulDY4BrGJXOa04jyEw0fFsx9JcokrN9he1qD3BQ3UMNNYjT_QPi4SN1JGcssePhUIt8iHpgPm"/>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Sarah Jenkins</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-xs">London, UK</p>
+<div class="flex items-center gap-base mb-sm">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface">5.0 (42)</span>
+</div>
+<div class="flex flex-wrap justify-center gap-base mb-md">
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">Luxury</span>
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">Europe</span>
+</div>
+<button class="mt-auto w-full border border-primary text-primary rounded-DEFAULT py-xs font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">View Profile</button>
+</div>
+<!-- Agent Card 2 -->
+<div class="bg-surface rounded-[16px] border border-surface-container-high p-sm flex flex-col items-center text-center hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<img class="w-24 h-24 rounded-full object-cover mb-sm border-2 border-surface" data-alt="A professional, high-quality headshot of a friendly male travel agent in his 40s. He is wearing a smart-casual light blue dress shirt, no tie. The background is a bright, sunlit travel agency office with travel brochures subtly visible but blurred. The lighting is optimistic and clear, conveying approachability and deep travel expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXPMsC7fknQZQnfTUEJJonpu68dfFdITgA7B-SQyD-AQDkoHgXttdhEht2H0hbt6uSdm_HpD9806bea1YJbbQHR8cuBVuRU89wn0LBa2MXqhEUUxz2IX0gi-EgvwbjYL-fbEO2DtdynQHmnSk1o4v7QcjeG3Ew9l3TVY98QpciaCCdPbDkRqdL5C9WOZyOMt2_5qCldUZCVF4cPpz2Ydz4KQzne9mDcBqGj-m1nrr-lPVs-NEGR7Gd"/>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">David Chen</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-xs">Sydney, AU</p>
+<div class="flex items-center gap-base mb-sm">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface">4.8 (89)</span>
+</div>
+<div class="flex flex-wrap justify-center gap-base mb-md">
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">Adventure</span>
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">Asia Pacific</span>
+</div>
+<button class="mt-auto w-full border border-primary text-primary rounded-DEFAULT py-xs font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">View Profile</button>
+</div>
+<!-- Agent Card 3 -->
+<div class="bg-surface rounded-[16px] border border-surface-container-high p-sm flex flex-col items-center text-center hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<img class="w-24 h-24 rounded-full object-cover mb-sm border-2 border-surface" data-alt="A professional headshot of an elegant female travel agent in her 50s. She is wearing a sophisticated white silk blouse. The background is a clean, minimal white wall with a soft ambient shadow, reflecting a highly premium and exclusive corporate modern aesthetic. The lighting is pristine, emphasizing her trustworthy and seasoned professional status." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPPdwjZ9s1T0xmvblI_jwDCPXCj7KRADYbt6wlZhuYOd8H4lRu0Dy-gOTCDAw1oaWXO0NKEKSLKyCN8O6MULdd7hxY_TuTcq9TfImh8rM1quXx2TXfCf7ASFZ8LubKaxf5yTuo4y-sPBvoa51ZzQi5m0G7ZyEy0LB-XqyUer0DdgLusBHhwL7PF4HWmtGhQlzIF7LbRUo_Aux_mhcdj9AOawPWby24pdSyuCbIMXSEjQ6f4ZV_PXLn"/>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Elena Rossi</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-xs">Milan, IT</p>
+<div class="flex items-center gap-base mb-sm">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface">5.0 (120)</span>
+</div>
+<div class="flex flex-wrap justify-center gap-base mb-md">
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">Romance</span>
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">Cruises</span>
+</div>
+<button class="mt-auto w-full border border-primary text-primary rounded-DEFAULT py-xs font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">View Profile</button>
+</div>
+<!-- Agent Card 4 -->
+<div class="bg-surface rounded-[16px] border border-surface-container-high p-sm flex flex-col items-center text-center hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow group relative overflow-hidden">
+<img class="w-24 h-24 rounded-full object-cover mb-sm border-2 border-surface" data-alt="A professional headshot of a young male travel agent in his late 20s. He is wearing a crisp white collared shirt under a subtle grey sweater. The setting is a modern cafe-style workspace with soft natural light streaming in, creating an airy and approachable atmosphere. He conveys enthusiasm and modern travel expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBrzyHQyOGNx9EQLQzhxDk1gChufocbeOrR8tdlj79tc2UnXcTqGcrI_jv3lLzThko4M3Pr8xraGCfFDexo1wjuT_Cl0mQex-Uht7Vqm25BGo2OvQYzBnA_S4ps8mQsuFtn4VZLNY4C0-5RrBGnrrWwk2it3_fpF3r5B2M4ZJgPksYvdjEHXl0UxMocj9a70zhXe8UpZ2SFF_qX_atzzhXZ4zAhAZ0cnxZxZwKoIhxV-47IgC6wz44"/>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Marcus Vance</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-xs">New York, US</p>
+<div class="flex items-center gap-base mb-sm">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface">4.9 (35)</span>
+</div>
+<div class="flex flex-wrap justify-center gap-base mb-md">
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">Corporate</span>
+<span class="bg-surface-container-low text-on-surface-variant px-xs py-base rounded-full text-label-sm font-label-sm">USA</span>
+</div>
+<button class="mt-auto w-full border border-primary text-primary rounded-DEFAULT py-xs font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">View Profile</button>
+</div>
+</div>
+</section>
+<!-- Popular Destinations Bento Grid -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto bg-surface-bright">
+<div class="mb-lg">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-xs">Popular Destinations</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Discover where our top companies are sending travelers.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-sm h-[600px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 rounded-[16px] overflow-hidden relative group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A spectacular, high-resolution wide shot of the Amalfi Coast in Italy during a bright summer day. The steep cliffs are dotted with colorful pastel houses tumbling down to the sparkling, deep blue Mediterranean sea. The image is vibrant and sun-drenched, embodying premium leisure travel and European elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9OMeL41sgxZkZWtrN5Rp8pCzfprbO5PwXlKRjUOMJ8AcndMsZZ_SMoaPS3Z4AhdXSV3CDJ9mDNMhjmI10q4ctEzE1sCXbd8dXAm2DiU6HEnUT-lHCgWRo-kkiYkWjXD3vCTJl6fGbZA-Lda9WUJmvl0iDIczW5fyv_RjUBNnY6RNSvFHkxO_7d7BkK43FM2EK61Tl9exYnuAddc1Vj8_zeL3QhoXZ-NjGbP9qG6EiKXzs8ENA_q1n"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<h3 class="text-headline-md font-headline-md text-white mb-xs">Amalfi Coast, Italy</h3>
+<p class="text-body-md font-body-md text-surface-container mb-sm">240 Companies specialize in this region</p>
+<span class="bg-primary/90 text-on-primary px-sm py-xs rounded-full text-label-sm font-label-sm backdrop-blur-sm">Explore Companies</span>
+</div>
+</div>
+<!-- Small Feature Top -->
+<div class="rounded-[16px] overflow-hidden relative group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene, premium photograph of an overwater bungalow in the Maldives. The water is a pristine, glowing cyan, and the sky is clear and bright. A wooden walkway leads to thatched-roof villas. The aesthetic is extremely clean, minimalist, and luxurious, fitting a high-end travel directory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI0McB6AbX7FsXklT_L8m3Vq389yZF1FOIfu1rap21mRRwp6No1uHxtio4tJmw-S2GoJef_kNcCpX1cXEaavWKOLQGdInLHgFmqMzKYMi73UjX0NLJyyehUcd6lFWnQMHZXVPjIg6MqC6q43DtGcH8iGYBHAewuoGYw7C_xO548OdMoDlnmXaza-emoVea3Xgvmq1wGtGI-bpes6zoRtN24C6R_CKMalBqc30-CSi49dV0ku_O1yCW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-sm left-sm">
+<h3 class="text-headline-sm font-headline-sm text-white mb-xs">Maldives</h3>
+<p class="text-body-md font-body-md text-surface-container">150 Companies</p>
+</div>
+</div>
+<!-- Small Feature Bottom -->
+<div class="rounded-[16px] overflow-hidden relative group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stunning view of Mount Fuji in Japan during cherry blossom season. The iconic snow-capped peak is framed by delicate pink sakura branches in the foreground. The lighting is soft, natural, and awe-inspiring, conveying a sense of cultural exploration and peaceful travel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt6551LkiOJQx2_9ppbHFGeGhbibcsdtb4sUagmGnLtIgJlFQfq_l_lC1nkoZTB88JOWrBwS4tmCbxFZUuBRjqAaQHQKHGL7ws_1DlkgIxQfmFO-WuvVoOO_F6ZEi_d-OfdpulbYl6ycxthViBLQPSKRtSZrbzO6HMUVq6OvKANlYeFA1WCR2NnGbm0iCii5fYFQSQvb1QeasURYNFtC373chbiF57SGBrjWctLxXdCH1vMmH8mVdw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-sm left-sm">
+<h3 class="text-headline-sm font-headline-sm text-white mb-xs">Kyoto, Japan</h3>
+<p class="text-body-md font-body-md text-surface-container">185 Companies</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-max-width mx-auto bg-surface-container-high border-t border-surface-container-high mt-xl">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-sm">
+<span class="text-headline-sm font-headline-sm font-bold text-primary">travel360</span>
+<p class="text-body-md font-body-md text-on-surface-variant">Your premium gateway to global travel expertise.</p>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-wrap gap-lg">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">FAQ</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Careers</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Support</a>
+</div>
+<div class="col-span-1 flex items-end justify-start md:justify-end">
+<p class="text-label-sm font-label-sm text-on-surface-variant opacity-80">© 2024 travel360 Directory. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

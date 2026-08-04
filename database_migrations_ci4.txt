@@ -1,0 +1,96 @@
+<?php
+
+namespace App\Database\Migrations;
+
+use CodeIgniter\Database\Migration;
+
+class InitialMigration extends Migration
+{
+    public function up()
+    {
+        // 1. Users Table
+        $this->forge->addField([
+            'id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'name' => ['type' => 'VARCHAR', 'constraint' => 255],
+            'email' => ['type' => 'VARCHAR', 'constraint' => 255, 'unique' => true],
+            'password' => ['type' => 'VARCHAR', 'constraint' => 255],
+            'role' => ['type' => 'ENUM', 'constraint' => ['agent', 'admin'], 'default' => 'agent'],
+            'created_at' => ['type' => 'DATETIME', 'null' => true],
+            'updated_at' => ['type' => 'DATETIME', 'null' => true],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('users');
+
+        // 2. Categories Table
+        $this->forge->addField([
+            'id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'name' => ['type' => 'VARCHAR', 'constraint' => 100],
+            'slug' => ['type' => 'VARCHAR', 'constraint' => 100, 'unique' => true],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('categories');
+
+        // 3. States Table
+        $this->forge->addField([
+            'id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'name' => ['type' => 'VARCHAR', 'constraint' => 100],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('states');
+
+        // 4. Cities Table
+        $this->forge->addField([
+            'id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'state_id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
+            'name' => ['type' => 'VARCHAR', 'constraint' => 100],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('state_id', 'states', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->createTable('cities');
+
+        // 5. Agents Table
+        $this->forge->addField([
+            'id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'user_id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
+            'category_id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => true],
+            'city_id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => true],
+            'agency_name' => ['type' => 'VARCHAR', 'constraint' => 255],
+            'slug' => ['type' => 'VARCHAR', 'constraint' => 255, 'unique' => true],
+            'logo_url' => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
+            'about_text' => ['type' => 'TEXT', 'null' => true],
+            'phone' => ['type' => 'VARCHAR', 'constraint' => 20, 'null' => true],
+            'whatsapp' => ['type' => 'VARCHAR', 'constraint' => 20, 'null' => true],
+            'website_url' => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
+            'rating' => ['type' => 'DECIMAL', 'constraint' => '3,2', 'default' => 0.00],
+            'status' => ['type' => 'ENUM', 'constraint' => ['pending', 'approved', 'rejected'], 'default' => 'pending'],
+            'created_at' => ['type' => 'DATETIME', 'null' => true],
+            'updated_at' => ['type' => 'DATETIME', 'null' => true],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->createTable('agents');
+
+        // 6. Enquiries Table
+        $this->forge->addField([
+            'id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'agent_id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
+            'sender_name' => ['type' => 'VARCHAR', 'constraint' => 255],
+            'sender_email' => ['type' => 'VARCHAR', 'constraint' => 255],
+            'message' => ['type' => 'TEXT'],
+            'created_at' => ['type' => 'DATETIME', 'null' => true],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('agent_id', 'agents', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->createTable('enquiries');
+    }
+
+    public function down()
+    {
+        $this->forge->dropTable('enquiries');
+        $this->forge->dropTable('agents');
+        $this->forge->dropTable('cities');
+        $this->forge->dropTable('states');
+        $this->forge->dropTable('categories');
+        $this->forge->dropTable('users');
+    }
+}

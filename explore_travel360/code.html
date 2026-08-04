@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>travel360 - Explore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#62d6ed",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#004954",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#acc7ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-dim": "#d9dadb",
+                      "primary-container": "#0056b3",
+                      "on-secondary-fixed-variant": "#00531a",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-on-surface": "#f0f1f2",
+                      "background": "#f8f9fa",
+                      "surface-tint": "#115cb9",
+                      "on-tertiary-container": "#6ddff7",
+                      "primary-fixed-dim": "#acc7ff",
+                      "surface-container": "#edeeef",
+                      "surface-bright": "#f8f9fa",
+                      "inverse-surface": "#2e3132",
+                      "secondary-container": "#80f98b",
+                      "on-surface-variant": "#424752",
+                      "on-secondary-container": "#007327",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#a4eeff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#e7e8e9",
+                      "outline-variant": "#c2c6d4",
+                      "outline": "#727784",
+                      "on-error-container": "#93000a",
+                      "primary": "#003f87",
+                      "on-primary-fixed": "#001a40",
+                      "secondary-fixed-dim": "#66df75",
+                      "on-surface": "#191c1d",
+                      "secondary": "#006e25",
+                      "primary-fixed": "#d7e2ff",
+                      "on-tertiary-fixed-variant": "#004e5a",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#006270",
+                      "secondary-fixed": "#83fc8e",
+                      "on-primary-container": "#bbd0ff",
+                      "on-primary-fixed-variant": "#004491",
+                      "on-secondary-fixed": "#002106",
+                      "on-background": "#191c1d",
+                      "on-tertiary-fixed": "#001f25",
+                      "surface-variant": "#e1e3e4",
+                      "surface": "#f8f9fa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "base": "4px",
+                      "md": "24px",
+                      "lg": "48px",
+                      "max-width": "1280px",
+                      "sm": "16px",
+                      "margin-desktop": "64px",
+                      "xl": "80px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-surface dark:bg-surface-dim shadow-sm font-body-md text-body-md">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<!-- Brand -->
+<a class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim tracking-tight" href="#">travel360</a>
+<!-- Navigation -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-bold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 active:scale-95 transition-transform" href="#">Explore</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 active:scale-95 transition-transform" href="#">Browse Agents</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 active:scale-95 transition-transform" href="#">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-sm">
+<button class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors px-4 py-2">Login</button>
+<button class="bg-primary-container text-on-primary rounded-lg font-label-md text-label-md px-6 py-2.5 hover:bg-primary transition-colors shadow-sm">Register</button>
+</div>
+<!-- Mobile Menu Toggle (Decorative for UI preview) -->
+<button class="md:hidden text-on-surface">
+<span aria-hidden="true" class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] min-h-[600px] flex items-center justify-center">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="A breathtaking landscape photograph of rugged mountains bathed in golden hour light, reflecting on a crystal-clear glacial lake. The scene evokes a sense of vast, untouched wilderness, adventure, and serenity. The high-quality corporate modern aesthetic uses vibrant yet natural colors, emphasizing clear skies and pristine nature, setting an inspirational tone for a travel booking platform." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_ZCK060tCwqs5GKcA7pNSfGCRl1vccuF_yBN_U5xPy20zotulTVuLy4N4_mE05KW3A1CeiZEKdr06iflVud45xxD1a5FdyGqRmyI4PQTRZFzXJYQJmSOaVw80zXkp7Fyz-zKqV2YkNGwiHnkytCOj-7xrKqV5zeoSj8mkiNHNvvjLNj_QCB-ZD0DgS1lMvtcfMMnVCbfzKf4Dlep5R-D59sx-8luLx1ojPr6yybGrDPs9NDvGR01L')"></div>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent z-10"></div>
+<div class="relative z-20 w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center mt-[-4rem]">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-white mb-md drop-shadow-lg">Discover Your Next Adventure</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-lg max-w-2xl drop-shadow-md">Curated experiences from local experts around the globe. Find exactly what you're looking for.</p>
+<!-- Search Bar -->
+<div class="w-full max-w-3xl glass-card rounded-full p-2 flex flex-col md:flex-row items-center gap-2 shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
+<div class="flex-1 flex items-center w-full px-4 py-2">
+<span aria-hidden="true" class="material-symbols-outlined text-outline mr-sm">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline font-body-md text-body-md outline-none" placeholder="Where to?" type="text"/>
+</div>
+<div class="hidden md:block w-px h-8 bg-outline-variant/50"></div>
+<div class="flex-1 flex items-center w-full px-4 py-2 border-t md:border-t-0 border-outline-variant/30">
+<span aria-hidden="true" class="material-symbols-outlined text-outline mr-sm">calendar_today</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline font-body-md text-body-md outline-none" placeholder="Dates" type="text"/>
+</div>
+<button class="w-full md:w-auto bg-primary-container text-on-primary rounded-full px-8 py-3.5 font-label-md text-label-md hover:bg-primary transition-colors flex items-center justify-center whitespace-nowrap mt-2 md:mt-0 shadow-sm">
+                         Search
+                     </button>
+</div>
+</div>
+</section>
+<!-- Featured Categories (Bento Grid) -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Travel Styles</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Find the perfect trip tailored to your preferences.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-sm md:h-[600px]">
+<!-- Large Card -->
+<a class="group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 h-64 md:h-auto" href="#">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious infinity pool overlooking a stunning turquoise ocean at a high-end resort. Sun loungers and white umbrellas dot the pristine wooden deck. The image represents 'Luxury Escapes' with a bright, sun-drenched, professional aesthetic, emphasizing relaxation and premium exclusivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBno69PfmTqnFGptGSBSJskz-jZjpi50b-OyuWNCduEs44FuGJ1eQdChF4pQ5unEHqMd7ges-yRntQfezLvRSpNrAZr0bATxwNqHWdaR-yqH2jkLmXG9054JJtjTL0pncl3fgCF37TShgmePmZkxtJy_44JqS7olLQrzVQNLQTiGDGDdXnjtWJc4YUVkvz30yp-Y1Vr9MqQniV9ftQfiV-X4OQ-DAcVvB0m-4q58cwWIsY9UqvZC4nz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<h3 class="font-headline-sm text-headline-sm text-white mb-base">Luxury Escapes</h3>
+<p class="font-body-md text-body-md text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Premium resorts and private villas.</p>
+</div>
+</a>
+<!-- Medium Cards -->
+<a class="group relative md:col-span-2 md:row-span-1 rounded-xl overflow-hidden shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 h-64 md:h-auto" href="#">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A hiker standing on a rocky outcrop looking over a vast, dramatic mountain valley with lush green slopes and distant snow-capped peaks. The scene captures 'Adventure &amp; Trekking' with a crisp, inspiring, and active mood, bathed in clear daylight suitable for a modern travel brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApz0IyfErW6jOav_2bq9fFkf70VDpA_0GqVRVNSZNDGSjai1OJmdBYFQB5ax2tIFN8RZ854kvU1Dgl4uX-ViH5BbVsOZ-SyzNgptHpol_34nfVAFGzV5OTTAX7_V3Iz3VF04GdkAC-GDqrowl8kUGbEqdMZ8k3t8jRn3Id7Ho75Ly6XheB-9Jz0IiO7KqO81X-8uj4bPKOoR75JZoQ6te6_XabtSU6AL0uAtTN8kVZKZOIAFoxGC_f"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-md">
+<h3 class="font-headline-sm text-headline-sm text-white">Adventure &amp; Trekking</h3>
+</div>
+</a>
+<!-- Small Cards -->
+<a class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 h-64 md:h-auto" href="#">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An intricately detailed ancient temple complex bathed in warm afternoon sunlight, showcasing ancient architecture. Represents 'Cultural Tours' with a respectful, educational, and visually rich aesthetic, fitting a professional travel directory's clean style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCPixS42-Q0J3IlnvVMvWrBiicKYKJa7_bHi4EPo7mYPbqwJVFTLz38FxwgL6hWj_xjK8KMRcVzUSfHIOzioYQcMZiZT_OSANcrUtKPKwJx3IWwxtrJlmnUnOcQuOdbSU2WMN_F78vvs3FXFRpiaIpX-tpA376fUqq0-4TiSCy5efnZEWnR_a2ston6iitbPVEyHidoL-mJWOenbWoQtzo6OLbH2HhPmxzlClFYMS32I3DkiBSlGS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-md">
+<h3 class="font-label-md text-label-md text-white">Cultural Tours</h3>
+</div>
+</a>
+<a class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 h-64 md:h-auto" href="#">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An aerial view of a pristine white sand beach meeting crystal clear, vibrant blue water. Small waves gently lap the shore. Represents 'Beach Resorts' focusing on clarity, vibrant colors, and a relaxing, sunny atmosphere in a clean, modern compositional style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-fz4IS0y7jRm0vbKktmYue1WK0nkVNVKxOn5nyC920GcKMAs2xhRwo_8bmpW5_htbs3lIgiAleKtP1fA_t6zphLSpCd81DpAHIuRvCFqhz-Ia2peogmGrueLuIx0sdp_7H3hAANz53LJaaqoY1zhs1yVVWYxFD4yxn9lYbrTjBRUIG5X9gkUY3dnjxd1PLshLOSTZMysGxdiwvByXGItymPN6Eg49jm4cQYAOvTLHYkkxSo5ziJTB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-md">
+<h3 class="font-label-md text-label-md text-white">Beach Resorts</h3>
+</div>
+</a>
+</div>
+</section>
+<!-- Trending Destinations -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Trending Destinations</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Popular spots travelers are loving right now.</p>
+</div>
+<a class="hidden md:flex items-center text-primary font-label-md text-label-md hover:underline" href="#">
+                        View all <span aria-hidden="true" class="material-symbols-outlined text-[18px] ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Destination Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A picturesque sunset view of Santorini, Greece, featuring iconic whitewashed buildings with blue domes perched on a cliffside overlooking the caldera. The lighting is warm and romantic, highlighting the premium, aspirational quality of the destination in a clean, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuFyLSgkKTvb9HvSaLNXy0L1IqAs0j1MOjqTP7Z1vilMiCqtGxI5DD0H1YAZG5aessRk3ntFd5XMWSBn0Y34Pt7abWNN1qgrtcJo7zfbXU-zVG_ucx7mHHOvt9hNZuX_v1BdQWNOHlhabHs9jZXm2ZAwakgLGvl4OxW8PfFR4JmphLQscVs2Q9tXzCaBSKy0MOa2yg2EgOlulQw4LPtzW8rJKdE3G2hb9vRynYLfqgvDFRcyD6dlOG"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1 shadow-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-[#28a745] text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Santorini, Greece</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Experience breathtaking sunsets, iconic blue-domed architecture, and world-class Mediterranean cuisine.</p>
+<div class="flex flex-wrap gap-2 mb-md">
+<span class="bg-surface-container text-on-surface-variant rounded-full px-3 py-1 font-label-sm text-label-sm">Romance</span>
+<span class="bg-surface-container text-on-surface-variant rounded-full px-3 py-1 font-label-sm text-label-sm">Coastal</span>
+</div>
+<button class="w-full bg-transparent border border-outline-variant text-primary rounded-lg py-2 font-label-md text-label-md hover:bg-surface-container-low transition-colors">Explore</button>
+</div>
+</div>
+<!-- Destination Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A serene landscape of Kyoto, Japan, in autumn. Traditional wooden architecture is framed by vibrant red and orange maple leaves. The atmosphere is calm, cultural, and beautifully lit, aligning with a high-clarity, professional travel visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAorX79Q_gmekNyBZmjlUQWm7qCV8p9qg-Ednk5c8uUdr-nA3Sf_BKmHW-EdjtQHzicw7KwsqmbjjYoxruqhyftcLg0WvRoCq9SOCc9SAzbu9a08g_fnCmLlkeWW_GL7v1kFpkOf3nlUveHL2P5OJg3ImfAcri6mcOzmiECIJQNsCM-X3Au35zC5xmidD_H3uScpkW4Ec0qsxDwAzaxzbzv5Reyb9vCUtr-zRKjAY_EAfvMUMKawphI"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1 shadow-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-[#28a745] text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface">4.8</span>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Kyoto, Japan</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Wander through tranquil bamboo forests, ancient temples, and vibrant autumn gardens.</p>
+<div class="flex flex-wrap gap-2 mb-md">
+<span class="bg-surface-container text-on-surface-variant rounded-full px-3 py-1 font-label-sm text-label-sm">Culture</span>
+<span class="bg-surface-container text-on-surface-variant rounded-full px-3 py-1 font-label-sm text-label-sm">History</span>
+</div>
+<button class="w-full bg-transparent border border-outline-variant text-primary rounded-lg py-2 font-label-md text-label-md hover:bg-surface-container-low transition-colors">Explore</button>
+</div>
+</div>
+<!-- Destination Card 3 -->
+<div class="bg-surface rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300 group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide shot of a vast African savanna during a golden sunset, with silhouettes of acacia trees and an elephant herd in the distance. Captures the essence of a 'Safari' with a majestic, awe-inspiring, and high-quality documentary style suited for a premium travel booking platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXZ4vUpWxP6HKKfO-O_S1MfKa-QpF4URilesK2EGWqOLY00kFsk5n4hqf7ysvhiUg0AHw9R3SnZXYGkMO2Xf6-YRubO3MHvrpq-cink247s1ZO5CdscI0dSGL308eiMt7KBZfbc4Z542kgNBY4HjRnv17IhBxZMnHXvEughQersTKdbAYqUQAQ93OV5qzhfuFBGdgDznTduIadXHWkpoWNWkbIDsGqhS2bdrolYJ2Z6ZsPkT6u56U2"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1 shadow-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-[#28a745] text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Serengeti, Tanzania</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Witness the great migration and immerse yourself in unparalleled wildlife encounters.</p>
+<div class="flex flex-wrap gap-2 mb-md">
+<span class="bg-surface-container text-on-surface-variant rounded-full px-3 py-1 font-label-sm text-label-sm">Wildlife</span>
+<span class="bg-surface-container text-on-surface-variant rounded-full px-3 py-1 font-label-sm text-label-sm">Safari</span>
+</div>
+<button class="w-full bg-transparent border border-outline-variant text-primary rounded-lg py-2 font-label-md text-label-md hover:bg-surface-container-low transition-colors">Explore</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="bg-primary rounded-[24px] p-lg md:p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed rounded-full blur-3xl opacity-20 -mr-32 -mt-32"></div>
+<div class="relative z-10 md:max-w-xl">
+<h2 class="font-headline-md text-headline-md text-on-primary mb-md">Need help planning?</h2>
+<p class="font-body-lg text-body-lg text-on-primary/90 mb-lg">Connect with one of our certified local experts who can curate a personalized itinerary just for you, ensuring every detail is covered.</p>
+<button class="bg-[#28a745] text-white rounded-lg px-8 py-3.5 font-label-md text-label-md hover:bg-[#218838] transition-colors shadow-sm inline-flex items-center gap-2">
+                        Find a Local Expert
+                        <span aria-hidden="true" class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<div class="relative z-10 hidden md:block">
+<!-- Stylized Agent Profiles Grid (Decorative) -->
+<div class="grid grid-cols-2 gap-4">
+<img class="w-32 h-32 rounded-xl object-cover border-4 border-primary-container/30" data-alt="A professional headshot of a smiling travel agent, a woman in her 30s with diverse heritage, wearing smart casual business attire. She is outdoors with a blurred, bright city background, conveying approachability, trust, and expertise for a corporate modern travel directory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNevFoWKC_RkUQ0B_KPfT3VkKqWe2Lfe0QY7HNJNTsf3ad-OBBTEfbbfOp--iYI9djSidsyiZqz7qjjIeR0POQezqAAuHMsYZwwcuWtecyndY2BQCrrZfiKOCjr6hK4aLcMnB3NcRfAgCfgxWKyUMMf14aNfqN4D4nllVUWfdqRoVo8c0i6qiFZMLeQSO1H5ckA5heO7iVVdDBXtUbAfJBSuL36T57otQMqi84qhqb_aoy4FuIc7Ru"/>
+<img class="w-32 h-32 rounded-xl object-cover border-4 border-primary-container/30 mt-8" data-alt="A professional headshot of a confident male travel agent in his 40s, wearing a crisp white shirt. The background is a brightly lit, modern office space with plants. The image exudes reliability and premium service, fitting the 'Soft Professionalism' aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPh6v7sFHju72WBUvpeBoMlt5GiHA2-8di3N5b5MtO1GqYHC6x3oGKaeooAJIgYaPkOZJ9kFf2UJpn0EkmpakAqhhAkAL5WIVWH7lJA3tJCAWgf2zlUmaIL9_nYSd297fnmAIETRbt4_rZhByAygyfK4MYUuLGWA5I2YJOjuuuNsNHR8Au2vRJmHHqb-oVQAKQU_2ltxcmVMl1Jy0FdsluW_QmXaOvUzyQl1bWvrarQTOujhf6ii2k"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-md bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant font-label-md text-label-md">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">travel360</span>
+<nav class="flex flex-wrap justify-center gap-sm">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">FAQ</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Support</a>
+</nav>
+<p class="text-on-surface-variant dark:text-on-surface-variant opacity-80 hover:opacity-100 transition-opacity">© 2024 travel360. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forgot Password - travel360</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#66df75",
+                        "on-background": "#191c1d",
+                        "surface-container": "#edeeef",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline-variant": "#c2c6d4",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#6ddff7",
+                        "primary": "#003f87",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed": "#001f25",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "tertiary": "#004954",
+                        "on-primary-fixed-variant": "#004491",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#83fc8e",
+                        "surface-tint": "#115cb9",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary": "#006e25",
+                        "on-surface-variant": "#424752",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#727784",
+                        "on-secondary-fixed": "#002106",
+                        "on-primary-container": "#bbd0ff",
+                        "surface-variant": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001a40",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed": "#a4eeff",
+                        "surface": "#f8f9fa",
+                        "tertiary-container": "#006270",
+                        "on-secondary-container": "#007327",
+                        "surface-container-low": "#f3f4f5",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "on-tertiary-fixed-variant": "#004e5a",
+                        "surface-bright": "#f8f9fa",
+                        "inverse-primary": "#acc7ff",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#0056b3",
+                        "tertiary-fixed-dim": "#62d6ed",
+                        "secondary-container": "#80f98b",
+                        "primary-fixed-dim": "#acc7ff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d7e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "80px",
+                        "sm": "16px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "max-width": "1280px",
+                        "xs": "8px",
+                        "lg": "48px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background min-h-screen flex text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<main class="w-full h-screen flex flex-col md:flex-row">
+<!-- Left Side: Image / Branding -->
+<div class="hidden md:flex flex-1 relative bg-surface-container-highest items-end p-margin-desktop overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="A breathtaking landscape photograph of a sun-drenched coastal town nestled against azure waters, representing aspirational travel. The scene is bathed in warm, soft natural light, highlighting the vibrant colors and pristine environment. The aesthetic is clean, premium, and optimistic, aligning perfectly with a modern corporate travel brand's 'Soft Professionalism' style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6dQ3arrXby_4UE-2_bPDng0w1OHzESvAKfAkt_fnzPjKLKYh7rZJQHg7ruyPvnzCrGk0T5luGIpCnthVlSZSrW4i68BOc6kG5j6sIV1-8qxvXoXikqGPEX-ckFJoHl7SHfLnJkErN75jZ1hpldVbrv6J8YPXu2bWusjCZ0KGro9E6BZ0hdvKI_o4mXQHa6KFfZU2akOLYzYYrYC1WPhu415rqCeZCKl2Z8ycQP9_sJy19Hd4_WydU')"></div>
+<!-- Gradient Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
+<div class="relative z-20 text-white w-full max-w-lg">
+<h1 class="font-display-lg text-display-lg mb-sm">travel360</h1>
+<p class="font-headline-sm text-headline-sm text-white/90">Restore your access.</p>
+</div>
+</div>
+<!-- Right Side: Form Container -->
+<div class="flex-1 flex flex-col justify-center items-center p-margin-mobile md:p-margin-desktop bg-surface-container-lowest shadow-[-10px_0_30px_rgba(0,0,0,0.05)] z-20">
+<div class="w-full max-w-md">
+<!-- Mobile Logo -->
+<div class="md:hidden mb-lg">
+<h1 class="font-headline-sm text-headline-sm text-primary font-bold">travel360</h1>
+</div>
+<!-- Header -->
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md text-on-background mb-xs">Forgot Password</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Enter your email address and we'll send you instructions to reset your password.
+                    </p>
+</div>
+<!-- Form -->
+<form class="space-y-md" onsubmit="event.preventDefault();">
+<!-- Email Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-base" for="email">Email address</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-sm flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="w-full pl-[44px] pr-sm py-[12px] bg-surface-container-lowest border border-surface-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="email" name="email" placeholder="name@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Actions -->
+<div class="pt-sm space-y-sm">
+<button class="w-full flex justify-center items-center py-[12px] px-md bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-on-primary-fixed-variant active:scale-[0.98] transition-all shadow-sm hover:shadow-md" type="submit">
+                            Send Reset Link
+                        </button>
+<div class="text-center">
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                                Back to Login
+                            </a>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+</body></html>

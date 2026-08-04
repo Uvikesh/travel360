@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results - travel360</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#131b2e",
+                    "surface-container-high": "#e2e7ff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary": "#006058",
+                    "surface-tint": "#0053db",
+                    "inverse-surface": "#283044",
+                    "surface-container-low": "#f2f3ff",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary-container": "#b3fff3",
+                    "tertiary-fixed-dim": "#6bd8cb",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#341100",
+                    "surface-container-highest": "#dae2fd",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#131b2e",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "primary-container": "#2563eb",
+                    "outline-variant": "#c3c6d7",
+                    "on-secondary-fixed-variant": "#783200",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eef0ff",
+                    "secondary-fixed": "#ffdbca",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#00201d",
+                    "outline": "#737686",
+                    "surface-container": "#eaedff",
+                    "secondary-fixed-dim": "#ffb690",
+                    "tertiary-fixed": "#89f5e7",
+                    "surface": "#faf8ff",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-dim": "#d2d9f4",
+                    "surface-bright": "#faf8ff",
+                    "tertiary-container": "#007b71",
+                    "surface-variant": "#dae2fd",
+                    "primary": "#004ac6",
+                    "secondary": "#9d4300",
+                    "on-secondary-container": "#5c2400",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005049",
+                    "on-surface-variant": "#434655",
+                    "on-primary-container": "#eeefff",
+                    "secondary-container": "#fd761a",
+                    "on-primary-fixed": "#00174b",
+                    "background": "#faf8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin": "32px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Manrope"
+                    ],
+                    "body-lg": [
+                            "Manrope"
+                    ],
+                    "label-sm": [
+                            "Manrope"
+                    ],
+                    "display-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "display-lg-mobile": [
+                            "Plus Jakarta Sans"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/70 backdrop-blur-xl dark:bg-surface-container-low/70 docked full-width top-0 sticky z-50 border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-headline-md font-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim" href="#">travel360</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Explore</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Browse Companies</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 rounded-full border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-body-md text-body-md w-64 transition-all focus:w-80" placeholder="Search destinations..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:text-primary px-4 py-2 font-label-sm text-label-sm font-semibold rounded-lg transition-colors">Login</button>
+<button class="bg-primary text-on-primary px-4 py-2 font-label-sm text-label-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-sm">Register</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-gutter py-margin md:py-[64px] min-h-[819px]">
+<!-- Search Header -->
+<div class="mb-10">
+<p class="font-label-sm text-label-sm text-outline mb-2 uppercase tracking-wider">Search Results</p>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface flex items-center gap-4">
+                "Luxury Safaris in Africa"
+                <span class="font-body-lg text-body-lg text-on-surface-variant font-normal mt-3">(24 Results)</span>
+</h1>
+</div>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Filters Sidebar -->
+<aside class="w-full lg:w-1/4 shrink-0 space-y-8">
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface !text-lg">Filters</h2>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container transition-colors">Clear All</button>
+</div>
+<!-- Category Filter -->
+<div class="mb-8">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase tracking-wider">Category</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<input checked="" class="peer appearance-none w-5 h-5 border-2 border-outline rounded-md checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Tour Operator</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none w-5 h-5 border-2 border-outline rounded-md checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Agency</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none w-5 h-5 border-2 border-outline rounded-md checked:bg-primary checked:border-primary transition-colors cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary text-[16px] opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Guide</span>
+</label>
+</div>
+</div>
+<!-- Location Filter -->
+<div class="mb-8">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase tracking-wider">Location</h3>
+<div class="space-y-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">location_on</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-outline-variant bg-surface focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary font-body-md text-body-md transition-all" placeholder="Country or State..." type="text"/>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">location_city</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-outline-variant bg-surface focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary font-body-md text-body-md transition-all" placeholder="City..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Rating Filter -->
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase tracking-wider">Minimum Rating</h3>
+<div class="space-y-3">
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="relative flex items-center justify-center">
+<input checked="" class="peer appearance-none w-5 h-5 border-2 border-outline rounded-full checked:border-primary transition-colors cursor-pointer" name="rating" type="radio"/>
+<div class="absolute w-2.5 h-2.5 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">4.5 &amp; up</span>
+</div>
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none w-5 h-5 border-2 border-outline rounded-full checked:border-primary transition-colors cursor-pointer" name="rating" type="radio"/>
+<div class="absolute w-2.5 h-2.5 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">4.0 &amp; up</span>
+</div>
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined fill text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star_border</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Results Grid -->
+<div class="flex-1">
+<!-- Active Filters & Sort -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-body-md text-body-md text-on-surface-variant mr-2">Active Filters:</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm">
+                            Tour Operator
+                            <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm">
+                            4.5+ Rating
+                            <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-body-md text-body-md text-on-surface-variant">Sort by:</span>
+<select class="bg-surface border-none focus:ring-0 font-label-sm text-label-sm text-on-surface font-semibold cursor-pointer appearance-none pr-8 relative">
+<option>Recommended</option>
+<option>Highest Rated</option>
+<option>Most Reviewed</option>
+</select>
+<span class="material-symbols-outlined text-on-surface pointer-events-none -ml-8">expand_more</span>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 flex flex-col h-full relative">
+<!-- Cover Image -->
+<div class="relative h-48 w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide, sweeping aerial view of a vibrant African savanna during golden hour. A small, luxury safari vehicle is visible in the distance, kicking up a trail of dust. The lighting is warm and cinematic, emphasizing the bright, modern, and energetic aesthetic of a premium travel directory. Rich earthy tones contrast with the clear blue sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjxSlQt1b_sZg66ecId2Nks8Jpk3QZcB6d9GfQmNd-zgzWj5Eka_jZF3c6H4dMK9BvltVZbeuYvUI0N3U_xhpRw_G4d0ea17__2U-fsK7AOXcl7NMBmJR6MVp_LLXxuJG9D3lXm2Bi7xqF68XxINR2Feq5V2rVr9hKE-R0E7_ab_tZFgyY0l2iao7C3zUSLIYEjzOBB_8PMXyVCRuGp8rPMZNAL7dvU5uuiFTiqvXMzQXdTW3Syz_d"/>
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<!-- Content -->
+<div class="p-5 flex flex-col flex-1 relative">
+<!-- Logo Avatar (Overlaps cover) -->
+<div class="absolute -top-8 left-5 w-16 h-16 rounded-xl bg-surface-container-lowest border-4 border-surface-container-lowest shadow-sm overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A modern, minimalist logo design for a luxury travel company, featuring an abstract geometric compass in deep primary blue on a crisp white background. High contrast, clean vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Se9iHzqNYVWZ-ITrKqD2pTwcSicMcXH4h5BRVRFzt9yX2G9l1HQexqY6YxDCvyBctHx5u3sXSQWP-qPiGMQOlFPykPMsXZRhqczaIGv5TOg7MYlJaYOTKPdz84dXVd01jfIm5A2wPUQ1RqyxBkXWf2KtpGA3_lHDFeK_7-gPCr8lOAxzcFY6b19J_3Ep9cd4Yf4WHZucWX5VyzDqcT7AkgL5xFr8DzAwPukYa3zPcG48xi5C6hLp"/>
+</div>
+<div class="mt-8 flex-1">
+<div class="flex items-start justify-between gap-2 mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface !text-xl group-hover:text-primary transition-colors line-clamp-1">Kiboko Safaris</h3>
+<div class="flex items-center gap-1 shrink-0 bg-primary-container/10 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined fill text-[#F59E0B] text-[16px]">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-md text-body-md !text-sm mb-4">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="truncate">Nairobi, Kenya</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm !text-[10px]">Tour Operator</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm !text-[10px]">Luxury</span>
+<span class="px-2.5 py-1 rounded-md bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm !text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified
+                                    </span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between mt-auto">
+<span class="font-body-md text-body-md text-on-surface-variant !text-sm">120+ Tours</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm text-label-sm hover:bg-primary/90 transition-colors shadow-sm shadow-primary/20">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 flex flex-col h-full relative">
+<div class="relative h-48 w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of a magnificent lion resting under an acacia tree, bathed in soft morning light. The image captures the essence of a high-end wildlife photography expedition. The composition is clean and modern, fitting a premium corporate travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4oiPyf9OTNV_UcBW_hpEz7Eq09TYCbTbI6lJRwdEyIoQVA8iI2ZoHlEvB3XAixYyWEwRF9FL2S-DSU3bbYsoHnnDBJ_hsWBkVyURtDpERekY8MyYFJphxCNu4JUjDn8yvJt9T-2KbsGDAe24kcJ80TsYutXQHZq9krRjLihtQsYhYC1DwRmKN8qz9QqK2fM1d5Cz_7heciv1VYXsJkpN8KWC-ugzkXyaatsgwlYlrxFgZULdRlpEw"/>
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1 relative">
+<div class="absolute -top-8 left-5 w-16 h-16 rounded-xl bg-surface-container-lowest border-4 border-surface-container-lowest shadow-sm overflow-hidden flex items-center justify-center p-2">
+<span class="material-symbols-outlined text-primary text-[32px]">photo_camera</span>
+</div>
+<div class="mt-8 flex-1">
+<div class="flex items-start justify-between gap-2 mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface !text-xl group-hover:text-primary transition-colors line-clamp-1">Lens &amp; Wild</h3>
+<div class="flex items-center gap-1 shrink-0 bg-primary-container/10 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined fill text-[#F59E0B] text-[16px]">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.8</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-md text-body-md !text-sm mb-4">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="truncate">Arusha, Tanzania</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm !text-[10px]">Agency</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm !text-[10px]">Photography</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between mt-auto">
+<span class="font-body-md text-body-md text-on-surface-variant !text-sm">45+ Expeditions</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm text-label-sm hover:bg-primary/90 transition-colors shadow-sm shadow-primary/20">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 flex flex-col h-full relative">
+<div class="relative h-48 w-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious glamping tent interior featuring a large four-poster bed draped in white linen, opening up to a sweeping view of a river with hippos. The lighting is bright and inviting, showcasing a premium, high-end travel experience with a clean, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNPjq-U3WwxM43-k2L9ATlhMzHAd3iFKePZGW5nOz9FC2uoLWEggf_FVvhqHxES_MZFfy0IdoJ3I49iMZp7KIiKg1SZsvfui_EHvOnrT6L1tP0RzyNpssv__Hd2D7arv9sWvuCk3J5JDNMhgYxHGPUFpOoXZwtCXTqdSIlXnDzDji3_ZzLRtkpBx-3bzChVpzTbcR--pdWmMWoXIrQuGB7RNNNkGg3AXKaiLakwsC0OOMU9m14Qy4x"/>
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1 relative">
+<div class="absolute -top-8 left-5 w-16 h-16 rounded-xl bg-surface-container-lowest border-4 border-surface-container-lowest shadow-sm overflow-hidden flex items-center justify-center bg-secondary-container text-on-secondary-container font-headline-md text-headline-md">
+                                SO
+                            </div>
+<div class="mt-8 flex-1">
+<div class="flex items-start justify-between gap-2 mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface !text-xl group-hover:text-primary transition-colors line-clamp-1">Savanna Opulence</h3>
+<div class="flex items-center gap-1 shrink-0 bg-primary-container/10 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined fill text-[#F59E0B] text-[16px]">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">5.0</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-md text-body-md !text-sm mb-4">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="truncate">Cape Town, South Africa</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm !text-[10px]">Tour Operator</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm !text-[10px]">Bespoke</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between mt-auto">
+<span class="font-body-md text-body-md text-on-surface-variant !text-sm">8 Exclusive Routes</span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm text-label-sm hover:bg-primary/90 transition-colors shadow-sm shadow-primary/20">View Profile</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center gap-2 mt-12">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-primary text-on-primary font-label-sm text-label-sm shadow-sm shadow-primary/20">1</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant text-on-surface font-label-sm text-label-sm hover:border-primary hover:text-primary transition-colors">2</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant text-on-surface font-label-sm text-label-sm hover:border-primary hover:text-primary transition-colors">3</button>
+<span class="text-on-surface-variant px-2">...</span>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant text-on-surface font-label-sm text-label-sm hover:border-primary hover:text-primary transition-colors">8</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Example Empty State (Hidden by default, structure provided as requested) -->
+<div class="hidden flex-col items-center justify-center py-20 text-center">
+<div class="w-24 h-24 bg-surface-variant rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">No companies found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mb-8">We couldn't find any travel companies matching your current filters. Try adjusting your search criteria.</p>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface px-6 py-2.5 rounded-lg font-label-sm text-label-sm hover:border-primary hover:text-primary transition-colors">Clear All Filters</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface full-width border-t border-outline-variant/30 dark:border-outline/10 flat no shadows">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter px-gutter py-12 max-w-container-max mx-auto">
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-4">
+<a class="text-headline-md font-headline-md text-on-surface dark:text-inverse-on-surface" href="#">travel360</a>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">Connecting you with the world's premier travel professionals and unforgettable experiences.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-on-surface dark:text-inverse-on-surface uppercase tracking-wider mb-2">Company</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 duration-200" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-on-surface dark:text-inverse-on-surface uppercase tracking-wider mb-2">Resources</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Help Center</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Partner Program</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-on-surface dark:text-inverse-on-surface uppercase tracking-wider mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 duration-200" href="#">Terms of Service</a>
+</div>
+<div class="col-span-2 md:col-span-4 lg:col-span-6 mt-8 pt-8 border-t border-outline-variant/30 dark:border-outline/10 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">© 2024 travel360. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

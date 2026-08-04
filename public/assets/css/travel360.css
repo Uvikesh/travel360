@@ -1,0 +1,65 @@
+body {
+    font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+}
+
+.hero-image {
+    background-image:
+        linear-gradient(90deg, rgba(8, 20, 49, 0.80), rgba(8, 20, 49, 0.18)),
+        url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=85");
+    background-position: center;
+    background-size: cover;
+}
+
+.page-band {
+    background:
+        linear-gradient(135deg, rgba(17, 92, 185, 0.10), rgba(0, 96, 88, 0.08)),
+        #f8f9fa;
+}
+
+.focus-ring:focus {
+    outline: 3px solid rgba(17, 92, 185, 0.24);
+    outline-offset: 2px;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.status-approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.form-input {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    padding: 0.75rem 0.9rem;
+    color: #0f172a;
+}
+
+.form-input:focus {
+    border-color: #115cb9;
+    box-shadow: 0 0 0 3px rgba(17, 92, 185, 0.14);
+    outline: none;
+}

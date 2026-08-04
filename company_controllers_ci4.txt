@@ -1,0 +1,59 @@
+<?php
+
+namespace App\Controllers\Company;
+
+use App\Controllers\BaseController;
+use App\Models\CompanyModel;
+use App\Models\EnquiryModel;
+
+class Profile extends BaseController
+{
+    public function index()
+    {
+        // Assuming session auth is handled via filters
+        $userId = session()->get('user_id');
+        $model = new CompanyModel();
+        
+        $data = [
+            'title' => 'Company Dashboard - travel360',
+            'company' => $model->where('user_id', $userId)->first(),
+        ];
+        
+        return view('company/dashboard', $data);
+    }
+
+    public function update()
+    {
+        $model = new CompanyModel();
+        $id = $this->request->getPost('id');
+        
+        $data = [
+            'agency_name' => $this->request->getPost('agency_name'),
+            'about_text'  => $this->request->getPost('about_text'),
+            'phone'       => $this->request->getPost('phone'),
+            'whatsapp'    => $this->request->getPost('whatsapp'),
+            'website_url' => $this->request->getPost('website_url'),
+        ];
+        
+        $model->update($id, $data);
+        return redirect()->back()->with('success', 'Profile updated successfully.');
+    }
+}
+
+class Enquiries extends BaseController
+{
+    public function index()
+    {
+        $userId = session()->get('user_id');
+        $companyModel = new CompanyModel();
+        $company = $companyModel->where('user_id', $userId)->first();
+        
+        $enquiryModel = new EnquiryModel();
+        $data = [
+            'title' => 'Enquiries - travel360',
+            'enquiries' => $enquiryModel->where('agent_id', $company['id'])->orderBy('created_at', 'DESC')->findAll(),
+        ];
+        
+        return view('company/enquiries', $data);
+    }
+}

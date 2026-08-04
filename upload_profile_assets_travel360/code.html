@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Assets - Travel360 Partner</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#9d4300",
+                    "on-secondary-container": "#5c2400",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "outline-variant": "#c3c6d7",
+                    "on-surface": "#131b2e",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb690",
+                    "surface-container-high": "#e2e7ff",
+                    "outline": "#737686",
+                    "tertiary": "#006058",
+                    "surface-variant": "#dae2fd",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed-variant": "#783200",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-container-highest": "#dae2fd",
+                    "on-primary-fixed": "#00174b",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-bright": "#faf8ff",
+                    "background": "#faf8ff",
+                    "secondary-container": "#fd761a",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#007b71",
+                    "on-tertiary-fixed-variant": "#005049",
+                    "surface-container-low": "#f2f3ff",
+                    "primary": "#004ac6",
+                    "on-surface-variant": "#434655",
+                    "on-primary-container": "#eeefff",
+                    "surface": "#faf8ff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#131b2e",
+                    "on-tertiary-fixed": "#00201d",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#b3fff3",
+                    "primary-container": "#2563eb",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#6bd8cb",
+                    "tertiary-fixed": "#89f5e7",
+                    "on-secondary-fixed": "#341100",
+                    "surface-container": "#eaedff",
+                    "secondary-fixed": "#ffdbca",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#0053db",
+                    "inverse-surface": "#283044",
+                    "surface-dim": "#d2d9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin": "32px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "display-lg-mobile": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-md": [
+                            "Manrope"
+                    ],
+                    "display-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-sm": [
+                            "Manrope"
+                    ],
+                    "body-lg": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    }
+            }
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-headline-md { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Custom scrollbar for gallery */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: theme('colors.outline-variant');
+            border-radius: theme('borderRadius.full');
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex">
+<!-- SideNavBar Shell -->
+<nav class="hidden md:flex flex-col fixed left-0 top-0 h-screen w-64 py-6 border-r border-outline-variant dark:border-outline bg-surface-container-low dark:bg-surface-dim shadow-md z-40">
+<!-- Header -->
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-primary font-headline-md text-headline-md">
+                    T
+                </div>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed text-lg leading-tight">Travel360 Partner</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Verified Agency</p>
+</div>
+</div>
+</div>
+<!-- Main Navigation -->
+<div class="flex-1 overflow-y-auto">
+<ul class="space-y-1">
+<!-- Dashboard (Inactive) -->
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-outline px-4 py-3 mx-2 rounded-xl hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<!-- Company Profile (Active) -->
+<li>
+<a class="flex items-center gap-3 bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-xl px-4 py-3 mx-2 translate-x-1 transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">business_center</span>
+                        Company Profile
+                    </a>
+</li>
+<!-- Bookings (Inactive) -->
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-outline px-4 py-3 mx-2 rounded-xl hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">event_available</span>
+                        Bookings
+                    </a>
+</li>
+<!-- Analytics (Inactive) -->
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-outline px-4 py-3 mx-2 rounded-xl hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">insights</span>
+                        Analytics
+                    </a>
+</li>
+<!-- Settings (Inactive) -->
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-outline px-4 py-3 mx-2 rounded-xl hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                        Settings
+                    </a>
+</li>
+</ul>
+</div>
+<!-- Footer Navigation & CTA -->
+<div class="px-4 mt-auto pt-6 border-t border-outline-variant/30">
+<ul class="space-y-1 mb-6">
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-outline px-4 py-2 rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-sm">help_outline</span>
+                        Support
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-outline px-4 py-2 rounded-lg hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-sm">logout</span>
+                        Sign Out
+                    </a>
+</li>
+</ul>
+<button class="w-full bg-primary text-on-primary hover:bg-primary/90 font-label-sm text-label-sm py-3 rounded-lg transition-colors shadow-sm">
+                Upgrade Plan
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-margin min-h-screen">
+<!-- Page Header -->
+<header class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-2">Profile Assets</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Manage your agency's visual identity. Upload high-resolution logos and stunning property photos to stand out in the Travel360 directory.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 rounded-lg border border-outline font-label-sm text-label-sm text-on-surface hover:bg-surface-container transition-colors">Cancel</button>
+<button class="px-6 py-2.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary/90 transition-colors shadow-sm">Save Changes</button>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Agency Logo -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,74,198,0.05)] border border-surface-variant relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-lowest to-surface-container opacity-50 z-0 pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">Agency Logo</h2>
+<span class="material-symbols-outlined text-outline">info</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 text-sm">Upload a square logo (min 500x500px). This will appear on your public profile and listings.</p>
+<!-- Current Logo Preview -->
+<div class="mb-6 flex justify-center">
+<div class="w-32 h-32 rounded-full border-4 border-surface-container bg-surface flex items-center justify-center overflow-hidden shadow-sm relative group cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A clean, modern corporate logo for a premium travel agency, featuring a stylized compass rose integrated with a minimalist mountain peak, rendered in deep indigo and bright white on a light background. High-quality corporate branding design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcNFtCE0bt_xAGKh_fTE_Bk8G4le51rzYmQNHUBXDkZJRRiWmInMWS80AEgjs4UaAGMk0yTECbwQ03cd-lUm_RhmswXEr3iGSRhiQ4n-DlGJPb_eK9DOesTNq6Or8MSOlYoar0us_X-qvRUDERe0aW7OP-WC3i93Leq2KgYAzh2sAtvc4EksLfsOm3WKYRbA3WCpVnqe-xEvBPA-XE8oCjryItjBPKH22eOtdq7a9eLI1DZ6xns_Og"/>
+<div class="absolute inset-0 bg-on-surface/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-primary">edit</span>
+</div>
+</div>
+</div>
+<!-- Dropzone -->
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-surface-container-low transition-colors cursor-pointer group/drop">
+<div class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center mb-3 group-hover/drop:scale-110 transition-transform">
+<span class="material-symbols-outlined">cloud_upload</span>
+</div>
+<h3 class="font-label-sm text-label-sm text-on-surface mb-1">Click to upload or drag and drop</h3>
+<p class="font-body-md text-body-md text-outline text-xs">SVG, PNG, JPG or GIF (max. 5MB)</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Property & Tour Photos -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,74,198,0.05)] border border-surface-variant h-full flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Property &amp; Tour Photos</h2>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full">12 / 50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Create a visual narrative of your offerings. High-quality imagery significantly increases booking conversion rates.</p>
+<!-- Main Dropzone -->
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-8 mb-6 flex flex-col items-center justify-center text-center hover:bg-surface-container-low transition-colors cursor-pointer bg-surface/50">
+<div class="flex gap-4 mb-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant -rotate-6">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-primary z-10 scale-110 shadow-sm">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant rotate-6">
+<span class="material-symbols-outlined">collections</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg mb-2">Drag &amp; Drop images here</h3>
+<p class="font-body-md text-body-md text-outline mb-4">or click to browse from your computer</p>
+<button class="px-6 py-2 rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-label-sm hover:bg-secondary-container/90 transition-colors">
+                            Select Files
+                        </button>
+</div>
+<!-- Active Uploads (Simulated) -->
+<div class="mb-6">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-3 uppercase tracking-wider">Uploading (2)</h3>
+<div class="space-y-3">
+<!-- Upload Item 1 -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-lg border border-surface-variant">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-sm">image</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-1">
+<p class="font-body-md text-body-md text-sm text-on-surface truncate">maldives-villa-exterior-01.jpg</p>
+<p class="font-label-sm text-label-sm text-outline text-xs">45%</p>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<button class="text-outline hover:text-error transition-colors shrink-0">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Upload Item 2 -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-lg border border-surface-variant">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-sm">image</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-1">
+<p class="font-body-md text-body-md text-sm text-on-surface truncate">paris-tour-group-eiffel.png</p>
+<p class="font-label-sm text-label-sm text-outline text-xs">82%</p>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<button class="text-outline hover:text-error transition-colors shrink-0">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Gallery Grid -->
+<div class="flex-1">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Gallery</h3>
+<div class="flex gap-2">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-sm">grid_view</span></button>
+<button class="p-1 rounded hover:bg-surface-container text-outline"><span class="material-symbols-outlined text-sm">view_list</span></button>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 overflow-y-auto custom-scrollbar max-h-[400px] pr-2 pb-2">
+<!-- Gallery Item 1 -->
+<div class="relative group aspect-square rounded-lg overflow-hidden border border-surface-variant bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A breathtaking view of a modern luxury eco-lodge nestled in a lush tropical rainforest, featuring expansive glass walls, a private infinity pool reflecting the vibrant sunset, and elegant minimalist wooden furniture. The scene evokes high-end sustainable travel with bright, airy lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3mMhC194j4WtHuuS8IhZbWoByCjZZkM4Jo-MFAZolRrwDubdXwzNyDr-F2AdQeEgAosjNbLc0mRVHE5ecG0bZQfIUBmTn5V19VFOw2BixV_NYnV6xes2Z9_eFDKglF2yu7CMGpyoVJ_xMuGdWc6JND3fKbNBIIdPSyD8WBTGuSx4cD5SPg-Yvrt83eQ1G_LDzUR5FTOGBo5tyyNqOyLVzstgmWNX_Mn_WrNZWKgO3PLwz2deyWvKK"/>
+<div class="absolute inset-0 bg-on-surface/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-2">
+<div class="flex justify-end">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/20 hover:bg-error text-surface-container-lowest flex items-center justify-center backdrop-blur-sm transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest/20 backdrop-blur-sm rounded px-2 py-1">
+<p class="font-label-sm text-label-sm text-surface-container-lowest truncate text-[10px]">eco-lodge-hero.jpg</p>
+</div>
+</div>
+<!-- Star Badge -->
+<div class="absolute top-2 left-2 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="relative group aspect-square rounded-lg overflow-hidden border border-surface-variant bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An inviting, high-contrast interior shot of a premium hotel lobby designed with kinetic, modern corporate aesthetics. Features sleek marble floors, dynamic abstract art installations in electric indigo, and comfortable yet structured seating areas bathed in bright, natural daytime light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzyMel1uhzIIOQb5C0kKJdWViiMgANF8DBjKaNUszzf94boTcGH-2QfCg6NKXAXvNSMgRRFEu4p5B0vzh6AD8o-3dH82giKXDpbfAXHKQGfzz1Bu3BMQ8_l1-xjAEEMNoKj8cHz4uEcUW6x1zvEEqbe9EMIcQvhpssoQ2zjoVow9d9wk_U2B5KJO1LrK7lhD7FcLiUIGQuM2-b0DbT95lFwGqhAS7xOnmYhaA9TQPouQmO5G1G8QYZ"/>
+<div class="absolute inset-0 bg-on-surface/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-2">
+<div class="flex justify-end gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/20 hover:bg-surface-container-lowest/40 text-surface-container-lowest flex items-center justify-center backdrop-blur-sm transition-colors" title="Set as Cover">
+<span class="material-symbols-outlined text-sm">star</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/20 hover:bg-error text-surface-container-lowest flex items-center justify-center backdrop-blur-sm transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest/20 backdrop-blur-sm rounded px-2 py-1">
+<p class="font-label-sm text-label-sm text-surface-container-lowest truncate text-[10px]">lobby-main.jpg</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="relative group aspect-square rounded-lg overflow-hidden border border-surface-variant bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A dynamic action shot of a guided travel group exploring ancient ruins. The composition is structured with cinematic wide-angle framing, emphasizing the architectural scale. The lighting is crisp and sunny, casting distinct shadows, fitting a modern travel directory promoting high-energy exploration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANhbwPkIDKV-lt0hW7bfClKD-_3UsziF-zaMQwMZ0gjVqxSRaUxZsQuTPwU4MBJORxX8sgGqohWIkyLPvAKdIhYLruVgJ6p3HDn_5hhHdHSY5E69P8MgmeSjQTrSTZlKXi5NwfpUB9UhYfoRaF5Ft2mEaJit8yDZO8mBdZbJF8MPtX3l6cShc7t_V7UGhL_EnyOJyro62_lfarXlw5pjVpamA0NPLjrZeChhN1_TXCuu06n0xbpxLM"/>
+<div class="absolute inset-0 bg-on-surface/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-2">
+<div class="flex justify-end gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/20 hover:bg-surface-container-lowest/40 text-surface-container-lowest flex items-center justify-center backdrop-blur-sm transition-colors" title="Set as Cover">
+<span class="material-symbols-outlined text-sm">star</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/20 hover:bg-error text-surface-container-lowest flex items-center justify-center backdrop-blur-sm transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest/20 backdrop-blur-sm rounded px-2 py-1">
+<p class="font-label-sm text-label-sm text-surface-container-lowest truncate text-[10px]">ruins-tour-group.jpg</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="relative group aspect-square rounded-lg overflow-hidden border border-surface-variant bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A tranquil, perfectly composed photograph of a first-class airplane cabin seat with a large window showing a clear blue sky. The seat features premium corporate styling with subtle blue accents and expansive whitespace, communicating efficiency, comfort, and professional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYrCLu2IBGXclXBoXvdQMqPfVgbbHcPLK4sZxWT-zhkFVBD-8nDCEgNts-SqYu26oGdmJhJQlHBz0E1GOTkjFPBa0Kkgwp54E8Jae2ybR0POxpXhiDIPkAN-IW5WDJmAyejpXEtPKMbh5DkChzPy0fXHMDZvEi7v3trCIvOJIXDBThBjSN982J5gKa4cezwt5ih0a1CqXsvW-LXGbY4C5GGa_LfTTx-9v9LylB1J1eM3YLWOrg8mkp"/>
+<div class="absolute inset-0 bg-on-surface/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-2">
+<div class="flex justify-end gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/20 hover:bg-surface-container-lowest/40 text-surface-container-lowest flex items-center justify-center backdrop-blur-sm transition-colors" title="Set as Cover">
+<span class="material-symbols-outlined text-sm">star</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/20 hover:bg-error text-surface-container-lowest flex items-center justify-center backdrop-blur-sm transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest/20 backdrop-blur-sm rounded px-2 py-1">
+<p class="font-label-sm text-label-sm text-surface-container-lowest truncate text-[10px]">flight-premium.jpg</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</body></html>

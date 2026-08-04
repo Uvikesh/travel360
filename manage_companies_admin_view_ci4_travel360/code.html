@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manage Companies - Admin Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#b4c5ff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#89f5e7",
+                        "surface-container": "#eaedff",
+                        "tertiary": "#006058",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-tertiary-fixed": "#00201d",
+                        "on-background": "#131b2e",
+                        "background": "#faf8ff",
+                        "surface-container-high": "#e2e7ff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dae2fd",
+                        "surface-tint": "#0053db",
+                        "surface-dim": "#d2d9f4",
+                        "on-tertiary-container": "#b3fff3",
+                        "on-secondary-fixed-variant": "#783200",
+                        "outline": "#737686",
+                        "surface-bright": "#faf8ff",
+                        "surface": "#faf8ff",
+                        "surface-container-highest": "#dae2fd",
+                        "inverse-surface": "#283044",
+                        "on-secondary-container": "#5c2400",
+                        "tertiary-container": "#007b71",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#005049",
+                        "on-secondary-fixed": "#341100",
+                        "on-primary-container": "#eeefff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-surface-variant": "#434655",
+                        "secondary-fixed": "#ffdbca",
+                        "on-error": "#ffffff",
+                        "on-surface": "#131b2e",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00174b",
+                        "tertiary-fixed-dim": "#6bd8cb",
+                        "secondary": "#9d4300",
+                        "primary-fixed": "#dbe1ff",
+                        "secondary-container": "#fd761a",
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c3c6d7",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b4c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin": "32px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-on-background border-r border-outline-variant flex flex-col p-base space-y-base z-40">
+<div class="px-gutter py-margin mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed truncate">Admin Center</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Manage Platform</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2 px-2 overflow-y-auto">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold cursor-pointer active:scale-98 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label-md text-label-md">Travel Agents</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="font-label-md text-label-md">Categories</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-md text-label-md">Locations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-label-md">Enquiries</span>
+</a>
+</nav>
+<div class="mt-auto p-4 border-t border-outline-variant">
+<button class="w-full py-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span> Export Report
+            </button>
+<div class="mt-4 flex items-center gap-3">
+<img alt="Horizon Guide Admin" class="w-8 h-8 rounded-full object-cover border border-outline-variant" data-alt="Admin user avatar, professional headshot in a modern studio setting, soft lighting, vibrant high-contrast style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB94g_lLA3iOA_kA66M0uxe9-O44VlCrsthSVthyThHvWXLGclvRYmK3-f77XnjtngBmS2re1rzeUJlrmBZWDzUWEg3Td6c-IaL0FeM7PRLICIXtCshAmO7wO7t4m9ybWUQx_bcNqWEbouq0ntWmaO9THAy6siLLrhCbK4Jf4OOiqFFCRO2nofogcr2x6Ob7YWSXZC4wRHpJts7xihz0vXLNIxtdxXIEjAFplpJrH2x5X7YsxVn71NG"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Admin User</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 flex flex-col h-screen overflow-hidden bg-background">
+<!-- TopNavBar (Simplified for Admin context) -->
+<header class="w-full h-16 sticky top-0 z-30 bg-surface dark:bg-on-background border-b border-outline-variant flex justify-between items-center px-gutter shrink-0">
+<div class="flex-1 max-w-xl">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary font-body-md text-body-md text-on-surface placeholder-on-surface-variant transition-all" placeholder="Search companies..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-gutter">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors scale-95 active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors scale-95 active:opacity-80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="flex-1 overflow-y-auto p-margin">
+<div class="max-w-container-max mx-auto">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<div>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-2">Manage Companies</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">View, edit, and manage registered travel agencies and operators.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg shadow-sm hover:shadow-md hover:bg-primary-container transition-all flex items-center gap-2 w-fit">
+<span class="material-symbols-outlined">add</span>
+                        Add New Company
+                    </button>
+</div>
+<!-- Filters & Controls -->
+<div class="bg-surface rounded-xl p-4 mb-6 shadow-sm border border-surface-variant flex flex-wrap gap-4 items-center justify-between">
+<div class="flex gap-2">
+<select class="bg-surface-container-low border-none rounded-lg font-body-md text-body-md text-on-surface py-2 pl-3 pr-8 focus:ring-2 focus:ring-primary cursor-pointer">
+<option value="">All Statuses</option>
+<option value="approved">Approved</option>
+<option value="pending">Pending</option>
+<option value="rejected">Rejected</option>
+</select>
+<select class="bg-surface-container-low border-none rounded-lg font-body-md text-body-md text-on-surface py-2 pl-3 pr-8 focus:ring-2 focus:ring-primary cursor-pointer">
+<option value="">Sort By</option>
+<option value="name_asc">Name (A-Z)</option>
+<option value="date_desc">Newest First</option>
+</select>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                        Showing <!--?php echo count($companies); ?--> companies
+                    </div>
+</div>
+<!-- Data Table (Bento Style Card) -->
+<div class="bg-surface rounded-xl shadow-sm border border-surface-variant overflow-hidden relative">
+<!-- Glassmorphism subtle effect for header -->
+<div class="absolute top-0 left-0 right-0 h-14 bg-surface/80 backdrop-blur-md border-b border-surface-variant z-10 pointer-events-none"></div>
+<div class="overflow-x-auto relative z-20">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider bg-transparent">
+<th class="px-6 py-4 font-semibold border-b border-surface-variant">Company Info</th>
+<th class="px-6 py-4 font-semibold border-b border-surface-variant">Contact</th>
+<th class="px-6 py-4 font-semibold border-b border-surface-variant">Location</th>
+<th class="px-6 py-4 font-semibold border-b border-surface-variant">Status</th>
+<th class="px-6 py-4 font-semibold border-b border-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant font-body-md text-body-md bg-surface">
+<!--?php if (!empty($companies) && is_array($companies)): ?-->
+<!--?php foreach ($companies as $company): ?-->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0 border border-outline-variant/30 flex items-center justify-center">
+<!--?php if(!empty($company['logo'])): ?-->
+<!-- Placeholder mapping to CI4 data -->
+<img class="w-full h-full object-cover" data-alt="A stylized logo for a travel agency, minimalist corporate design, blue and white colors, crisp vector style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDar84t0qbEKgaQWA18-hDRoovRm1ZzHgU86TAtm66-ukuW31u3XEkJgl8l8uBfmk9B3V0JpaBuPWm79_H-iXpTM08QAHSnPs_AVycdcDBxzrXZW14P8hxWws84_1MJjDOtXPcJXgXpNqgsWL77zlZGgarWpOoGTz7S670phVsGBwrqjbL2_vDToxqt3ZGVkkAsg0v0BUFQMHTshGgL-URPS3Fc_fdFUTfh-SRBjUAbhG7H3qdSRjT0"/>
+<!--?php else: ?-->
+<span class="material-symbols-outlined text-outline">domain</span>
+<!--?php endif; ?-->
+</div>
+<div>
+<div class="font-semibold text-on-surface"><!--?php echo esc($company['name']); ?--></div>
+<div class="text-sm text-on-surface-variant">ID: #<!--?php echo esc($company['id']); ?--> • Joined <!--?php echo date('M Y', strtotime($company['created_at'])); ?--></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="text-on-surface"><!--?php echo esc($company['email']); ?--></div>
+<div class="text-sm text-on-surface-variant"><!--?php echo esc($company['phone']); ?--></div>
+</td>
+<td class="px-6 py-4">
+<div class="text-on-surface"><!--?php echo esc($company['city']); ?--></div>
+<div class="text-sm text-on-surface-variant"><!--?php echo esc($company['country']); ?--></div>
+</td>
+<td class="px-6 py-4">
+<!--?php 
+                                                $statusClass = 'bg-surface-variant text-on-surface-variant'; // default
+                                                $statusIcon = 'help';
+                                                switch(strtolower($company['status'])) {
+                                                    case 'approved':
+                                                        $statusClass = 'bg-tertiary-container/10 text-tertiary';
+                                                        $statusIcon = 'check_circle';
+                                                        break;
+                                                    case 'pending':
+                                                        $statusClass = 'bg-secondary-container/10 text-secondary';
+                                                        $statusIcon = 'schedule';
+                                                        break;
+                                                    case 'rejected':
+                                                        $statusClass = 'bg-error-container/10 text-error';
+                                                        $statusIcon = 'cancel';
+                                                        break;
+                                                }
+                                            ?-->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm &lt;?php echo $statusClass; ?&gt;">
+<span class="material-symbols-outlined text-[14px]"><!--?php echo $statusIcon; ?--></span>
+<!--?php echo ucfirst(esc($company['status'])); ?-->
+</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-variant hover:text-primary transition-colors" title="Change Status">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+<a class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-variant hover:text-primary transition-colors" href="/admin/companies/edit/&lt;?php echo $company['id']; ?&gt;" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</a>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-error-container hover:text-error transition-colors" onclick="return confirm('Are you sure you want to delete this company?')" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!--?php endforeach; ?-->
+<!--?php else: ?-->
+<!-- Empty State -->
+<tr>
+<td class="px-6 py-16 text-center" colspan="5">
+<div class="flex flex-col items-center justify-center text-on-surface-variant max-w-md mx-auto">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[32px]">domain_disabled</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">No companies found</h3>
+<p class="font-body-md text-body-md mb-6">There are currently no companies listed in the system or matching your filters.</p>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded-lg shadow-sm hover:shadow-md hover:bg-primary-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                                                    Add New Company
+                                                </button>
+</div>
+</td>
+</tr>
+<!--?php endif; ?-->
+</tbody>
+</table>
+</div>
+</div>
+<!-- Pagination (Mockup) -->
+<!--?php if (!empty($companies)): ?-->
+<div class="flex items-center justify-between mt-6">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Showing 1 to 10 of 45 entries</p>
+<div class="flex gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-low disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-sm text-label-sm">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-low font-label-sm text-label-sm">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-low font-label-sm text-label-sm">3</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!--?php endif; ?-->
+</div>
+<!-- Footer Spacer -->
+<div class="h-24"></div>
+</div>
+</main>
+</body></html>

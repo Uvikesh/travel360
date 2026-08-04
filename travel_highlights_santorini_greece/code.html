@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel360 - Destination Highlights</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "primary": "#003f87",
+                        "outline-variant": "#c2c6d4",
+                        "surface-bright": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-background": "#191c1d",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d7e2ff",
+                        "on-tertiary-fixed": "#001f25",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#115cb9",
+                        "on-tertiary-container": "#6ddff7",
+                        "on-secondary-container": "#007327",
+                        "on-primary-container": "#bbd0ff",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-fixed-dim": "#66df75",
+                        "tertiary-container": "#006270",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed": "#001a40",
+                        "surface": "#f8f9fa",
+                        "primary-container": "#0056b3",
+                        "surface-container": "#edeeef",
+                        "tertiary-fixed": "#a4eeff",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "background": "#f8f9fa",
+                        "secondary": "#006e25",
+                        "on-secondary-fixed": "#002106",
+                        "on-primary-fixed-variant": "#004491",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed-variant": "#004e5a",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#80f98b",
+                        "outline": "#727784",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-fixed": "#83fc8e",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed-dim": "#62d6ed",
+                        "surface-dim": "#d9dadb",
+                        "inverse-primary": "#acc7ff",
+                        "tertiary": "#004954",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface-variant": "#424752",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#acc7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "max-width": "1280px",
+                        "base": "4px",
+                        "xs": "8px",
+                        "margin-desktop": "64px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md text-body-md antialiased">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-inverse-primary">
+                Travel360
+            </div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Explore</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300 ease-in-out font-label-md text-label-md" href="#">Agents</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all duration-300 ease-in-out font-label-md text-label-md" href="#">Destinations</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-sm py-xs rounded-lg hover:bg-primary-container transition-colors shadow-sm hidden md:block">
+                Sign Up
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[614px] min-h-[400px] w-full flex items-end pb-lg">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full z-0" data-alt="A breathtaking, high-resolution wide shot of Santorini, Greece during golden hour. The iconic white-washed buildings with blue domes cascade down the rugged caldera cliffside. The Aegean sea below is a deep, sparkling sapphire. Warm golden sunlight bathes the scene, creating a sense of luxury, tranquility, and aspirational travel. Professional photography style, highly detailed." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUhDrBpffDb9LFtEkV6vKO-hCKT0463BDNbAKejnVePR6vTJ-NteIbCXxhC4pSNeAFaVBP8gyDBB-55ZGV51pedR3PqSbOCPCYLUxoTNzXSSJlPTkSGVtymAr8VDqDJ97wzGnBsFPUkJN0ZUOsDI9owABycnLBSeJRyh-U5Epy_HrDXEadnpEl2lvU6N1VdC8_vEwW8AFDeKNYx9Vwd5mvpIng37t7eGLgOr6KcNNRDNz5wm90jjc6')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10"></div>
+<div class="relative z-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto w-full">
+<div class="flex flex-col gap-xs text-white max-w-2xl">
+<span class="font-label-md text-label-md uppercase tracking-wider text-inverse-primary">Greece</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg">Santorini</h1>
+<p class="font-body-lg text-body-lg text-surface opacity-90 mt-xs">
+                        Discover the breathtaking caldera views, iconic white architecture, and world-class sunsets of this Aegean jewel.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Overview Content -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<div class="lg:col-span-8 flex flex-col gap-lg">
+<div class="prose max-w-none text-on-surface-variant font-body-md text-body-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-md">Overview</h2>
+<p class="mb-sm">
+                            Santorini is arguably the most famous of the Greek islands, instantly recognizable by its whitewashed, cubiform houses clinging to cliffs above an underwater caldera. Beyond its photogenic appeal, it offers a rich blend of history, unique volcanic wine, and distinct beaches with red, black, and white sand.
+                        </p>
+<p>
+                            Whether you're wandering the narrow alleys of Oia at sunset, taking a boat tour to the volcanic crater, or enjoying fresh seafood at a traditional taverna in Ammoudi Bay, Santorini provides a premium, unforgettable Mediterranean escape.
+                        </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md bg-surface-container-lowest p-md rounded-xl border border-surface-variant shadow-sm">
+<div class="flex flex-col items-center text-center gap-xs">
+<span class="material-symbols-outlined text-primary text-3xl">partly_cloudy_day</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Best Time</span>
+<span class="font-label-md text-label-md text-on-surface">May - Oct</span>
+</div>
+<div class="flex flex-col items-center text-center gap-xs">
+<span class="material-symbols-outlined text-primary text-3xl">thermostat</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Temp</span>
+<span class="font-label-md text-label-md text-on-surface">26°C / 79°F</span>
+</div>
+<div class="flex flex-col items-center text-center gap-xs">
+<span class="material-symbols-outlined text-primary text-3xl">language</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Language</span>
+<span class="font-label-md text-label-md text-on-surface">Greek</span>
+</div>
+<div class="flex flex-col items-center text-center gap-xs">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Currency</span>
+<span class="font-label-md text-label-md text-on-surface">Euro (€)</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4">
+<div class="bg-primary text-on-primary p-lg rounded-xl shadow-lg sticky top-32">
+<h3 class="font-headline-sm text-headline-sm mb-sm">Ready to explore Santorini?</h3>
+<p class="font-body-md text-body-md opacity-90 mb-lg">Connect with a specialized travel agent to craft your perfect Greek getaway.</p>
+<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-colors flex justify-center items-center gap-xs shadow-sm">
+<span class="material-symbols-outlined text-sm">mail</span>
+                            Contact an Expert
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-lg bg-surface-container-lowest dark:bg-surface-container-high bg-surface-container-low dark:bg-surface-container-highest flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-max-width mx-auto gap-md">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+                Travel360
+            </div>
+<div class="flex flex-wrap gap-md justify-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary dark:hover:text-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary dark:hover:text-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary dark:hover:text-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Help Center</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary dark:hover:text-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant">
+                © 2024 Travel360. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

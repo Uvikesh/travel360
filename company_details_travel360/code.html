@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>travel360 - Company Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed-dim": "#6bd8cb",
+                "inverse-primary": "#b4c5ff",
+                "on-secondary-fixed-variant": "#783200",
+                "on-error": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "outline": "#737686",
+                "surface": "#faf8ff",
+                "on-background": "#131b2e",
+                "surface-tint": "#0053db",
+                "on-surface-variant": "#434655",
+                "surface-variant": "#dae2fd",
+                "on-tertiary-container": "#b3fff3",
+                "tertiary-container": "#007b71",
+                "secondary-container": "#fd761a",
+                "tertiary-fixed": "#89f5e7",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed-dim": "#b4c5ff",
+                "background": "#faf8ff",
+                "on-primary-container": "#eeefff",
+                "on-tertiary-fixed": "#00201d",
+                "on-secondary-container": "#5c2400",
+                "on-secondary-fixed": "#341100",
+                "on-primary-fixed-variant": "#003ea8",
+                "primary-fixed": "#dbe1ff",
+                "primary-container": "#2563eb",
+                "tertiary": "#006058",
+                "outline-variant": "#c3c6d7",
+                "on-error-container": "#93000a",
+                "surface-dim": "#d2d9f4",
+                "inverse-surface": "#283044",
+                "secondary": "#9d4300",
+                "on-tertiary-fixed-variant": "#005049",
+                "on-primary": "#ffffff",
+                "error": "#ba1a1a",
+                "surface-container-low": "#f2f3ff",
+                "on-secondary": "#ffffff",
+                "on-surface": "#131b2e",
+                "surface-container-highest": "#dae2fd",
+                "secondary-fixed": "#ffdbca",
+                "surface-container": "#eaedff",
+                "surface-container-high": "#e2e7ff",
+                "on-primary-fixed": "#00174b",
+                "inverse-on-surface": "#eef0ff",
+                "secondary-fixed-dim": "#ffb690",
+                "primary": "#004ac6",
+                "error-container": "#ffdad6",
+                "surface-bright": "#faf8ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "margin": "32px",
+                "container-max": "1280px",
+                "base": "8px",
+                "lg": "48px",
+                "max-width": "1280px",
+                "xs": "8px",
+                "margin-mobile": "16px",
+                "xl": "80px",
+                "margin-desktop": "64px",
+                "sm": "16px",
+                "md": "24px"
+        },
+        "fontFamily": {
+                "label-sm": [
+                        "Manrope"
+                ],
+                "body-lg": [
+                        "Manrope"
+                ],
+                "display-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Manrope"
+                ],
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "display-lg-mobile": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-sm": ["Plus Jakarta Sans"],
+                "label-md": ["Manrope"]
+        },
+        "fontSize": {
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto shadow-sm bg-surface dark:bg-inverse-surface">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+            travel360
+        </div>
+<div class="hidden md:flex gap-md items-center">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 text-label-md font-label-md" href="#">Browse Companies</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-label-md font-label-md" href="#">About</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-label-md font-label-md" href="#">Contact</a>
+</div>
+<div class="flex gap-sm items-center">
+<button class="text-label-md font-label-md text-primary dark:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hidden md:block">Login</button>
+<button class="bg-primary text-on-primary px-sm py-xs rounded text-label-md font-label-md scale-95 hover:scale-100 duration-150 ease-in-out transition-transform">Register</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+<!-- Company Header -->
+<header class="flex flex-col md:flex-row items-start md:items-center gap-md mb-lg">
+<img alt="Company Profile" class="w-24 h-24 rounded-full object-cover shadow-sm" data-alt="A professional headshot of a travel agent in a light, airy office setting, smiling warmly. High quality corporate photography style with soft natural lighting and a slightly blurred background featuring subtle travel elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDigRaehPqdrBsqHtG62vVnjkDfqftRRGa0U1ISTa9p75BaC80TZ3VueqqF4jayaQyDNfXrH_TVxyoueetL6in5prtzd-v8K2ONj4cK6Aw4hzcPJ5rPnjQnHE4vNvdac0VMbEm1C-Bqm33aA2BlMW4VoEI0l-h7vZU2sN-LQpwuA0RP11cVnRmVtvZ8S55pWa-GQlGDPmbpKxT63liYS8RQRsQegqM8YP0Qgy3SfYtGBeyK6fjrHbao"/>
+<div>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary mb-xs">Elena Rossi Travels</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Luxury European Tours &amp; Custom Itineraries</p>
+<div class="flex items-center gap-base mt-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">4.9 (120 reviews)</span>
+</div>
+</div>
+</header>
+<!-- Bento Layout Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Content Canvas -->
+<div class="md:col-span-8 flex flex-col gap-lg">
+<!-- Gallery Section -->
+<section>
+<h2 class="text-headline-sm font-headline-sm text-primary mb-sm">Featured Destinations</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-sm">
+<img alt="Amalfi Coast" class="rounded-lg object-cover h-40 w-full shadow-sm hover:shadow-md transition-shadow" data-alt="A breathtaking view of the Amalfi coast in Italy on a sunny day. Vivid blue waters, colorful cliffside houses, shot in a bright, aspirational travel photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS76SFvdLypfrtPNwjuul0CEz-D2FzNifzX9VPEfNDXg33DQm27fyl3C2-5ljHZapgBnwfPXKlQlAbtXMOax59eDX6I5XfVuA_eC64FBn51sQL0-4p4-GVRgVG4XnpLpKBmJG4pq9lu1Y6RKp5MG42vaFgB5-Xys2x1hbgtAkbK_yoIFfvKlpzKMEslID8pENAC3wPqQy-oRx0-J8z8OyTdSuqtH0Ahy22ns28vf1MTbmmw1vP0iAt"/>
+<img alt="Swiss Alps" class="rounded-lg object-cover h-40 w-full shadow-sm hover:shadow-md transition-shadow" data-alt="A stunning shot of the Swiss Alps in summer. Lush green valleys, snow-capped peaks in the background, clear blue sky. Bright, clean, professional travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhmzv71Ot1USaVsLISk3GppWkJdWY7151ChiUeZnf0J35t1LdyxkcwzQEJbNRVupsuEsbP9xInvQxzj4-Bys_C123x3nS8oNyRPyJyfwlqrTalLnN-XReQFOm-YxIedKUsL2J_2x-qkHJe2_xvQQzlfiEI3-JhLVEt9BuhlzK_mkBg9qpA10yMGHBBJGvLdd8vgbz9mk8veeI5XlNVyEfkeIQZGx0k3qm1imLys5xL4nKHV2HlC16g"/>
+<img alt="Paris" class="rounded-lg object-cover h-40 w-full shadow-sm hover:shadow-md transition-shadow hidden md:block" data-alt="A romantic evening scene in Paris featuring the Eiffel Tower sparkling. Soft sunset lighting, elegant atmosphere, professional high-end travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-OHwB_TccYl_4RPeZwXqC7f9wCf7434ko2SxSzSnxzcisBE4y_nEORw8smDAnAt68hpn0aBpLDkM9zFlGyAwwsWEV3yeKVkQ-pFJ1oYkGw1G26_EwHVYkuUN4PUi6k5TDHczKx69ORyE6ajwE6zomoADGMzPawF_Z08yXZHMLcpSVyU6RHsvvvf9iEWGyYd5MrvHyzlFuIA7_Y1hC3IXHLQsp4rTTnok_5JvbPk_kf7vROlOImQOJ"/>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container-lowest p-md rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high">
+<h2 class="text-headline-sm font-headline-sm text-primary mb-sm">About Elena Rossi Travels</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-sm">
+                        With over 15 years of experience curating bespoke travel experiences across Europe, we specialize in turning your dream vacations into reality. Our approach is deeply personal; we believe every journey should be as unique as the traveler. From private wine tastings in Tuscany to exclusive access to historical sites in Rome, we handle every detail so you can focus on creating memories.
+                    </p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-sm py-base rounded-full">Luxury</span>
+<span class="bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-sm py-base rounded-full">Europe</span>
+<span class="bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-sm py-base rounded-full">Culinary</span>
+<span class="bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-sm py-base rounded-full">Couples</span>
+</div>
+</section>
+<!-- Services Section -->
+<section>
+<h2 class="text-headline-sm font-headline-sm text-primary mb-sm">Expertise &amp; Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex gap-sm items-start">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-xs rounded-full">flight_takeoff</span>
+<div>
+<h3 class="text-label-md font-label-md text-on-background">Custom Itineraries</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Tailor-made day-by-day plans crafted to your specific interests and pace.</p>
+</div>
+</div>
+<div class="flex gap-sm items-start">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-xs rounded-full">hotel</span>
+<div>
+<h3 class="text-label-md font-label-md text-on-background">Premium Accommodations</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Exclusive partnerships with boutique hotels and luxury resorts worldwide.</p>
+</div>
+</div>
+<div class="flex gap-sm items-start">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-xs rounded-full">directions_car</span>
+<div>
+<h3 class="text-label-md font-label-md text-on-background">Private Transfers</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Seamless ground transportation with professional, vetted drivers.</p>
+</div>
+</div>
+<div class="flex gap-sm items-start">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-xs rounded-full">restaurant</span>
+<div>
+<h3 class="text-label-md font-label-md text-on-background">Culinary Experiences</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Reservations at highly sought-after restaurants and private cooking classes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="bg-surface-container-lowest p-md rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high mt-lg">
+<h2 class="text-headline-sm font-headline-sm text-primary mb-sm">Send an Inquiry</h2>
+<form class="flex flex-col gap-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<div class="flex flex-col gap-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Name</label>
+<input class="border border-outline-variant rounded p-xs text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Your name" type="text"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Email</label>
+<input class="border border-outline-variant rounded p-xs text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="your@email.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Message</label>
+<textarea class="border border-outline-variant rounded p-xs text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Tell us about your travel plans..." rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary rounded px-md py-xs text-label-md font-label-md self-start hover:bg-on-primary-fixed-variant transition-colors mt-xs" type="button">Send Message</button>
+</form>
+</section>
+</div>
+<!-- Right Column: Sidebar (Contact Card & Map) -->
+<div class="md:col-span-4 flex flex-col gap-md">
+<!-- Contact Card -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0px_10px_30px_rgba(0,0,0,0.1)] border border-surface-container-high sticky top-24">
+<h3 class="text-headline-sm font-headline-sm text-primary mb-md">Contact Information</h3>
+<div class="flex flex-col gap-sm mb-md">
+<div class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-outline">location_on</span>
+<span class="text-body-md font-body-md text-on-surface-variant">123 Via Roma<br/>Milan, Italy 20121</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline">call</span>
+<span class="text-body-md font-body-md text-on-surface-variant">+39 02 1234 5678</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline">mail</span>
+<a class="text-body-md font-body-md text-primary hover:underline" href="#">contact@travel360.com</a>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline">language</span>
+<a class="text-body-md font-body-md text-primary hover:underline" href="#">www.elenarossitravel.com</a>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<button class="w-full bg-secondary text-white rounded px-md py-sm text-label-md font-label-md hover:bg-opacity-90 transition-opacity flex justify-center items-center gap-xs shadow-sm">
+<span class="material-symbols-outlined">forum</span> Chat on WhatsApp
+                        </button>
+<button class="w-full bg-transparent border border-primary text-primary rounded px-md py-sm text-label-md font-label-md hover:bg-primary-fixed hover:bg-opacity-20 transition-colors flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined">event</span> Book Consultation
+                        </button>
+</div>
+</div>
+<!-- Google Map Placeholder -->
+<div class="rounded-xl overflow-hidden h-64 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high">
+<img alt="Map of Milan" class="w-full h-full object-cover" data-alt="A clean, modern stylized map showing the city center of Milan, Italy. Light mode styling with subtle blue accents indicating key travel points. Professional corporate aesthetic." data-location="Milan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD_jMBdEA4SKZPZRPvZkLZtGugfLnOcnUjNgDa3u7FKdV1BOa4nr_-mqV_JZbYsP-QB7DMSQTn4g1XuBuTiPZtUZV9uFzdfmMgwYJwIyYBGw_A-FrQUubHbcNWpkuHnxZmBPoqANWUNUtjd-BJVtPCoZ86bgylayJWfPW3iYhxzcWVilMiEvqtSC8gD4DJzDDiK85_fDOcr2NoclP7RWQGeidSeAagjurdk9PHStu17mFsEQuAhk20"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-xl px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-max-width mx-auto bg-surface-container-lowest dark:bg-inverse-surface border-t border-surface-container-high mt-xl">
+<div class="col-span-1 md:col-span-4 mb-md">
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed-dim">travel360</span>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-md items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 text-label-sm font-label-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 text-label-sm font-label-sm" href="#">FAQ</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 text-label-sm font-label-sm" href="#">Careers</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 text-label-sm font-label-sm" href="#">Support</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-md">
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant">© 2024 travel360 Directory. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
