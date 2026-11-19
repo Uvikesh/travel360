@@ -39,9 +39,40 @@ def outline_and_shadow(img, stroke=10, shadow=18, stroke_color=(255, 255, 255, 2
     return out
 
 
+def _remove_white_bg(im, tol=28):
+    """Cut out an object shot on a plain white/light background (flood fill from the borders)."""
+    from scipy.ndimage import label as cc_label, binary_dilation
+    rgb = np.asarray(im.convert("RGB"), np.int16)
+    light = (np.abs(rgb - 255).max(axis=2) <= tol)
+    lab, _ = cc_label(light)
+    border = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) - {0}
+    bg = np.isin(lab, list(border))
+    if bg.mean() < 0.08:          # not really a white-background image -> keep as is
+        return None
+    alpha = (~bg).astype(np.uint8) * 255
+    a = Image.fromarray(alpha).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
+    out = im.convert("RGBA")
+    out.putalpha(a)
+    return out
+
+
+def _round_badge(im):
+    w, h = im.size
+    s = min(w, h)
+    im = im.convert("RGB").crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
+    m = Image.new("L", (s * 2, s * 2), 0)
+    ImageDraw.Draw(m).ellipse((0, 0, s * 2 - 1, s * 2 - 1), fill=255)
+    im.putalpha(m.resize((s, s), Image.LANCZOS))
+    return im
+
+
 def load_sticker(path, height):
-    """User-supplied art (AI portrait / food photo with transparent background)."""
+    """User-supplied art: transparent PNG used as is; white-background AI images are cut out
+    automatically; any other photo becomes a round badge."""
     im = Image.open(path).convert("RGBA")
+    if im.getchannel("A").getextrema()[0] == 255:   # fully opaque
+        cut = _remove_white_bg(im)
+        im = cut if cut is not None else _round_badge(im)
     bbox = im.getchannel("A").getbbox()
     if bbox:
         im = im.crop(bbox)

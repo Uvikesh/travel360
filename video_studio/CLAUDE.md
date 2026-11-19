@@ -25,6 +25,14 @@ The owner uploads these Shorts to earn from Shorts ad revenue. Every decision mu
 7. Voice/script language: Hinglish (Devanagari), conversational, energetic. Not robotic, not a plain list:
    every ~10 s needs a surprise fact, a question or a twist.
 
+## Always use a Hindi font (owner's standing rule)
+- **All on-screen text is written in Hindi (Devanagari script) and set in the Hindi font**
+  `assets/fonts/NotoSansDevanagari-*.ttf`. That covers name tags, titles, thumbnail text, CTA pills and the watermark.
+  Write English words in Devanagari (स्टेट, डिश, जी आई टैग), and write numbers as digits inside Hindi text.
+- Do not use Latin/Poppins text on screen (Poppins exists only as a technical fallback).
+- **Talk to the owner in Hindi written in Devanagari** in chat (not Roman Hinglish). Technical names such as
+  files, commands and code may stay in English.
+
 ## Practical
 - Render: `python3 -m engine.render episodes/<ep>.json [--preview|--stills 1,5]` (from `video_studio/`).
 - edge-tts goes through `HTTPS_PROXY` automatically. The free endpoint is flaky, so retries are built in.
