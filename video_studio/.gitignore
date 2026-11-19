@@ -6,3 +6,4 @@ output/**/*_preview.mp4
 __pycache__/
 output/commons/
 output/voice_samples/*.wav
+output/commons2/

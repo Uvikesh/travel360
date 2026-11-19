@@ -107,6 +107,39 @@ def _split(x, ref_durs):
     return [x[edges[k]: edges[k + 1]] for k in range(n)]
 
 
+def _strip_spoken_prefix_checked(x, cache_path):
+    """Ask gemini-2.5-flash whether the take starts with a spoken (English) instruction, and where the Hindi
+    script starts. Cut only if it really was spoken. The answer is cached next to the take."""
+    meta = cache_path.replace(".npy", "_prefix.json")
+    if not os.path.exists(meta):
+        mp3 = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
+                              "-b:a", "48k", "-f", "mp3", "-"], input=x[: 25 * SR].astype(np.float32).tobytes(),
+                             capture_output=True, check=True).stdout
+        body = {"contents": [{"parts": [
+            {"inlineData": {"mimeType": "audio/mp3", "data": base64.b64encode(mp3).decode()}},
+            {"text": "Does this audio START with someone reading an instruction/stage direction (usually English, "
+                     "e.g. 'Read this in Hindi like...') before the actual Hindi content? Answer only JSON: "
+                     '{"instruction_spoken": true|false, "hindi_start_sec": <seconds where the Hindi content starts>}'}]}],
+            "generationConfig": {"responseMimeType": "application/json"}}
+        req = urllib.request.Request(
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+            data=json.dumps(body).encode(), headers={"x-goog-api-key": _key(), "Content-Type": "application/json"})
+        d = json.load(urllib.request.urlopen(req, timeout=300))
+        ans = json.loads(d["candidates"][0]["content"]["parts"][0]["text"])
+        json.dump(ans, open(meta, "w"))
+    ans = json.load(open(meta))
+    print("  spoken-instruction check:", ans)
+    if not ans.get("instruction_spoken"):
+        return x
+    # cut in the pause closest to the reported Hindi start
+    runs, first, last = _silences(x[: 30 * SR])
+    target = float(ans.get("hindi_start_sec", 0)) * SR
+    if not runs:
+        return x[int(max(0, target - 0.1 * SR)):]
+    a, b = min(runs, key=lambda r: abs((r[0] + r[1]) / 2 - target) - 0.3 * (r[1] - r[0]))
+    return x[(a + b) // 2:]
+
+
 def _strip_spoken_style(x, window=16.0, min_pause=0.35, min_lead=2.0):
     """Gemini sometimes reads the style instruction aloud before the script. It ends with the longest pause
     in the first `window` seconds -> drop everything before that pause (only if it is clearly long)."""
@@ -164,7 +197,7 @@ def narrate(ep):
         np.save(raw, _request(script, voice, model))
     x = np.load(raw)
     if tts.get("strip_spoken_style", True):
-        x = _strip_spoken_style(x)
+        x = _strip_spoken_prefix_checked(x, raw)
     # reference timing from the edge-tts voice (cached, free) -> where each line should end + word positions
     from . import tts as edge
     take_refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in take_texts]
