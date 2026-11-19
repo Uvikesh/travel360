@@ -1,0 +1,179 @@
+{
+ "title": "<विषय>",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "<लाइन 1>",
+   "<लाइन 2 (पीली)>",
+   "<सवाल?>"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 118,
+  "pill": "<छोटा सवाल>"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "model": "gemini-3.8-flash-tts",
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber talking to friends. Fast, punchy, smiling voice, with a short pause between paragraphs:",
+  "per_segment": false
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "महाराष्ट्र का वड़ा पाव तो सबने खाया है, पर छत्तीसगढ़ की अंगाकर रोटी खाई है कभी?",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mh"
+      ]
+     },
+     "transition": "cut",
+     "show": {
+      "state": "mh",
+      "label": "वड़ा पाव",
+      "sticker": "mh.png",
+      "emoji": "🍔",
+      "prompt": "Mumbai vada pav: a spiced potato fritter in a soft bun with green and red chutney and a fried green chilli"
+     }
+    },
+    {
+     "at": "छत्तीसगढ़",
+     "camera": {
+      "fit": [
+       "ct"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ct",
+      "label": "अंगाकर रोटी",
+      "sticker": "ct.png",
+      "emoji": "🥠",
+      "prompt": "Chhattisgarhi fara: steamed rice-flour dumplings tempered with mustard seeds and curry leaves in a brass plate"
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो देखते हैं भारत के हर स्टेट का सुपरहिट खाना, और गिनते जाना आपने कितने खाए हैं!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं ऊपर से। कश्मीर का रोगन जोश, हिमाचल का सिड्डू, और पंजाब का सरसों का साग।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jk",
+       "hp",
+       "pb"
+      ],
+      "pad": 1.25
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कश्मीर",
+     "show": {
+      "state": "jk",
+      "label": "रोगन जोश",
+      "sticker": "jk.png",
+      "emoji": "🍖",
+      "scale": 0.72,
+      "prompt": "Kashmiri rogan josh: a deep red mutton curry in a copper bowl, garnished with fried onions"
+     }
+    },
+    {
+     "at": "हिमाचल",
+     "show": {
+      "state": "hp",
+      "label": "सिड्डू",
+      "sticker": "hp.png",
+      "emoji": "🥖",
+      "scale": 0.62,
+      "prompt": "Himachali siddu: steamed wheat buns stuffed with walnut and poppy seed, served with ghee and green chutney"
+     }
+    },
+    {
+     "at": "पंजाब",
+     "show": {
+      "state": "pb",
+      "label": "सरसों का साग",
+      "sticker": "pb.png",
+      "emoji": "🥬",
+      "scale": 0.62,
+      "dx": -6,
+      "prompt": "Sarson ka saag with makki di roti and a dollop of white butter, with jaggery on the side"
+     }
+    }
+   ]
+  },
+  {
+   "text": "तो तीस में से आपका स्कोर कितना है? कमेंट में लिखो, और अपने स्टेट की कोई डिश छूट गई हो तो वो भी बताना!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}

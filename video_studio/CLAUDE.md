@@ -7,6 +7,35 @@ Free tier = 10 TTS requests/day, so make one request per episode (whole script).
 GEMINI_API_KEY / GEMINI_KEY_FILE and is never committed. Gemini may read the style instruction aloud. That part
 is stripped automatically, but always verify by transcribing the narration (gemini-2.5-flash) before the final render.
 
+
+## ▶ When the owner says "एक वीडियो दो" (or "ek video do") — do the WHOLE job without asking
+The owner wants a finished, upload-ready Short with **zero corrections needed**. Work end-to-end, then deliver.
+
+1. **Research the topic (WebSearch, extended mode).** Look for what Indian YouTube Shorts audiences watch now:
+   map-based "every state / every country" lists, GK/history/food/travel/culture, festivals coming up in the next
+   2–3 weeks, viral comparisons. Pick ONE topic that (a) works on the India/world map format, (b) is not in
+   `PUBLISHED.md`, (c) is advertiser-friendly, and (d) has photos available under a free licence. Note why it should get views.
+2. **Script** (Hinglish in Devanagari, 75–100 s): a hook in 2 s with 2 famous examples and a question → a promise → a
+   fast list covering **every** state (group small/NE states in a montage) with a surprise fact every ~10 s →
+   score/opinion CTA → end-card line. Fact-check every claim with sources. If unsure, drop it.
+3. **Images:** real photos from Wikimedia Commons (`engine/commons.py`, standard 500px thumbs, ≥4 s between
+   requests). Look at EVERY candidate and pick the one that really shows that exact item. If none exists,
+   **change the script to an item that has a correct photo** (never show a wrong image). Keep `credits.txt`.
+4. **Episode JSON:** copy `episodes/_template.json`, fill segments/beats/labels (Hindi), and keep the end card.
+5. **Voice:** Gemini TTS **Hali**, ONE request for the whole script (`"per_segment": false`). Then
+   **transcribe the narration with gemini-2.5-flash** and check that (a) there are no spoken instructions or extra
+   words and (b) every line starts where its scene starts. Fix and re-check until it is perfect.
+6. **QC before delivering (mandatory):** render `--stills` at every scene and LOOK at them: correct image under
+   each label, nothing hidden or cut off, Hindi text shaped correctly, logo visible, end card complete. Check the
+   video length (≤ 3 min) and that the audio is about −14 LUFS.
+7. **Deliver:** send the final MP4 and thumbnail, plus `youtube.txt` (title, description with credits, hashtags,
+   tags and the AI-disclosure note). Add the topic to `PUBLISHED.md`, then commit and push.
+   Keep the chat short, in Hindi Devanagari.
+
+Keys needed: `GEMINI_API_KEY` (environment variable or GEMINI_KEY_FILE). If it is missing, ask the owner to add it
+in the environment settings (never paste keys into the repo). Hosts needed: commons.wikimedia.org,
+upload.wikimedia.org, generativelanguage.googleapis.com.
+
 ## Goal: every video goes to YouTube Shorts FOR MONETIZATION (YouTube Partner Program)
 The owner uploads these Shorts to earn from Shorts ad revenue. Every decision must keep the video monetizable:
 
