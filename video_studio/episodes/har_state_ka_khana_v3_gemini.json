@@ -3,7 +3,7 @@
  "voice": "hi-IN-MadhurNeural",
  "rate": "+22%",
  "gap": 0.04,
- "watermark": "ट्रैवल 360",
+ "watermark": null,
  "music": "synth",
  "music_gain_db": -21,
  "sticker_height": 470,
@@ -622,5 +622,7 @@
   "model": "gemini-3.8-flash-tts",
   "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber talking to friends. Fast, punchy, smiling voice, with a short pause between paragraphs:",
   "per_segment": false
- }
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150
 }

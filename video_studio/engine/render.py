@@ -198,6 +198,14 @@ def _init_globals(ep, W, H, fps):
     G["shade"] = (np.asarray(mapart.plaster(H, W), np.float32) / 128.0)[..., None]
     G["clouds"] = graphics.clouds(W, H)
     G["wm"] = graphics.watermark(ep.get("watermark", ""), size=int(34 * W / 1080)) if ep.get("watermark") else None
+    G["logo"] = None
+    if ep.get("logo"):
+        lg = Image.open(os.path.join(ROOT, ep["logo"])).convert("RGBA")
+        G["logo_src"] = lg
+        sz = int(ep.get("logo_size", 150) * W / 1080)
+        lg = lg.resize((sz, sz), Image.LANCZOS)
+        lg.putalpha(lg.getchannel("A").point(lambda v: int(v * 0.95)))
+        G["logo"] = lg
     G["W"], G["H"] = W, H
 
 
@@ -314,6 +322,16 @@ def render_frame(i):
 
     if G["wm"] is not None:
         frame.alpha_composite(G["wm"], (int(W * 0.025), int(H * 0.018)))
+    if G["logo"] is not None:
+        frame.alpha_composite(G["logo"], (int(W * 0.03), int(H * 0.02)))
+        # big logo pops in over the final collage (end card)
+        t_end = tl.duration - 2.2
+        if t >= t_end:
+            p = ease_out_back((t - t_end) / 0.5)
+            sz = int(W * 0.34 * p)
+            if sz > 4:
+                big = G["logo_src"].resize((sz, sz), Image.LANCZOS)
+                _paste(frame, big, (W - sz) // 2, int(H * 0.80) - sz // 2)
     return frame.convert("RGB").tobytes()
 
 
@@ -362,6 +380,9 @@ def thumbnail(ep, out):
         frame.alpha_composite(p, ((W - p.width) // 2, H - 210))
     if G["wm"] is not None:
         frame.alpha_composite(G["wm"], (26, 34))
+    if G.get("logo") is not None:
+        lg = G["logo_src"].resize((230, 230), Image.LANCZOS)
+        frame.alpha_composite(lg, (W - 250, H - 560))
     frame.convert("RGB").save(out, quality=92)
 
 

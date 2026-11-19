@@ -107,6 +107,19 @@ def _split(x, ref_durs):
     return [x[edges[k]: edges[k + 1]] for k in range(n)]
 
 
+def _strip_spoken_style(x, window=16.0):
+    """Gemini sometimes reads the style instruction aloud before the script. It ends with the longest pause
+    in the first `window` seconds -> drop everything before that pause (only if it is clearly long)."""
+    runs, first, last = _silences(x[: int(window * SR)])
+    runs = [r for r in runs if r[0] > first + 2 * SR]
+    if not runs:
+        return x
+    a, b = max(runs, key=lambda r: r[1] - r[0])
+    if (b - a) / SR < 0.35:
+        return x
+    return x[(a + b) // 2:]
+
+
 def _trim(x, thr_ratio=0.02):
     env = np.abs(x)
     idx = np.where(env > env.max() * thr_ratio)[0]
@@ -147,6 +160,8 @@ def narrate(ep):
         print(f"  Gemini TTS ({model}, {voice}) ...")
         np.save(raw, _request(script, voice, model))
     x = np.load(raw)
+    if tts.get("strip_spoken_style", True):
+        x = _strip_spoken_style(x)
     # reference timing from the edge-tts voice (cached, free) -> where each line should end + word positions
     from . import tts as edge
     refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in texts]

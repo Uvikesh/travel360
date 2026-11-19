@@ -1,5 +1,12 @@
 # video_studio — standing instructions (read every session)
 
+**Channel / brand: The StorySpark** ("हर कहानी में छिपी है एक चिंगारी…"). Logo: `assets/brand/storyspark_logo.png`.
+Put it on every video (top-left corner + a big logo on the end card) and on every thumbnail. Do not use a text watermark.
+Preferred voice: Google AI Studio (Gemini TTS) **Hali**, via `"tts": {"engine": "gemini", "voice": "Hali"}`.
+Free tier = 10 TTS requests/day, so make one request per episode (whole script). The API key comes from
+GEMINI_API_KEY / GEMINI_KEY_FILE and is never committed. Gemini may read the style instruction aloud. That part
+is stripped automatically, but always verify by transcribing the narration (gemini-2.5-flash) before the final render.
+
 ## Goal: every video goes to YouTube Shorts FOR MONETIZATION (YouTube Partner Program)
 The owner uploads these Shorts to earn from Shorts ad revenue. Every decision must keep the video monetizable:
 
