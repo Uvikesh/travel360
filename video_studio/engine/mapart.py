@@ -13,7 +13,7 @@ from scipy.ndimage import gaussian_filter
 
 from . import geo
 
-WX0, WY0, WX1, WY1 = -200.0, -300.0, 820.0, 1000.0
+WX0, WY0, WX1, WY1 = -260.0, -560.0, 880.0, 1060.0
 K = 8
 CACHE = os.path.join(os.path.dirname(__file__), "..", "output", "map_cache")
 
@@ -44,7 +44,7 @@ def plaster(h, w, seed=7, strength=0.32):
 
 def build(force=False):
     os.makedirs(CACHE, exist_ok=True)
-    marker = os.path.join(CACHE, f"built_K{K}_v2.ok")
+    marker = os.path.join(CACHE, f"built_K{K}_v3.ok")
     if os.path.exists(marker) and not force:
         return
     W = int((WX1 - WX0) * K)

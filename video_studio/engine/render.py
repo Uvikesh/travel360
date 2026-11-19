@@ -326,8 +326,8 @@ def _paste(dst, src, x, y):
 def thumbnail(ep, out):
     W, H = 1080, 1920
     tl, mp_ = G["tl"], G["map"]
-    cx, cy, z = fit_camera({"fit": "india", "pad": 1.25}, W, H)
-    cy -= 40
+    cx, cy, z = fit_camera({"fit": "india", "pad": 1.12}, W, H)
+    cy -= 0.12 * H / z  # push the map down so the title sits above it
     items = [it for it in tl.items if not it.get("collage")]
     frame, masks = mp_.view(cx, cy, z, W, H, [it["state"] for it in items])
     frame = frame.convert("RGBA")
@@ -341,7 +341,7 @@ def thumbnail(ep, out):
         if it["img"] is None:
             continue
         sx, sy = W / 2 + (it["pos"][0] - cx) * z, H / 2 + (it["pos"][1] - cy) * z
-        im = it["img"].resize((int(it["img"].width * 0.42), int(it["img"].height * 0.42)), Image.LANCZOS)
+        im = it["img"].resize((int(it["img"].width * 0.3), int(it["img"].height * 0.3)), Image.LANCZOS)
         _paste(frame, im, int(sx - im.width / 2), int(sy - im.height / 2))
     th = ep.get("thumbnail", {})
     y = 90
@@ -352,7 +352,7 @@ def thumbnail(ep, out):
         y += im.height - 10
     if th.get("pill"):
         p = graphics.label_pill(th["pill"], size=60)
-        frame.alpha_composite(p, ((W - p.width) // 2, H - 330))
+        frame.alpha_composite(p, ((W - p.width) // 2, H - 210))
     if G["wm"] is not None:
         frame.alpha_composite(G["wm"], (26, 34))
     frame.convert("RGB").save(out, quality=92)
