@@ -80,7 +80,7 @@ def candidates(query, key, limit=8):
     return res
 
 
-def pick(key, n, crop=None):
+def pick(key, n, crop=None, out_name=None):
     """Make a round photo sticker from candidate n. crop = (cx, cy, size) as fractions of the image."""
     from PIL import Image, ImageDraw
     d = os.path.join(ROOT, "output", "commons", key)
@@ -95,11 +95,12 @@ def pick(key, n, crop=None):
     mask = Image.new("L", (720 * 4, 720 * 4), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, 720 * 4 - 1, 720 * 4 - 1), fill=255)
     im.putalpha(mask.resize((720, 720), Image.LANCZOS))
-    out = os.path.join(ROOT, "assets", "stickers", f"{key}.png")
+    out_name = out_name or f"{key}.png"
+    out = os.path.join(ROOT, "assets", "stickers", out_name)
     im.save(out)
     cred_path = os.path.join(ROOT, "assets", "stickers", "credits.json")
     creds = json.load(open(cred_path)) if os.path.exists(cred_path) else {}
-    creds[f"{key}.png"] = {k: meta[k] for k in ("title", "page", "license", "artist")}
+    creds[out_name] = {k: meta[k] for k in ("title", "page", "license", "artist")}
     json.dump(creds, open(cred_path, "w"), ensure_ascii=False, indent=1)
     return out
 

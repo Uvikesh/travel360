@@ -190,8 +190,8 @@
       "label": "कुरुक्षेत्र",
       "sticker": "winter_hr.png",
       "scale": 0.58,
-      "dx": -30,
-      "dy": -10
+      "dx": -48,
+      "dy": -30
      }
     },
     {
@@ -201,8 +201,8 @@
       "label": "कुतुब मीनार",
       "sticker": "winter_dl.png",
       "scale": 0.58,
-      "dx": 10,
-      "dy": 40
+      "dx": 26,
+      "dy": 52
      }
     },
     {
@@ -461,7 +461,8 @@
       "label": "लिविंग रूट ब्रिज",
       "sticker": "winter_ml.png",
       "scale": 0.85,
-      "dy": -20
+      "dy": -34,
+      "dx": 0
      }
     },
     {
@@ -519,8 +520,8 @@
       "state": "nl",
       "label": "हॉर्नबिल फ़ेस्टिवल",
       "sticker": "winter_nl.png",
-      "dx": -20,
-      "dy": -14
+      "dx": -26,
+      "dy": -30
      }
     }
    ]

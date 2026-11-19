@@ -3,3 +3,4 @@
 | # | Date | Topic | Episode file | Final video |
 |---|------|-------|--------------|-------------|
 | 1 | 2026-11-19 | भारत के हर राज्य का सुपरहिट खाना (30 states + Delhi/J&K) | `episodes/har_state_ka_khana_v3_gemini.json` | `output/har_state_ka_khana_v3_gemini/har_state_ka_khana_v3_gemini.mp4` |
+| 2 | 2026-11-19 | सर्दियों में घूमने के लिए हर राज्य की बेस्ट जगह (30 places) | `episodes/ep02_sardiyon_me_ghoomne_ki_jagah.json` | `output/ep02_sardiyon_me_ghoomne_ki_jagah/ep02_sardiyon_me_ghoomne_ki_jagah.mp4` |
