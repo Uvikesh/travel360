@@ -41,7 +41,8 @@
       "state": "mh",
       "label": "वड़ा पाव",
       "sticker": "mh.png",
-      "emoji": "🍔"
+      "emoji": "🍔",
+      "prompt": "Mumbai vada pav: a spiced potato fritter in a soft bun with green and red chutney and a fried green chilli"
      }
     },
     {
@@ -56,7 +57,8 @@
       "state": "ct",
       "label": "फरा",
       "sticker": "ct.png",
-      "emoji": "🥠"
+      "emoji": "🥠",
+      "prompt": "Chhattisgarhi fara: steamed rice-flour dumplings tempered with mustard seeds and curry leaves in a brass plate"
      }
     }
    ]
@@ -94,7 +96,8 @@
       "label": "रोगन जोश",
       "sticker": "jk.png",
       "emoji": "🍖",
-      "scale": 0.72
+      "scale": 0.72,
+      "prompt": "Kashmiri rogan josh: a deep red mutton curry in a copper bowl, garnished with fried onions"
      }
     },
     {
@@ -104,7 +107,8 @@
       "label": "सिड्डू",
       "sticker": "hp.png",
       "emoji": "🥖",
-      "scale": 0.62
+      "scale": 0.62,
+      "prompt": "Himachali siddu: steamed wheat buns stuffed with walnut and poppy seed, served with ghee and green chutney"
      }
     },
     {
@@ -115,7 +119,8 @@
       "sticker": "pb.png",
       "emoji": "🥬",
       "scale": 0.62,
-      "dx": -6
+      "dx": -6,
+      "prompt": "Sarson ka saag with makki di roti and a dollop of white butter, with jaggery on the side"
      }
     }
    ]
@@ -143,7 +148,8 @@
       "emoji": "🥣",
       "scale": 0.6,
       "dx": -34,
-      "dy": -10
+      "dy": -10,
+      "prompt": "Haryanvi bajra khichdi in a clay bowl with ghee on top"
      }
     },
     {
@@ -153,7 +159,8 @@
       "label": "बाल मिठाई",
       "sticker": "ut.png",
       "emoji": "🍫",
-      "scale": 0.6
+      "scale": 0.6,
+      "prompt": "Almora bal mithai: brown fudge cubes coated with white sugar balls"
      }
     },
     {
@@ -165,7 +172,8 @@
       "emoji": "🫓",
       "scale": 0.6,
       "dy": 44,
-      "dx": 14
+      "dx": 14,
+      "prompt": "Chole bhature: two puffed fried breads with spicy chickpea curry, onion and pickle"
      }
     }
    ]
@@ -184,7 +192,8 @@
       "state": "up",
       "label": "लखनवी कबाब",
       "sticker": "up.png",
-      "emoji": "🍢"
+      "emoji": "🍢",
+      "prompt": "Lucknowi galouti kebabs on a plate with sliced onion, lemon and mint chutney"
      }
     },
     {
@@ -199,7 +208,8 @@
       "state": "rj",
       "label": "दाल बाटी चूरमा",
       "sticker": "rj.png",
-      "emoji": "🥘"
+      "emoji": "🥘",
+      "prompt": "Dal baati churma: baked wheat balls dipped in ghee, yellow dal and sweet churma in a thali"
      }
     }
    ]
@@ -218,7 +228,8 @@
       "state": "gj",
       "label": "ढोकला",
       "sticker": "gj.png",
-      "emoji": "🥮"
+      "emoji": "🥮",
+      "prompt": "Khaman dhokla: spongy yellow squares topped with mustard seeds, green chillies and coriander"
      }
     },
     {
@@ -233,7 +244,8 @@
       "state": "mp",
       "label": "पोहा जलेबी",
       "sticker": "mp.png",
-      "emoji": "🍥"
+      "emoji": "🍥",
+      "prompt": "Indori poha with sev and pomegranate, next to orange jalebi"
      }
     }
    ]
@@ -258,7 +270,8 @@
       "label": "लिट्टी चोखा",
       "sticker": "br.png",
       "emoji": "🧆",
-      "scale": 0.75
+      "scale": 0.75,
+      "prompt": "Litti chokha: roasted wheat balls with mashed brinjal-potato chokha and ghee"
      }
     },
     {
@@ -268,7 +281,8 @@
       "label": "धुस्का",
       "sticker": "jh.png",
       "emoji": "🍩",
-      "scale": 0.75
+      "scale": 0.75,
+      "prompt": "Jharkhand dhuska: deep-fried rice-lentil fritters with aloo curry"
      }
     }
    ]
@@ -293,7 +307,8 @@
       "label": "बांग्लार रसगुल्ला",
       "sticker": "wb.png",
       "emoji": "🍡",
-      "scale": 0.7
+      "scale": 0.7,
+      "prompt": "Bengali rasgulla: white spongy cheese balls in sugar syrup in a clay pot (matir handi)"
      }
     },
     {
@@ -303,7 +318,8 @@
       "label": "ओडिशा रसगोला",
       "sticker": "or.png",
       "emoji": "🍡",
-      "scale": 0.7
+      "scale": 0.7,
+      "prompt": "Odisha rasagola: light creamy-brown soft cheese balls in syrup in a steel bowl"
      }
     }
    ]
@@ -336,7 +352,8 @@
       "emoji": "🥟",
       "scale": 0.85,
       "dx": -4,
-      "dy": -24
+      "dy": -24,
+      "prompt": "Sikkimese momos: steamed dumplings in a bamboo steamer with red tomato chutney"
      },
      "camera": {
       "fit": [
@@ -354,7 +371,8 @@
       "label": "मसोर टेंगा",
       "sticker": "as.png",
       "emoji": "🍲",
-      "scale": 0.85
+      "scale": 0.85,
+      "prompt": "Assamese masor tenga: a light tangy fish curry with tomatoes in a bronze bowl"
      },
      "camera": {
       "fit": [
@@ -372,7 +390,8 @@
       "label": "थुकपा",
       "sticker": "ar.png",
       "emoji": "🍜",
-      "scale": 0.85
+      "scale": 0.85,
+      "prompt": "Thukpa: a noodle soup with vegetables in a deep bowl, with steam rising"
      },
      "camera": {
       "fit": [
@@ -397,7 +416,8 @@
       "emoji": "🍚",
       "scale": 0.85,
       "dx": 0,
-      "dy": -20
+      "dy": -20,
+      "prompt": "Meghalaya jadoh: turmeric rice cooked with meat, in a bowl, Khasi style"
      },
      "camera": {
       "fit": [
@@ -417,7 +437,8 @@
       "emoji": "🐟",
       "scale": 0.85,
       "dx": -24,
-      "dy": -10
+      "dy": -10,
+      "prompt": "Tripura mui borok: a traditional fermented-fish dish with bamboo shoot and herbs"
      },
      "camera": {
       "fit": [
@@ -437,7 +458,8 @@
       "emoji": "🥗",
       "scale": 0.85,
       "dx": -22,
-      "dy": -6
+      "dy": -6,
+      "prompt": "Mizo bai: a light vegetable and bamboo shoot stew in a bowl"
      },
      "camera": {
       "fit": [
@@ -457,7 +479,8 @@
       "emoji": "🍮",
       "scale": 0.85,
       "dx": -22,
-      "dy": -14
+      "dy": -14,
+      "prompt": "Manipuri chak-hao kheer: purple black-rice pudding in a bowl"
      },
      "camera": {
       "fit": [
@@ -487,7 +510,8 @@
       "sticker": "nl.png",
       "emoji": "🌶️",
       "dx": -20,
-      "dy": -14
+      "dy": -14,
+      "prompt": "Naga king chilli (raja mirchi): a pile of fiery red wrinkled chillies on a wooden plate"
      }
     }
    ]
@@ -512,7 +536,8 @@
       "label": "हैदराबादी बिरयानी",
       "sticker": "tg.png",
       "emoji": "🍛",
-      "scale": 0.7
+      "scale": 0.7,
+      "prompt": "Hyderabadi dum biryani in a handi with boiled egg, mint and fried onions"
      }
     },
     {
@@ -523,7 +548,8 @@
       "sticker": "ap.png",
       "emoji": "🌿",
       "scale": 0.7,
-      "dy": 30
+      "dy": 30,
+      "prompt": "Andhra gongura pachadi: dark green sorrel-leaf chutney in a small bowl with red chillies and rice"
      }
     }
    ]
@@ -542,7 +568,8 @@
       "state": "ka",
       "label": "मैसूर पाक",
       "sticker": "ka.png",
-      "emoji": "🍪"
+      "emoji": "🍪",
+      "prompt": "Mysore pak: golden porous gram-flour fudge pieces on a plate"
      }
     }
    ]
@@ -563,7 +590,8 @@
       "state": "ga",
       "label": "फिश करी राइस",
       "sticker": "ga.png",
-      "emoji": "🦐"
+      "emoji": "🦐",
+      "prompt": "Goan fish curry rice: an orange coconut fish curry with rice and fried fish"
      }
     },
     {
@@ -578,7 +606,8 @@
       "state": "kl",
       "label": "ओणम सद्या",
       "sticker": "kl.png",
-      "emoji": "🍌"
+      "emoji": "🍌",
+      "prompt": "Kerala onam sadya: many small dishes and rice served on a banana leaf"
      }
     }
    ]
@@ -597,7 +626,8 @@
       "state": "tn",
       "label": "इडली सांभर",
       "sticker": "tn.png",
-      "emoji": "☕"
+      "emoji": "☕",
+      "prompt": "Idli sambar: soft white idlis with sambar and coconut chutney, and filter coffee in a dabara"
      }
     }
    ]

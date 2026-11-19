@@ -37,10 +37,10 @@ def _strip(html):
     return re.sub(r"<[^>]+>", "", html or "").strip()
 
 
-def search(query, limit=8, width=960):
+def search(query, limit=8, width=500):
     q = {"action": "query", "format": "json", "generator": "search", "gsrsearch": f"filetype:bitmap {query}",
          "gsrnamespace": 6, "gsrlimit": limit, "prop": "imageinfo",
-         "iiprop": "url|extmetadata|size|mime"}
+         "iiprop": "url|extmetadata|size|mime", "iiurlwidth": width}
     d = json.loads(_get(API + "?" + urllib.parse.urlencode(q)))
     out = []
     for p in sorted(d.get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 0)):
@@ -51,9 +51,7 @@ def search(query, limit=8, width=960):
             continue
         if ii.get("width", 0) < 500:
             continue
-        if ii.get("size", 0) > 12_000_000:
-            continue
-        out.append({"title": p["title"], "thumb": ii["url"], "page": ii["descriptionurl"], "license": lic,
+        out.append({"title": p["title"], "thumb": ii.get("thumburl", ii["url"]), "page": ii["descriptionurl"], "license": lic,
                     "artist": _strip(m.get("Artist", {}).get("value", ""))[:120] or "unknown"})
     return out
 
@@ -75,7 +73,7 @@ def candidates(query, key, limit=8):
             im = Image.open(io.BytesIO(data)).convert("RGB")
             im.thumbnail((1000, 1000))
             im.save(path, quality=92)
-            time.sleep(2.0)
+            time.sleep(4.0)
         r["file"] = path
     res = [r for r in res if r.get("file") and os.path.exists(r["file"]) and os.path.getsize(r["file"]) > 0]
     json.dump(res, open(os.path.join(d, "meta.json"), "w"), ensure_ascii=False, indent=1)
