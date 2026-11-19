@@ -399,7 +399,8 @@ def main():
         music = audio.music_bed(tl.duration)
     elif m:
         music = audio.read_wav(os.path.join(ROOT, m))
-    wav = audio.mix(tl.duration, clips, sfx, music, ep.get("music_gain_db", -20), os.path.join(outdir, "mix.wav"))
+    wav = audio.mix(tl.duration, clips, sfx, music, ep.get("music_gain_db", -20), os.path.join(outdir, "mix.wav"),
+                    ep.get("voice_fx", audio.VOICE_FX))
 
     print("[3/4] frames")
     n = int(tl.duration * fps)

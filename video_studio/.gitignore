@@ -4,3 +4,5 @@ output/**/mix.wav
 output/**/still_*.png
 output/**/*_preview.mp4
 __pycache__/
+output/commons/
+output/voice_samples/*.wav

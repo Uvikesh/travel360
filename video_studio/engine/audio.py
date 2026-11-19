@@ -12,6 +12,24 @@ def read_wav(path):
     return np.frombuffer(raw, np.float32).copy()
 
 
+# Makes TTS sound more like a real mic recording: low-cut, warmth, presence, gentle compression,
+# a very short room reflection and a touch of saturation. Pass "voice_fx": null in the episode to disable.
+VOICE_FX = ("highpass=f=70,lowpass=f=15000,"
+            "equalizer=f=180:t=q:w=1.0:g=2.5,equalizer=f=3200:t=q:w=1.2:g=3,equalizer=f=7500:t=q:w=2:g=-2,"
+            "acompressor=threshold=-20dB:ratio=3.5:attack=4:release=90:makeup=3,"
+            "aecho=0.9:0.6:18|31:0.10|0.06,asoftclip=type=tanh:threshold=0.9")
+
+
+def process_voice(x, fx=VOICE_FX):
+    if not fx:
+        return x
+    out = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
+                          "-af", fx, "-f", "f32le", "-ar", str(SR), "-ac", "1", "-"],
+                         input=x.astype(np.float32).tobytes(), capture_output=True, check=True).stdout
+    y = np.frombuffer(out, np.float32).copy()
+    return y[: len(x)] if len(y) >= len(x) else np.pad(y, (0, len(x) - len(y)))
+
+
 def whoosh(dur=0.7, seed=0):
     rng = np.random.default_rng(seed)
     n = int(dur * SR)
@@ -75,13 +93,14 @@ def music_bed(duration, bpm=100, seed=1):
     return out * fade
 
 
-def mix(duration, voice_clips, sfx, music=None, music_gain_db=-20, out_path="mix.wav"):
+def mix(duration, voice_clips, sfx, music=None, music_gain_db=-20, out_path="mix.wav", voice_fx=VOICE_FX):
     """voice_clips: [(t, samples)], sfx: [(t, samples)], music: samples or None. Voice ducks the music."""
     n = int(duration * SR) + SR
     voice = np.zeros(n, np.float32)
     for t, x in voice_clips:
         s = int(t * SR)
         voice[s:s + len(x)] += x[: n - s]
+    voice = process_voice(voice, voice_fx)
     fx = np.zeros(n, np.float32)
     for t, x in sfx:
         s = max(0, int(t * SR))
