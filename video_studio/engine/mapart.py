@@ -44,7 +44,7 @@ def plaster(h, w, seed=7, strength=0.32):
 
 def build(force=False):
     os.makedirs(CACHE, exist_ok=True)
-    marker = os.path.join(CACHE, f"built_K{K}_v3.ok")
+    marker = os.path.join(CACHE, f"built_K{K}_v4_osm36.ok")
     if os.path.exists(marker) and not force:
         return
     W = int((WX1 - WX0) * K)

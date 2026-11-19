@@ -28,8 +28,43 @@ def _path_to_rings(path, step=0.6):
     return rings
 
 
+GEOJSON36 = os.path.join(ASSETS, "india36_osm.geojson")   # 28 states + 8 UTs, GoI depiction, (c) OSM contributors
+ID_FIX = {"od": "or"}   # keep the ids older episodes use
+
+
 @lru_cache(maxsize=1)
 def india_states():
+    """{state_id: {"name": str, "rings": [[(x,y),...], ...]}} in SVG space.
+    Uses the 36-region OSM-derived map (Ladakh separate, official J&K/Ladakh depiction) when present."""
+    if os.path.exists(GEOJSON36):
+        return _states_from_geojson()
+    return _states_from_svg()
+
+
+@lru_cache(maxsize=1)
+def _states_from_geojson(min_area=0.02):
+    fc = json.load(open(GEOJSON36))
+    out = {}
+    for f in fc["features"]:
+        sid = f["properties"]["code"].split("-")[1].lower()
+        sid = ID_FIX.get(sid, sid)
+        g = f["geometry"]
+        polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+        rings = []
+        for poly in polys:
+            r = [project(lon, lat) for lon, lat in poly[0]]
+            if abs(_area(r)) >= min_area or sid in ("ld", "an", "py", "dh", "ch", "dl", "ga"):
+                rings.append(r)
+        out[sid] = {"name": f["properties"]["name"], "rings": rings}
+    # the OSM Lakshadweep feature is the maritime area, not the islands -> use the island outlines instead
+    old = _states_from_svg()
+    if "ld" in old:
+        out["ld"] = old["ld"]
+    return out
+
+
+@lru_cache(maxsize=1)
+def _states_from_svg():
     """{state_id: {"name": str, "rings": [[(x,y),...], ...]}}"""
     svg = SVG.parse(os.path.join(ASSETS, "india_states.svg"))
     raw = open(os.path.join(ASSETS, "india_states.svg"), encoding="utf-8").read()
@@ -87,7 +122,7 @@ PROJ = None
 
 def fit_projection():
     """Fit a Mercator projection (uniform scale) that maps Natural Earth India onto the SVG."""
-    st = india_states()
+    st = _states_from_svg()
     xs = [p[0] for s in st.values() for r in s["rings"] for p in r]
     ys = [p[1] for s in st.values() for r in s["rings"] for p in r]
     topo = json.load(open(os.path.join(ASSETS, "countries-50m.json")))

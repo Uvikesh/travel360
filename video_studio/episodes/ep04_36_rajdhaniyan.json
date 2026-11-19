@@ -1,0 +1,734 @@
+{
+ "title": "भारत के सभी 36 राज्यों और केंद्र शासित प्रदेशों की राजधानी",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "36 राज्य/UT",
+   "36 राजधानियाँ",
+   "कितनी पता हैं?"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 118,
+  "pill": "एक शहर = 3 की राजधानी!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts",
+   "gemini-3.8-flash-lite-tts",
+   "gemini-3.1-flash-tts-preview"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber sharing GK facts with friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "भारत में अट्ठाईस राज्य और आठ केंद्र शासित प्रदेश हैं, यानी छत्तीस राजधानियाँ! पर क्या आप जानते हैं, एक शहर तीन-तीन की राजधानी है?",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    },
+    {
+     "at": "शहर",
+     "camera": {
+      "fit": [
+       "ch",
+       "pb",
+       "hr"
+      ],
+      "pad": 1.6
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ch",
+      "label": "चंडीगढ़",
+      "sticker": "capital_ch.png",
+      "scale": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो देखते हैं सबकी राजधानी, और गिनते जाना आपको कितनी पता हैं!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं ऊपर से। जम्मू-कश्मीर की दो राजधानियाँ हैं, गर्मियों में श्रीनगर, और सर्दियों में जम्मू। और लद्दाख की राजधानी लेह।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jk",
+       "la"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "जम्मू",
+     "show": {
+      "state": "jk",
+      "label": "श्रीनगर / जम्मू",
+      "sticker": "capital_jk.png",
+      "scale": 0.72,
+      "dx": -10
+     }
+    },
+    {
+     "at": "लद्दाख",
+     "show": {
+      "state": "la",
+      "label": "लेह",
+      "sticker": "capital_la.png",
+      "scale": 0.72,
+      "dx": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "हिमाचल की राजधानी शिमला, और सर्दियों में धर्मशाला। उत्तराखंड की देहरादून, और गर्मियों में गैरसैंण।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "hp",
+       "ut"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "हिमाचल",
+     "show": {
+      "state": "hp",
+      "label": "शिमला / धर्मशाला",
+      "sticker": "capital_hp.png",
+      "scale": 0.66,
+      "dx": -12,
+      "dy": -6
+     }
+    },
+    {
+     "at": "उत्तराखंड",
+     "show": {
+      "state": "ut",
+      "label": "देहरादून / गैरसैंण",
+      "sticker": "capital_ut.png",
+      "scale": 0.66,
+      "dx": 12,
+      "dy": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब वो शहर, चंडीगढ़! ये पंजाब और हरियाणा, दोनों की राजधानी है, और खुद एक केंद्र शासित प्रदेश भी।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "pb",
+       "hr",
+       "ch"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "पंजाब",
+     "show": {
+      "state": "pb",
+      "label": "चंडीगढ़",
+      "sticker": "capital_pb.png",
+      "scale": 0.62,
+      "dx": -14,
+      "dy": -10
+     }
+    },
+    {
+     "at": "हरियाणा",
+     "show": {
+      "state": "hr",
+      "label": "चंडीगढ़",
+      "sticker": "capital_hr.png",
+      "scale": 0.62,
+      "dx": -6,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "दिल्ली की नई दिल्ली, उत्तर प्रदेश की लखनऊ, और राजस्थान की जयपुर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "dl",
+       "up",
+       "rj"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "दिल्ली",
+     "show": {
+      "state": "dl",
+      "label": "नई दिल्ली",
+      "sticker": "capital_dl.png",
+      "scale": 0.6,
+      "dx": 0,
+      "dy": -34
+     }
+    },
+    {
+     "at": "उत्तर",
+     "show": {
+      "state": "up",
+      "label": "लखनऊ",
+      "sticker": "capital_up.png",
+      "scale": 0.66
+     }
+    },
+    {
+     "at": "राजस्थान",
+     "show": {
+      "state": "rj",
+      "label": "जयपुर",
+      "sticker": "capital_rj.png",
+      "scale": 0.66
+     }
+    }
+   ]
+  },
+  {
+   "text": "गुजरात की गांधीनगर, और दादरा नगर हवेली और दमन दीव की राजधानी, दमन।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "gj",
+       "dh"
+      ],
+      "pad": 1.25
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "गुजरात",
+     "show": {
+      "state": "gj",
+      "label": "गांधीनगर",
+      "sticker": "capital_gj.png",
+      "scale": 0.72,
+      "dx": -20,
+      "dy": -20
+     }
+    },
+    {
+     "at": "दादरा",
+     "show": {
+      "state": "dh",
+      "label": "दमन",
+      "sticker": "capital_dh.png",
+      "scale": 0.72,
+      "dx": 20,
+      "dy": 30
+     }
+    }
+   ]
+  },
+  {
+   "text": "मध्य प्रदेश की भोपाल, छत्तीसगढ़ की रायपुर, और महाराष्ट्र की मुंबई।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mp",
+       "ct",
+       "mh"
+      ],
+      "pad": 1.1
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "मध्य",
+     "show": {
+      "state": "mp",
+      "label": "भोपाल",
+      "sticker": "capital_mp.png",
+      "scale": 0.62
+     }
+    },
+    {
+     "at": "छत्तीसगढ़",
+     "show": {
+      "state": "ct",
+      "label": "रायपुर",
+      "sticker": "capital_ct.png",
+      "scale": 0.62
+     }
+    },
+    {
+     "at": "महाराष्ट्र",
+     "show": {
+      "state": "mh",
+      "label": "मुंबई",
+      "sticker": "capital_mh.png",
+      "scale": 0.62,
+      "dx": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "बिहार की पटना, झारखंड की रांची, बंगाल की कोलकाता, और ओडिशा की भुवनेश्वर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "br",
+       "jh",
+       "wb",
+       "or"
+      ],
+      "pad": 1.1
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "बिहार",
+     "show": {
+      "state": "br",
+      "label": "पटना",
+      "sticker": "capital_br.png",
+      "scale": 0.6
+     }
+    },
+    {
+     "at": "झारखंड",
+     "show": {
+      "state": "jh",
+      "label": "रांची",
+      "sticker": "capital_jh.png",
+      "scale": 0.6,
+      "dx": -6
+     }
+    },
+    {
+     "at": "बंगाल",
+     "show": {
+      "state": "wb",
+      "label": "कोलकाता",
+      "sticker": "capital_wb.png",
+      "scale": 0.58,
+      "dx": 10,
+      "dy": 20
+     }
+    },
+    {
+     "at": "ओडिशा",
+     "show": {
+      "state": "or",
+      "label": "भुवनेश्वर",
+      "sticker": "capital_or.png",
+      "scale": 0.6
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब नॉर्थ ईस्ट! सिक्किम की गंगटोक, असम की दिसपुर, अरुणाचल की ईटानगर, और नागालैंड की कोहिमा।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk",
+       "as",
+       "ar",
+       "nl",
+       "mn",
+       "ml",
+       "mz",
+       "tr"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "सिक्किम",
+     "camera": {
+      "fit": [
+       "sk"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "sk",
+      "label": "गंगटोक",
+      "sticker": "capital_sk.png",
+      "scale": 0.85,
+      "dx": -4,
+      "dy": -24
+     }
+    },
+    {
+     "at": "असम",
+     "camera": {
+      "fit": [
+       "as"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "as",
+      "label": "दिसपुर",
+      "sticker": "capital_as.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "अरुणाचल",
+     "camera": {
+      "fit": [
+       "ar"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "ईटानगर",
+      "sticker": "capital_ar.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "नागालैंड",
+     "camera": {
+      "fit": [
+       "nl"
+      ],
+      "pad": 1.8,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "nl",
+      "label": "कोहिमा",
+      "sticker": "capital_nl.png",
+      "scale": 0.85,
+      "dx": -26,
+      "dy": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "मणिपुर की इंफाल, मिज़ोरम की आइज़ोल, त्रिपुरा की अगरतला, और मेघालय की शिलांग।",
+   "beats": [
+    {
+     "at": "मणिपुर",
+     "camera": {
+      "fit": [
+       "mn"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mn",
+      "label": "इंफाल",
+      "sticker": "capital_mn.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -14
+     }
+    },
+    {
+     "at": "मिज़ोरम",
+     "camera": {
+      "fit": [
+       "mz"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mz",
+      "label": "आइज़ोल",
+      "sticker": "capital_mz.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -6
+     }
+    },
+    {
+     "at": "त्रिपुरा",
+     "camera": {
+      "fit": [
+       "tr"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tr",
+      "label": "अगरतला",
+      "sticker": "capital_tr.png",
+      "scale": 0.85,
+      "dx": -24,
+      "dy": -10
+     }
+    },
+    {
+     "at": "मेघालय",
+     "camera": {
+      "fit": [
+       "ml"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "शिलांग",
+      "sticker": "capital_ml.png",
+      "scale": 0.85,
+      "dy": -34
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब साउथ। तेलंगाना की हैदराबाद, और आंध्र प्रदेश की अमरावती।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "tg",
+       "ap"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "तेलंगाना",
+     "show": {
+      "state": "tg",
+      "label": "हैदराबाद",
+      "sticker": "capital_tg.png",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "आंध्र",
+     "show": {
+      "state": "ap",
+      "label": "अमरावती",
+      "sticker": "capital_ap.png",
+      "scale": 0.72,
+      "dy": 30
+     }
+    }
+   ]
+  },
+  {
+   "text": "कर्नाटक की बेंगलुरु, गोवा की पणजी, केरला की तिरुवनंतपुरम, तमिलनाडु की चेन्नई, और पुडुचेरी की पुडुचेरी।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ka",
+       "ga",
+       "kl",
+       "tn",
+       "py"
+      ],
+      "pad": 1.08
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कर्नाटक",
+     "show": {
+      "state": "ka",
+      "label": "बेंगलुरु",
+      "sticker": "capital_ka.png",
+      "scale": 0.56
+     }
+    },
+    {
+     "at": "गोवा",
+     "show": {
+      "state": "ga",
+      "label": "पणजी",
+      "sticker": "capital_ga.png",
+      "scale": 0.5,
+      "dx": -16
+     }
+    },
+    {
+     "at": "केरला",
+     "show": {
+      "state": "kl",
+      "label": "तिरुवनंतपुरम",
+      "sticker": "capital_kl.png",
+      "scale": 0.5,
+      "dx": -10
+     }
+    },
+    {
+     "at": "तमिलनाडु",
+     "show": {
+      "state": "tn",
+      "label": "चेन्नई",
+      "sticker": "capital_tn.png",
+      "scale": 0.56,
+      "dy": -10
+     }
+    },
+    {
+     "at": "पुडुचेरी",
+     "show": {
+      "state": "py",
+      "label": "पुडुचेरी",
+      "sticker": "capital_py.png",
+      "scale": 0.5,
+      "dx": 26,
+      "dy": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "और समंदर के बीच, लक्षद्वीप की कवरत्ती, और अंडमान निकोबार की राजधानी, जिसका नाम पोर्ट ब्लेयर से बदलकर अब श्री विजय पुरम हो गया है!",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ld"
+      ],
+      "pad": 3.0,
+      "max_zoom": 10
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ld",
+      "label": "कवरत्ती",
+      "sticker": "capital_ld.png",
+      "scale": 0.85,
+      "dx": 12
+     }
+    },
+    {
+     "at": "अंडमान",
+     "camera": {
+      "fit": [
+       "an"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "श्री विजय पुरम",
+      "sticker": "capital_an.png",
+      "scale": 0.85,
+      "dx": -20
+     }
+    }
+   ]
+  },
+  {
+   "text": "तो छत्तीस में से आपको कितनी पता थीं? कमेंट में अपना स्कोर लिखो, और ये वीडियो दोस्तों को भेजो!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}

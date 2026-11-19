@@ -44,7 +44,9 @@ def _request(text, voice, model):
             return np.frombuffer(base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"]),
                                  np.int16).astype(np.float32) / 32768
         except urllib.error.HTTPError as e:
-            msg = e.read()[:300].decode(errors="ignore")
+            msg = e.read()[:3000].decode(errors="ignore")
+            if e.code == 429 and "per day" in msg.lower():
+                raise SystemExit(f"Gemini TTS daily quota reached for {model}")
             if e.code in (429, 500, 503) and attempt < 5:
                 wait = 20 * (attempt + 1)
                 print(f"  gemini {e.code}, retry in {wait}s")
@@ -67,6 +69,19 @@ def _silences(x):
             start = None
     speech = np.where(~silent)[0]
     return runs, speech[0] * hop, speech[-1] * hop
+
+
+def _request_any(text, voice, models):
+    """Try the models in order (each has its own free daily quota)."""
+    last = None
+    for m in models:
+        print(f"  Gemini TTS ({m}, {voice}) ...")
+        try:
+            return _request(text, voice, m)
+        except SystemExit as e:
+            last = e
+            print("   ->", str(e)[:120])
+    raise SystemExit(f"all TTS models failed: {last}")
 
 
 def _split(x, ref_durs):
@@ -129,7 +144,13 @@ def _split_by_transcript(x, texts, cache_path):
         json.dump(json.loads(d["candidates"][0]["content"]["parts"][0]["text"]), open(meta, "w"), ensure_ascii=False)
     phrases = json.load(open(meta))["phrases"]
     dur = len(x) / SR
-    # Gemini sometimes switches to "m.sss" (1.083 = 1:08.3) after the first minute -> repair to seconds
+    # Gemini sometimes writes times as "m.sss" (0.057 = 0:05.7, 1.083 = 1:08.3), for the whole list or only
+    # after the first minute -> repair to seconds
+    if phrases and max(float(p["start"]) for p in phrases) < dur / 20:
+        for p in phrases:
+            v = float(p["start"])
+            m = int(v)
+            p["start"] = m * 60 + (v - m) * 100
     prev = 0.0
     for p in phrases:
         v = float(p["start"])
@@ -138,7 +159,12 @@ def _split_by_transcript(x, texts, cache_path):
             v = m * 60 + (v - m) * 100
         p["start"] = v
         prev = v
-    norm = lambda t: re.sub(r"[^\u0900-\u097F\w]", "", t.replace("ँ", "ं").replace("़", ""))
+    NUM = {"एक": "1", "दो": "2", "तीन": "3", "चार": "4", "पांच": "5", "पाँच": "5", "दस": "10", "बीस": "20",
+           "तीस": "30", "अट्ठाईस": "28", "छत्तीस": "36", "चौबीस": "24", "बारह": "12", "आठ": "8"}
+
+    def norm(t):
+        t = " ".join(NUM.get(w.strip("।,!?"), w) for w in t.split())
+        return re.sub(r"[^\u0900-\u097F\w]", "", t.replace("ँ", "ं").replace("़", ""))
     starts, k = [0.0], 0
     for t in texts[1:]:
         head = norm(" ".join(t.split()[:3]))
@@ -255,8 +281,7 @@ def narrate(ep):
     os.makedirs(CACHE, exist_ok=True)
     raw = os.path.join(CACHE, f"gemini_{key}.npy")
     if not os.path.exists(raw):
-        print(f"  Gemini TTS ({model}, {voice}) ...")
-        np.save(raw, _request(script, voice, model))
+        np.save(raw, _request_any(script, voice, tts.get("models") or [model]))
     x = np.load(raw)
     if tts.get("strip_spoken_style", True):
         x = _strip_spoken_prefix_checked(x, raw)
