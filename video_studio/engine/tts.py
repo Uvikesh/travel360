@@ -31,6 +31,12 @@ def synth(text, voice="hi-IN-MadhurNeural", rate="+18%", pitch="+0Hz"):
     mp3 = os.path.join(CACHE, key + ".mp3")
     wav = os.path.join(CACHE, key + ".wav")
     meta = os.path.join(CACHE, key + ".json")
+    if os.path.exists(meta):
+        m = json.load(open(meta))
+        ws = m.get("words") or []
+        if ws and m["duration"] < ws[-1]["t"] + ws[-1]["d"] * 0.5:   # truncated audio got cached -> redo
+            print("  broken TTS cache, regenerating:", text[:30])
+            os.remove(meta)
     if not os.path.exists(meta):
         for attempt in range(7):
             try:
