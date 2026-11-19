@@ -1,0 +1,6 @@
+output/map_cache/
+output/tts_cache/
+output/**/mix.wav
+output/**/still_*.png
+output/**/*_preview.mp4
+__pycache__/

@@ -1,0 +1,137 @@
+{
+  "title": "भारत के हर राज्य का फेमस खाना",
+  "voice": "hi-IN-MadhurNeural",
+  "rate": "+25%",
+  "watermark": "Travel360",
+  "music": "synth",
+  "music_gain_db": -22,
+  "size": [1080, 1920],
+  "fps": 30,
+  "thumbnail": {
+    "lines": ["हर राज्य का", "फेमस खाना", "एक मैप पर"],
+    "colors": ["white", "yellow", "white"],
+    "size": 125,
+    "pill": "आपने कितने खाए हैं?"
+  },
+  "segments": [
+    {
+      "text": "महाराष्ट्र का वड़ा पाव और राजस्थान की दाल बाटी चूरमा तो सबने खाई है।",
+      "beats": [
+        {"camera": {"fit": ["mh"]}, "transition": "cut",
+         "show": {"state": "mh", "label": "वड़ा पाव", "sticker": "mh.png", "emoji": "🍔"}},
+        {"at": "राजस्थान", "camera": {"fit": ["rj"]}, "transition": "fly",
+         "show": {"state": "rj", "label": "दाल बाटी चूरमा", "sticker": "rj.png", "emoji": "🥘"}}
+      ]
+    },
+    {
+      "text": "पर इस वीडियो में चलते हैं भारत के हर स्टेट की सबसे फेमस डिश के सफर पर।",
+      "beats": [
+        {"camera": {"fit": "india", "pad": 1.12}, "transition": "clouds"}
+      ]
+    },
+    {
+      "text": "कश्मीर की शान है वाज़वान का रोगन जोश।",
+      "beats": [
+        {"camera": {"fit": ["jk"]}, "transition": "fly",
+         "show": {"state": "jk", "label": "रोगन जोश", "sticker": "jk.png", "emoji": "🍖"}}
+      ]
+    },
+    {
+      "text": "पंजाब में मिलेगा सरसों का साग और मक्के की रोटी।",
+      "beats": [
+        {"camera": {"fit": ["pb"], "pad": 1.6}, "transition": "fly"},
+        {"at": "सरसों", "show": {"state": "pb", "label": "सरसों का साग", "sticker": "pb.png", "emoji": "🫓"}}
+      ]
+    },
+    {
+      "text": "यूपी में लखनऊ के कबाब और आगरा का पेठा।",
+      "beats": [
+        {"camera": {"fit": ["up"]}, "transition": "fly",
+         "show": {"state": "up", "label": "लखनवी कबाब", "sticker": "up.png", "emoji": "🍢"}}
+      ]
+    },
+    {
+      "text": "बिहार जाओ तो लिट्टी चोखा ज़रूर खाना।",
+      "beats": [
+        {"camera": {"fit": ["br"]}, "transition": "fly",
+         "show": {"state": "br", "label": "लिट्टी चोखा", "sticker": "br.png", "emoji": "🧆"}}
+      ]
+    },
+    {
+      "text": "बंगाल का दिल है रसगुल्ला।",
+      "beats": [
+        {"camera": {"fit": ["wb"]}, "transition": "fly",
+         "show": {"state": "wb", "label": "रसगुल्ला", "sticker": "wb.png", "emoji": "🍡"}}
+      ]
+    },
+    {
+      "text": "असम की मसोर टेंगा, यानी खट्टी फिश करी।",
+      "beats": [
+        {"camera": {"fit": ["as"]}, "transition": "fly",
+         "show": {"state": "as", "label": "मसोर टेंगा", "sticker": "as.png", "emoji": "🐟"}}
+      ]
+    },
+    {
+      "text": "ओडिशा में मिलता है छेना पोड़ा, जिसे भारत का चीज़केक कहते हैं।",
+      "beats": [
+        {"camera": {"fit": ["or"]}, "transition": "fly",
+         "show": {"state": "or", "label": "छेना पोड़ा", "sticker": "or.png", "emoji": "🍰"}}
+      ]
+    },
+    {
+      "text": "मध्य प्रदेश के इंदौर में सुबह होती है पोहा जलेबी से।",
+      "beats": [
+        {"camera": {"fit": ["mp"]}, "transition": "fly",
+         "show": {"state": "mp", "label": "पोहा जलेबी", "sticker": "mp.png", "emoji": "🍥"}}
+      ]
+    },
+    {
+      "text": "गुजरात का ढोकला तो पूरे देश में फेमस है।",
+      "beats": [
+        {"camera": {"fit": ["gj"]}, "transition": "fly",
+         "show": {"state": "gj", "label": "ढोकला", "sticker": "gj.png", "emoji": "🥮"}}
+      ]
+    },
+    {
+      "text": "गोवा जाओ तो फिश करी राइस ज़रूर ट्राई करना।",
+      "beats": [
+        {"camera": {"fit": ["ga"], "max_zoom": 15, "pad": 2.2}, "transition": "fly",
+         "show": {"state": "ga", "label": "फिश करी राइस", "sticker": "ga.png", "emoji": "🦐"}}
+      ]
+    },
+    {
+      "text": "कर्नाटक का मैसूर पाक और मसाला डोसा।",
+      "beats": [
+        {"camera": {"fit": ["ka"]}, "transition": "fly",
+         "show": {"state": "ka", "label": "मसाला डोसा", "sticker": "ka.png", "emoji": "🌯"}}
+      ]
+    },
+    {
+      "text": "केरला में केले के पत्ते पर परोसी जाती है ओणम सद्या।",
+      "beats": [
+        {"camera": {"fit": ["kl"]}, "transition": "fly",
+         "show": {"state": "kl", "label": "ओणम सद्या", "sticker": "kl.png", "emoji": "🥥"}}
+      ]
+    },
+    {
+      "text": "तमिलनाडु का इडली सांभर और फिल्टर कॉफी।",
+      "beats": [
+        {"camera": {"fit": ["tn"]}, "transition": "fly",
+         "show": {"state": "tn", "label": "इडली सांभर", "sticker": "tn.png", "emoji": "☕"}}
+      ]
+    },
+    {
+      "text": "और तेलंगाना की पहचान है हैदराबादी बिरयानी।",
+      "beats": [
+        {"camera": {"fit": ["tg"]}, "transition": "fly",
+         "show": {"state": "tg", "label": "हैदराबादी बिरयानी", "sticker": "tg.png", "emoji": "🍛"}}
+      ]
+    },
+    {
+      "text": "आपके स्टेट की फेमस डिश कौन सी है? कमेंट में ज़रूर बताना।",
+      "beats": [
+        {"camera": {"fit": "india", "pad": 1.04}, "transition": "clouds", "collage": true}
+      ]
+    }
+  ]
+}
