@@ -234,8 +234,8 @@
       "label": "नई दिल्ली",
       "sticker": "capital_dl.png",
       "scale": 0.6,
-      "dx": 0,
-      "dy": -34
+      "dx": -40,
+      "dy": -50
      }
     },
     {
@@ -253,7 +253,9 @@
       "state": "rj",
       "label": "जयपुर",
       "sticker": "capital_rj.png",
-      "scale": 0.66
+      "scale": 0.66,
+      "dx": -30,
+      "dy": 20
      }
     }
    ]
@@ -597,7 +599,8 @@
       "label": "अमरावती",
       "sticker": "capital_ap.png",
       "scale": 0.72,
-      "dy": 30
+      "dy": 70,
+      "dx": 10
      }
     }
    ]
@@ -624,7 +627,9 @@
       "state": "ka",
       "label": "बेंगलुरु",
       "sticker": "capital_ka.png",
-      "scale": 0.56
+      "scale": 0.56,
+      "dx": 40,
+      "dy": -10
      }
     },
     {
@@ -634,7 +639,8 @@
       "label": "पणजी",
       "sticker": "capital_ga.png",
       "scale": 0.5,
-      "dx": -16
+      "dx": -40,
+      "dy": -10
      }
     },
     {

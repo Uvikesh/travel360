@@ -77,4 +77,5 @@ big StorySpark logo, "वीडियो पसंद आया?", 👍 ला�
 ## Practical
 - Render: `python3 -m engine.render episodes/<ep>.json [--preview|--stills 1,5]` (from `video_studio/`).
 - edge-tts goes through `HTTPS_PROXY` automatically. The free endpoint is flaky, so retries are built in.
-- Every state should be covered when the topic says "every state" (28 states; add Delhi and J&K when relevant).
+- Cover ALL 36: 28 states + 8 UTs (owner's rule). The map is assets/map/india36_osm.geojson (Ladakh separate, DNHDD merged,
+  official depiction; credit "© OpenStreetMap contributors (ODbL)"). Ids: an ap ar as br ch ct dh dl ga gj hp hr jh jk ka kl la ld mh ml mn mp mz nl or pb py rj sk tg tn tr up ut wb.
