@@ -455,6 +455,17 @@ def main():
     with open(os.path.join(outdir, "captions.srt"), "w", encoding="utf-8") as f:
         for k, (a, b, txt) in enumerate(tl.captions, 1):
             f.write(f"{k}\n{_ts(a)} --> {_ts(b)}\n{txt}\n\n")
+    # attribution for CC BY / BY-SA photos -> paste into the YouTube description
+    cred_path = os.path.join(ROOT, "assets", "stickers", "credits.json")
+    if os.path.exists(cred_path):
+        creds = json.load(open(cred_path, encoding="utf-8"))
+        used = {it["src"].get("sticker") for it in tl.items}
+        lines = ["फ़ोटो क्रेडिट (Wikimedia Commons):"]
+        for f, c in creds.items():
+            if f in used:
+                lines.append(f"- {c['title'][5:]} — {c['artist']} — {c['license']} — {c['page']}")
+        lines += ["", "मैप: @svg-maps/india (CC BY 4.0), Natural Earth.", "आवाज़: AI (Google Gemini TTS)."]
+        open(os.path.join(outdir, "credits.txt"), "w", encoding="utf-8").write("\n".join(lines))
     print(f"done in {time.time() - t0:.0f}s -> {out}")
 
 

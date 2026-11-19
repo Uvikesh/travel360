@@ -107,15 +107,15 @@ def _split(x, ref_durs):
     return [x[edges[k]: edges[k + 1]] for k in range(n)]
 
 
-def _strip_spoken_style(x, window=16.0):
+def _strip_spoken_style(x, window=16.0, min_pause=0.35, min_lead=2.0):
     """Gemini sometimes reads the style instruction aloud before the script. It ends with the longest pause
     in the first `window` seconds -> drop everything before that pause (only if it is clearly long)."""
     runs, first, last = _silences(x[: int(window * SR)])
-    runs = [r for r in runs if r[0] > first + 2 * SR]
+    runs = [r for r in runs if r[0] > first + min_lead * SR]
     if not runs:
         return x
     a, b = max(runs, key=lambda r: r[1] - r[0])
-    if (b - a) / SR < 0.35:
+    if (b - a) / SR < min_pause:
         return x
     return x[(a + b) // 2:]
 
@@ -152,7 +152,10 @@ def narrate(ep):
     style = tts.get("style", "Read in a fun, energetic, excited Hindi YouTuber style, fast pace, "
                              "with a short pause between paragraphs:")
     texts = [s["text"] for s in ep["segments"]]
-    script = style + "\n\n" + "\n\n".join(texts)
+    # "take_texts": the script the cached one-take was recorded with. Lines edited since then are re-voiced
+    # one by one (with "patch_model"), so the rest of the take can be reused without a new request.
+    take_texts = tts.get("take_texts") or texts
+    script = style + "\n\n" + "\n\n".join(take_texts)
     key = hashlib.sha1(f"{model}|{voice}|{script}".encode()).hexdigest()[:16]
     os.makedirs(CACHE, exist_ok=True)
     raw = os.path.join(CACHE, f"gemini_{key}.npy")
@@ -164,12 +167,22 @@ def narrate(ep):
         x = _strip_spoken_style(x)
     # reference timing from the edge-tts voice (cached, free) -> where each line should end + word positions
     from . import tts as edge
+    take_refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in take_texts]
+    parts = _split(x, [r[1] for r in take_refs])
     refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in texts]
-    parts = _split(x, [r[1] for r in refs])
     out = []
     for i, (p, t) in enumerate(zip(parts, texts)):
+        if t != take_texts[i]:
+            pm = tts.get("patch_model", "gemini-3.8-flash-lite-tts")
+            pkey = hashlib.sha1(f"{pm}|{voice}|{t}".encode()).hexdigest()[:16]
+            raw_p = os.path.join(CACHE, f"gempatch_{pkey}.npy")
+            if not os.path.exists(raw_p):
+                print(f"  re-voicing edited line {i + 1} with {pm}")
+                np.save(raw_p, _request(t, voice, pm))  # no instruction text: it tends to get read aloud
+                time.sleep(6)
+            p = _strip_spoken_style(np.load(raw_p), window=5.0, min_pause=0.15, min_lead=1.5)
         p = _trim(p)
-        wav = os.path.join(CACHE, f"gemini_{key}_{i:02d}.wav")
+        wav = os.path.join(CACHE, f"gemini_{key}_{i:02d}_{hashlib.sha1(t.encode()).hexdigest()[:6]}.wav")
         if not os.path.exists(wav):
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
                             "-ar", "48000", wav], input=p.astype(np.float32).tobytes(), check=True)
