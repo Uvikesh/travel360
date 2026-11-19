@@ -1,0 +1,729 @@
+{
+ "title": "भारत के हर राज्य और UT का मशहूर नृत्य",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "36 राज्य/UT",
+   "36 मशहूर नृत्य",
+   "कितने देखे?"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 118,
+  "pill": "सिर पर घड़ा रखकर नाच!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts",
+   "gemini-3.8-flash-lite-tts",
+   "gemini-3.1-flash-tts-preview"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber sharing culture facts with friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "गुजरात का गरबा और पंजाब का भांगड़ा तो सबने देखा है, पर त्रिपुरा का वो नृत्य देखा है, जिसमें सिर पर घड़ा रखकर बैलेंस बनाते हैं?",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "gj"
+      ]
+     },
+     "transition": "cut",
+     "show": {
+      "state": "gj",
+      "label": "गरबा",
+      "sticker": "dance_gj.png"
+     }
+    },
+    {
+     "at": "त्रिपुरा",
+     "camera": {
+      "fit": [
+       "tr"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tr",
+      "label": "होजागिरी",
+      "sticker": "dance_tr.png",
+      "scale": 0.9,
+      "dx": -24,
+      "dy": -10
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो देखते हैं अट्ठाईस राज्य और आठ केंद्र शासित प्रदेश, हर एक का मशहूर नृत्य!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं ऊपर से। कश्मीर का रऊफ़, और लद्दाख में मठों का मुखौटा नृत्य, छाम।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jk",
+       "la"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कश्मीर",
+     "show": {
+      "state": "jk",
+      "label": "रऊफ़",
+      "sticker": "dance_jk.png",
+      "scale": 0.72,
+      "dx": -10
+     }
+    },
+    {
+     "at": "लद्दाख",
+     "show": {
+      "state": "la",
+      "label": "छाम",
+      "sticker": "dance_la.png",
+      "scale": 0.72,
+      "dx": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "हिमाचल की नाटी, जो गिनीज़ वर्ल्ड रिकॉर्ड में दर्ज है, और उत्तराखंड का तलवारों वाला छोलिया।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "hp",
+       "ut"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "हिमाचल",
+     "show": {
+      "state": "hp",
+      "label": "नाटी",
+      "sticker": "dance_hp.png",
+      "scale": 0.66,
+      "dx": -26,
+      "dy": 12
+     }
+    },
+    {
+     "at": "उत्तराखंड",
+     "show": {
+      "state": "ut",
+      "label": "छोलिया",
+      "sticker": "dance_ut.png",
+      "scale": 0.66,
+      "dx": 40,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "पंजाब का भांगड़ा, चंडीगढ़ में औरतों का गिद्धा, और हरियाणा का घूमते घाघरों वाला लोक नृत्य।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "pb",
+       "ch",
+       "hr"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "पंजाब",
+     "show": {
+      "state": "pb",
+      "label": "भांगड़ा",
+      "sticker": "dance_pb.png",
+      "scale": 0.62,
+      "dx": -14,
+      "dy": -10
+     }
+    },
+    {
+     "at": "चंडीगढ़",
+     "show": {
+      "state": "ch",
+      "label": "गिद्धा",
+      "sticker": "dance_ch.png",
+      "scale": 0.56,
+      "dx": 24,
+      "dy": -20
+     }
+    },
+    {
+     "at": "हरियाणा",
+     "show": {
+      "state": "hr",
+      "label": "हरियाणवी लोक नृत्य",
+      "sticker": "dance_hr.png",
+      "scale": 0.6,
+      "dx": -40,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "दिल्ली का कोई एक लोक नृत्य नहीं, यहाँ गणतंत्र दिवस पर पूरे देश के नृत्य दिखते हैं। यूपी का कथक, और राजस्थान का घूमर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "dl",
+       "up",
+       "rj"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "दिल्ली",
+     "show": {
+      "state": "dl",
+      "label": "गणतंत्र दिवस परेड",
+      "sticker": "dance_dl.png",
+      "scale": 0.6,
+      "dx": -20,
+      "dy": -60
+     }
+    },
+    {
+     "at": "यूपी",
+     "show": {
+      "state": "up",
+      "label": "कथक",
+      "sticker": "dance_up.png",
+      "scale": 0.66,
+      "dx": 30,
+      "dy": 30
+     }
+    },
+    {
+     "at": "राजस्थान",
+     "show": {
+      "state": "rj",
+      "label": "घूमर",
+      "sticker": "dance_rj.png",
+      "scale": 0.66,
+      "dx": -50,
+      "dy": 70
+     }
+    }
+   ]
+  },
+  {
+   "text": "मध्य प्रदेश में भील आदिवासियों का भगोरिया नृत्य, दादरा नगर हवेली का तारपा, और महाराष्ट्र की लावणी।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mp",
+       "dh",
+       "mh"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "मध्य",
+     "show": {
+      "state": "mp",
+      "label": "भगोरिया",
+      "sticker": "dance_mp.png",
+      "scale": 0.62
+     }
+    },
+    {
+     "at": "दादरा",
+     "show": {
+      "state": "dh",
+      "label": "तारपा",
+      "sticker": "dance_dh.png",
+      "scale": 0.56,
+      "dx": -30,
+      "dy": -10
+     }
+    },
+    {
+     "at": "महाराष्ट्र",
+     "show": {
+      "state": "mh",
+      "label": "लावणी",
+      "sticker": "dance_mh.png",
+      "scale": 0.62,
+      "dx": 20,
+      "dy": 20
+     }
+    }
+   ]
+  },
+  {
+   "text": "छत्तीसगढ़ का राउत नाचा, और बिहार का जट-जटिन।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ct",
+       "br"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "छत्तीसगढ़",
+     "show": {
+      "state": "ct",
+      "label": "राउत नाचा",
+      "sticker": "dance_ct.png",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "बिहार",
+     "show": {
+      "state": "br",
+      "label": "जट-जटिन",
+      "sticker": "dance_br.png",
+      "scale": 0.72
+     }
+    }
+   ]
+  },
+  {
+   "text": "झारखंड और बंगाल का छऊ, जो यूनेस्को की सूची में है, और ओडिशा का शास्त्रीय नृत्य ओडिसी।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jh",
+       "wb",
+       "or"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "झारखंड",
+     "show": {
+      "state": "jh",
+      "label": "छऊ",
+      "sticker": "dance_jh.png",
+      "scale": 0.62
+     }
+    },
+    {
+     "at": "बंगाल",
+     "show": {
+      "state": "wb",
+      "label": "छऊ",
+      "sticker": "dance_wb.png",
+      "scale": 0.58,
+      "dx": 10,
+      "dy": 20
+     }
+    },
+    {
+     "at": "ओडिशा",
+     "show": {
+      "state": "or",
+      "label": "ओडिसी",
+      "sticker": "dance_or.png",
+      "scale": 0.62
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब नॉर्थ ईस्ट! असम का बिहू, सिक्किम का मारुनी, अरुणाचल का अजी लामू, और नागालैंड के योद्धाओं का नृत्य।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk",
+       "as",
+       "ar",
+       "nl",
+       "mn",
+       "ml",
+       "mz",
+       "tr"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "असम",
+     "camera": {
+      "fit": [
+       "as"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "as",
+      "label": "बिहू",
+      "sticker": "dance_as.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "सिक्किम",
+     "camera": {
+      "fit": [
+       "sk"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "sk",
+      "label": "मारुनी",
+      "sticker": "dance_sk.png",
+      "scale": 0.85,
+      "dx": -4,
+      "dy": -24
+     }
+    },
+    {
+     "at": "अरुणाचल",
+     "camera": {
+      "fit": [
+       "ar"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "अजी लामू",
+      "sticker": "dance_ar.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "नागालैंड",
+     "camera": {
+      "fit": [
+       "nl"
+      ],
+      "pad": 1.8,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "nl",
+      "label": "कोन्याक योद्धा नृत्य",
+      "sticker": "dance_nl.png",
+      "scale": 0.85,
+      "dx": -26,
+      "dy": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "मणिपुर का रासलीला, मेघालय का वांगला, जिसे सौ ढोलों का त्योहार कहते हैं, और मिज़ोरम का बांस वाला चेराव।",
+   "beats": [
+    {
+     "at": "मणिपुर",
+     "camera": {
+      "fit": [
+       "mn"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mn",
+      "label": "मणिपुरी रासलीला",
+      "sticker": "dance_mn.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -14
+     }
+    },
+    {
+     "at": "मेघालय",
+     "camera": {
+      "fit": [
+       "ml"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "वांगला",
+      "sticker": "dance_ml.png",
+      "scale": 0.85,
+      "dy": -34
+     }
+    },
+    {
+     "at": "मिज़ोरम",
+     "camera": {
+      "fit": [
+       "mz"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mz",
+      "label": "चेराव",
+      "sticker": "dance_mz.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -6
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब साउथ। तेलंगाना का पेरिणी शिवतांडवम, और आंध्र का कुचिपुड़ी।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "tg",
+       "ap"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "तेलंगाना",
+     "show": {
+      "state": "tg",
+      "label": "पेरिणी",
+      "sticker": "dance_tg.png",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "आंध्र",
+     "show": {
+      "state": "ap",
+      "label": "कुचिपुड़ी",
+      "sticker": "dance_ap.png",
+      "scale": 0.72,
+      "dx": 10,
+      "dy": 70
+     }
+    }
+   ]
+  },
+  {
+   "text": "कर्नाटक का यक्षगान, गोवा की फुगड़ी, केरला का कथकली, तमिलनाडु का भरतनाट्यम, और पुडुचेरी की सदियों पुरानी नृत्य परंपरा।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ka",
+       "ga",
+       "kl",
+       "tn",
+       "py"
+      ],
+      "pad": 1.08
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कर्नाटक",
+     "show": {
+      "state": "ka",
+      "label": "यक्षगान",
+      "sticker": "dance_ka.png",
+      "scale": 0.56,
+      "dx": 40,
+      "dy": -10
+     }
+    },
+    {
+     "at": "गोवा",
+     "show": {
+      "state": "ga",
+      "label": "फुगड़ी",
+      "sticker": "dance_ga.png",
+      "scale": 0.5,
+      "dx": -40,
+      "dy": -10
+     }
+    },
+    {
+     "at": "केरला",
+     "show": {
+      "state": "kl",
+      "label": "कथकली",
+      "sticker": "dance_kl.png",
+      "scale": 0.5,
+      "dx": -10
+     }
+    },
+    {
+     "at": "तमिलनाडु",
+     "show": {
+      "state": "tn",
+      "label": "भरतनाट्यम",
+      "sticker": "dance_tn.png",
+      "scale": 0.56,
+      "dy": -10
+     }
+    },
+    {
+     "at": "पुडुचेरी",
+     "show": {
+      "state": "py",
+      "label": "पुडुचेरी (पुरानी तस्वीर)",
+      "sticker": "dance_py.png",
+      "scale": 0.5,
+      "dx": 26,
+      "dy": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "और समंदर के बीच, लक्षद्वीप का कोलकली, और अंडमान निकोबार का निकोबारी नृत्य।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ld"
+      ],
+      "pad": 3.0,
+      "max_zoom": 10
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ld",
+      "label": "कोलकली",
+      "sticker": "dance_ld.png",
+      "scale": 0.85,
+      "dx": 12
+     }
+    },
+    {
+     "at": "अंडमान",
+     "camera": {
+      "fit": [
+       "an"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "निकोबारी नृत्य",
+      "sticker": "dance_an.png",
+      "scale": 0.85,
+      "dx": -20
+     }
+    }
+   ]
+  },
+  {
+   "text": "तो इनमें से आपने कितने नृत्य देखे हैं? और आपके राज्य का कौन सा है? कमेंट में ज़रूर बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}

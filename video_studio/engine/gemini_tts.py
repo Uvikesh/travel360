@@ -151,14 +151,21 @@ def _split_by_transcript(x, texts, cache_path):
             v = float(p["start"])
             m = int(v)
             p["start"] = m * 60 + (v - m) * 100
-    prev = 0.0
+    # after a minute Gemini either restarts at 0 (1.94 = 1:01.94) or writes "m.sss" (1.083 = 1:08.3):
+    # on every drop pick the reading that continues closest after the previous phrase
+    prev, offset = 0.0, 0.0
     for p in phrases:
         v = float(p["start"])
-        if v + 1.0 < prev:
+        cand = v + offset
+        if cand + 1.0 < prev:
             m = int(v)
-            v = m * 60 + (v - m) * 100
-        p["start"] = v
-        prev = v
+            options = [v + offset + 60 * k for k in (1, 2, 3)] + [m * 60 + (v - m) * 100]
+            options = [o for o in options if o + 1.0 >= prev] or options
+            cand = min(options, key=lambda o: abs(o - prev))
+            if abs(cand - (v + offset + 60)) < 1e-6 or abs(cand - (v + offset + 120)) < 1e-6:
+                offset = cand - v
+        p["start"] = cand
+        prev = cand
     NUM = {"एक": "1", "दो": "2", "तीन": "3", "चार": "4", "पांच": "5", "पाँच": "5", "दस": "10", "बीस": "20",
            "तीस": "30", "अट्ठाईस": "28", "छत्तीस": "36", "चौबीस": "24", "बारह": "12", "आठ": "8"}
 

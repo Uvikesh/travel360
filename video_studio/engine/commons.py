@@ -61,7 +61,8 @@ def candidates(query, key, limit=8):
     os.makedirs(d, exist_ok=True)
     res = search(query, limit)
     for i, r in enumerate(res):
-        path = os.path.join(d, f"cand_{i}.jpg")
+        import hashlib
+        path = os.path.join(d, f"cand_{i}_{hashlib.sha1(r['title'].encode()).hexdigest()[:8]}.jpg")
         if not os.path.exists(path) or os.path.getsize(path) == 0:
             try:
                 data = _get(r["thumb"])
