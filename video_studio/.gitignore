@@ -7,3 +7,4 @@ __pycache__/
 output/commons/
 output/voice_samples/*.wav
 output/commons2/
+output/commons3/

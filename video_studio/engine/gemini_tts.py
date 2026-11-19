@@ -107,6 +107,68 @@ def _split(x, ref_durs):
     return [x[edges[k]: edges[k + 1]] for k in range(n)]
 
 
+def _split_by_transcript(x, texts, cache_path):
+    """Get a timestamped transcript of the take (gemini-2.5-flash), find where each script line starts by
+    matching its opening words in order, and cut in the pause just before each start."""
+    import difflib
+    meta = cache_path.replace(".npy", "_transcript.json")
+    if not os.path.exists(meta):
+        mp3 = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
+                              "-b:a", "48k", "-f", "mp3", "-"], input=x.astype(np.float32).tobytes(),
+                             capture_output=True, check=True).stdout
+        body = {"contents": [{"parts": [
+            {"inlineData": {"mimeType": "audio/mp3", "data": base64.b64encode(mp3).decode()}},
+            {"text": "Transcribe this Hindi audio in Devanagari as short phrases (split at every comma, pause and "
+                     "sentence end). Answer only JSON: {\"phrases\": [{\"start\": seconds_with_2_decimals, "
+                     "\"text\": \"...\"}, ...]}"}]}],
+            "generationConfig": {"responseMimeType": "application/json"}}
+        req = urllib.request.Request(
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+            data=json.dumps(body).encode(), headers={"x-goog-api-key": _key(), "Content-Type": "application/json"})
+        d = json.load(urllib.request.urlopen(req, timeout=400))
+        json.dump(json.loads(d["candidates"][0]["content"]["parts"][0]["text"]), open(meta, "w"), ensure_ascii=False)
+    phrases = json.load(open(meta))["phrases"]
+    dur = len(x) / SR
+    # Gemini sometimes switches to "m.sss" (1.083 = 1:08.3) after the first minute -> repair to seconds
+    prev = 0.0
+    for p in phrases:
+        v = float(p["start"])
+        if v + 1.0 < prev:
+            m = int(v)
+            v = m * 60 + (v - m) * 100
+        p["start"] = v
+        prev = v
+    norm = lambda t: re.sub(r"[^\u0900-\u097F\w]", "", t.replace("ँ", "ं").replace("़", ""))
+    starts, k = [0.0], 0
+    for t in texts[1:]:
+        head = norm(" ".join(t.split()[:3]))
+        best, score = None, 0.0
+        for idx in range(k + 1, len(phrases)):
+            p = norm(phrases[idx]["text"])[: len(head) + 4]
+            sc = difflib.SequenceMatcher(None, head, p).ratio()
+            if sc > score + 0.05:
+                best, score = idx, sc
+            if sc > 0.85:
+                break
+        if best is None or score < 0.5:
+            raise ValueError(f"line not found in transcript: {t[:30]} ({score:.2f})")
+        k = best
+        starts.append(float(phrases[best]["start"]))
+    if any(b <= a for a, b in zip(starts, starts[1:])) or starts[-1] >= dur:
+        raise ValueError(f"bad alignment {starts}")
+    runs, first, last = _silences(x)
+    cuts = [max(0, first - int(0.05 * SR))]
+    for t in starts[1:]:
+        target = int(t * SR)
+        near = [r for r in runs if -0.7 * SR < (r[1] - target) < 0.35 * SR]
+        c = (min(near, key=lambda r: abs(r[1] - target))[0] + min(near, key=lambda r: abs(r[1] - target))[1]) // 2 \
+            if near else target - int(0.1 * SR)
+        cuts.append(max(c, cuts[-1] + int(0.3 * SR)))
+    cuts.append(min(len(x), last + int(0.15 * SR)))
+    print("  aligned line starts:", [round(v, 1) for v in starts])
+    return [x[cuts[m]: cuts[m + 1]] for m in range(len(texts))]
+
+
 def _strip_spoken_prefix_checked(x, cache_path):
     """Ask gemini-2.5-flash whether the take starts with a spoken (English) instruction, and where the Hindi
     script starts. Cut only if it really was spoken. The answer is cached next to the take."""
@@ -201,7 +263,14 @@ def narrate(ep):
     # reference timing from the edge-tts voice (cached, free) -> where each line should end + word positions
     from . import tts as edge
     take_refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in take_texts]
-    parts = _split(x, [r[1] for r in take_refs])
+    parts = None
+    if tts.get("align", "transcript") == "transcript":
+        try:
+            parts = _split_by_transcript(x, take_texts, raw)
+        except Exception as e:  # fall back to the pause-based DP split
+            print("  transcript alignment failed, using pause DP:", e)
+    if parts is None:
+        parts = _split(x, [r[1] for r in take_refs])
     refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in texts]
     out = []
     for i, t in enumerate(texts):

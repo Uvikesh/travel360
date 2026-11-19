@@ -1,0 +1,629 @@
+{
+ "title": "हर राज्य का राजकीय पशु",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "हर राज्य का",
+   "राजकीय पशु",
+   "कितने पता हैं?"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 122,
+  "pill": "महाराष्ट्र का = गिलहरी!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "model": "gemini-3.8-flash-lite-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber sharing amazing facts with friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "गुजरात का एशियाई शेर तो सबको पता है, पर क्या आप जानते हैं कि महाराष्ट्र का राजकीय पशु एक गिलहरी है?",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "gj"
+      ]
+     },
+     "transition": "cut",
+     "show": {
+      "state": "gj",
+      "label": "एशियाई शेर",
+      "sticker": "animal_gj.png"
+     }
+    },
+    {
+     "at": "महाराष्ट्र",
+     "camera": {
+      "fit": [
+       "mh"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mh",
+      "label": "शेकरू (बड़ी गिलहरी)",
+      "sticker": "animal_mh.png"
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो देखते हैं हर स्टेट का राजकीय पशु, और गिनते जाना आपको कितने पता थे!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं ऊपर से। जम्मू-कश्मीर का हंगुल, हिमाचल का हिम तेंदुआ, और उत्तराखंड का कस्तूरी मृग।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jk",
+       "hp",
+       "ut"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "जम्मू",
+     "show": {
+      "state": "jk",
+      "label": "हंगुल",
+      "sticker": "animal_jk.png",
+      "scale": 0.7
+     }
+    },
+    {
+     "at": "हिमाचल",
+     "show": {
+      "state": "hp",
+      "label": "हिम तेंदुआ",
+      "sticker": "animal_hp.png",
+      "scale": 0.62,
+      "dx": -10
+     }
+    },
+    {
+     "at": "उत्तराखंड",
+     "show": {
+      "state": "ut",
+      "label": "कस्तूरी मृग",
+      "sticker": "animal_ut.png",
+      "scale": 0.62,
+      "dx": 8,
+      "dy": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "पंजाब और हरियाणा, दोनों का राजकीय पशु है काला हिरण, और दिल्ली का नीलगाय।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "pb",
+       "hr",
+       "dl"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "पंजाब",
+     "show": {
+      "state": "pb",
+      "label": "काला हिरण",
+      "sticker": "animal_pb.png",
+      "scale": 0.6,
+      "dx": -14,
+      "dy": -10
+     }
+    },
+    {
+     "at": "हरियाणा",
+     "show": {
+      "state": "hr",
+      "label": "काला हिरण",
+      "sticker": "animal_hr.png",
+      "scale": 0.6,
+      "dx": -40,
+      "dy": 30
+     }
+    },
+    {
+     "at": "दिल्ली",
+     "show": {
+      "state": "dl",
+      "label": "नीलगाय",
+      "sticker": "animal_dl.png",
+      "scale": 0.6,
+      "dx": 30,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "राजस्थान के तो दो हैं! जंगली जानवरों में चिंकारा, और पशुधन में ऊँट।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "rj"
+      ]
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "चिंकारा",
+     "show": {
+      "state": "rj",
+      "label": "चिंकारा",
+      "sticker": "animal_rj.png",
+      "scale": 0.72,
+      "dx": -60,
+      "dy": -40
+     }
+    },
+    {
+     "at": "ऊँट",
+     "show": {
+      "state": "rj",
+      "label": "ऊँट",
+      "sticker": "animal_rj2.png",
+      "scale": 0.72,
+      "dx": 60,
+      "dy": 50,
+      "highlight": false
+     }
+    }
+   ]
+  },
+  {
+   "text": "यूपी और एमपी, दोनों का राजकीय पशु है बारहसिंगा, जिसके नाम का मतलब है बारह सींगों वाला।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "up",
+       "mp"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "यूपी",
+     "show": {
+      "state": "up",
+      "label": "बारहसिंगा",
+      "sticker": "animal_up.png",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "एमपी",
+     "show": {
+      "state": "mp",
+      "label": "बारहसिंगा",
+      "sticker": "animal_mp.png",
+      "scale": 0.72
+     }
+    }
+   ]
+  },
+  {
+   "text": "छत्तीसगढ़ का जंगली भैंसा, और बिहार का गौर, जिसे इंडियन बाइसन भी कहते हैं।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ct",
+       "br"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "छत्तीसगढ़",
+     "show": {
+      "state": "ct",
+      "label": "जंगली भैंसा",
+      "sticker": "animal_ct.png",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "बिहार",
+     "show": {
+      "state": "br",
+      "label": "गौर",
+      "sticker": "animal_br.png",
+      "scale": 0.72
+     }
+    }
+   ]
+  },
+  {
+   "text": "झारखंड का हाथी, बंगाल की फिशिंग कैट, जो पानी में तैरकर मछली पकड़ती है, और ओडिशा का सांभर हिरण।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jh",
+       "wb",
+       "or"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "झारखंड",
+     "show": {
+      "state": "jh",
+      "label": "हाथी",
+      "sticker": "animal_jh.png",
+      "scale": 0.66
+     }
+    },
+    {
+     "at": "बंगाल",
+     "show": {
+      "state": "wb",
+      "label": "फिशिंग कैट",
+      "sticker": "animal_wb.png",
+      "scale": 0.62,
+      "dx": 8
+     }
+    },
+    {
+     "at": "ओडिशा",
+     "show": {
+      "state": "or",
+      "label": "सांभर हिरण",
+      "sticker": "animal_or.png",
+      "scale": 0.66
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब नॉर्थ ईस्ट! असम का एक सींग वाला गैंडा, सिक्किम का रेड पांडा, और अरुणाचल और नागालैंड, दोनों का मिथुन।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk",
+       "as",
+       "ar",
+       "nl",
+       "mn",
+       "ml",
+       "mz",
+       "tr"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "असम",
+     "camera": {
+      "fit": [
+       "as"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "as",
+      "label": "एक सींग वाला गैंडा",
+      "sticker": "animal_as.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "सिक्किम",
+     "camera": {
+      "fit": [
+       "sk"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "sk",
+      "label": "रेड पांडा",
+      "sticker": "animal_sk.png",
+      "scale": 0.85,
+      "dx": -4,
+      "dy": -24
+     }
+    },
+    {
+     "at": "अरुणाचल",
+     "camera": {
+      "fit": [
+       "ar"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "मिथुन",
+      "sticker": "animal_ar.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "नागालैंड",
+     "camera": {
+      "fit": [
+       "nl"
+      ],
+      "pad": 1.8,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "nl",
+      "label": "मिथुन",
+      "sticker": "animal_nl.png",
+      "scale": 0.85,
+      "dx": -26,
+      "dy": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "मेघालय का क्लाउडेड लेपर्ड, त्रिपुरा का फेयर्स लंगूर, मिज़ोरम का सेरो, और मणिपुर का संगाई हिरण, जो सिर्फ़ एक तैरते नेशनल पार्क में मिलता है!",
+   "beats": [
+    {
+     "at": "मेघालय",
+     "camera": {
+      "fit": [
+       "ml"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "क्लाउडेड लेपर्ड",
+      "sticker": "animal_ml.png",
+      "scale": 0.85,
+      "dy": -34
+     }
+    },
+    {
+     "at": "त्रिपुरा",
+     "camera": {
+      "fit": [
+       "tr"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tr",
+      "label": "फेयर्स लंगूर",
+      "sticker": "animal_tr.png",
+      "scale": 0.85,
+      "dx": -24,
+      "dy": -10
+     }
+    },
+    {
+     "at": "मिज़ोरम",
+     "camera": {
+      "fit": [
+       "mz"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mz",
+      "label": "सेरो",
+      "sticker": "animal_mz.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -6
+     }
+    },
+    {
+     "at": "मणिपुर",
+     "camera": {
+      "fit": [
+       "mn"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mn",
+      "label": "संगाई हिरण",
+      "sticker": "animal_mn.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -14
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब साउथ। तेलंगाना का चीतल, आंध्र का काला हिरण, और गोवा का गौर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "tg",
+       "ap",
+       "ga"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "तेलंगाना",
+     "show": {
+      "state": "tg",
+      "label": "चीतल",
+      "sticker": "animal_tg.png",
+      "scale": 0.66
+     }
+    },
+    {
+     "at": "आंध्र",
+     "show": {
+      "state": "ap",
+      "label": "काला हिरण",
+      "sticker": "animal_ap.png",
+      "scale": 0.66,
+      "dy": 30
+     }
+    },
+    {
+     "at": "गोवा",
+     "show": {
+      "state": "ga",
+      "label": "गौर",
+      "sticker": "animal_ga.png",
+      "scale": 0.6,
+      "dx": -10
+     }
+    }
+   ]
+  },
+  {
+   "text": "कर्नाटक और केरला का भी हाथी, यानी झारखंड समेत तीन राज्यों का एक ही राजकीय पशु! और तमिलनाडु का नीलगिरि तहर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ka",
+       "kl",
+       "tn"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कर्नाटक",
+     "show": {
+      "state": "ka",
+      "label": "हाथी",
+      "sticker": "animal_ka.png",
+      "scale": 0.66
+     }
+    },
+    {
+     "at": "केरला",
+     "show": {
+      "state": "kl",
+      "label": "हाथी",
+      "sticker": "animal_kl.png",
+      "scale": 0.6,
+      "dx": -6
+     }
+    },
+    {
+     "at": "तमिलनाडु",
+     "show": {
+      "state": "tn",
+      "label": "नीलगिरि तहर",
+      "sticker": "animal_tn.png",
+      "scale": 0.66,
+      "dx": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "तो इनमें से आपको कितने पता थे? कमेंट में अपना स्कोर लिखो, और ये वीडियो अपने दोस्तों को भेजो!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
