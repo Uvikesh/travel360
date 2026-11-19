@@ -1,0 +1,626 @@
+{
+ "title": "भारत के हर राज्य का सुपरहिट खाना",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": "ट्रैवल 360",
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "30 स्टेट्स",
+   "30 सुपरहिट खाने",
+   "आपका स्कोर?"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 118,
+  "pill": "कितने खाए हैं आपने?"
+ },
+ "segments": [
+  {
+   "text": "महाराष्ट्र का वड़ा पाव तो सबने खाया है, पर छत्तीसगढ़ का फरा खाया है कभी?",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mh"
+      ]
+     },
+     "transition": "cut",
+     "show": {
+      "state": "mh",
+      "label": "वड़ा पाव",
+      "sticker": "mh.png",
+      "emoji": "🍔"
+     }
+    },
+    {
+     "at": "छत्तीसगढ़",
+     "camera": {
+      "fit": [
+       "ct"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ct",
+      "label": "फरा",
+      "sticker": "ct.png",
+      "emoji": "🥠"
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो देखते हैं भारत के हर स्टेट का सुपरहिट खाना, और गिनते जाना आपने कितने खाए हैं!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं ऊपर से। कश्मीर का रोगन जोश, हिमाचल का सिड्डू, और पंजाब का सरसों का साग।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jk",
+       "hp",
+       "pb"
+      ],
+      "pad": 1.25
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कश्मीर",
+     "show": {
+      "state": "jk",
+      "label": "रोगन जोश",
+      "sticker": "jk.png",
+      "emoji": "🍖",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "हिमाचल",
+     "show": {
+      "state": "hp",
+      "label": "सिड्डू",
+      "sticker": "hp.png",
+      "emoji": "🥖",
+      "scale": 0.62
+     }
+    },
+    {
+     "at": "पंजाब",
+     "show": {
+      "state": "pb",
+      "label": "सरसों का साग",
+      "sticker": "pb.png",
+      "emoji": "🥬",
+      "scale": 0.62,
+      "dx": -6
+     }
+    }
+   ]
+  },
+  {
+   "text": "हरियाणा की बाजरे की खिचड़ी, उत्तराखंड की बाल मिठाई, और दिल्ली के छोले भटूरे।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "hr",
+       "ut",
+       "dl"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "हरियाणा",
+     "show": {
+      "state": "hr",
+      "label": "बाजरा खिचड़ी",
+      "sticker": "hr.png",
+      "emoji": "🥣",
+      "scale": 0.6,
+      "dx": -34,
+      "dy": -10
+     }
+    },
+    {
+     "at": "उत्तराखंड",
+     "show": {
+      "state": "ut",
+      "label": "बाल मिठाई",
+      "sticker": "ut.png",
+      "emoji": "🍫",
+      "scale": 0.6
+     }
+    },
+    {
+     "at": "दिल्ली",
+     "show": {
+      "state": "dl",
+      "label": "छोले भटूरे",
+      "sticker": "dl.png",
+      "emoji": "🫓",
+      "scale": 0.6,
+      "dy": 44,
+      "dx": 14
+     }
+    }
+   ]
+  },
+  {
+   "text": "यूपी में लखनऊ के कबाब, और राजस्थान की दाल बाटी चूरमा।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "up"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "up",
+      "label": "लखनवी कबाब",
+      "sticker": "up.png",
+      "emoji": "🍢"
+     }
+    },
+    {
+     "at": "राजस्थान",
+     "camera": {
+      "fit": [
+       "rj"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "rj",
+      "label": "दाल बाटी चूरमा",
+      "sticker": "rj.png",
+      "emoji": "🥘"
+     }
+    }
+   ]
+  },
+  {
+   "text": "गुजरात का ढोकला, और एमपी के इंदौर का पोहा जलेबी।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "gj"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "gj",
+      "label": "ढोकला",
+      "sticker": "gj.png",
+      "emoji": "🥮"
+     }
+    },
+    {
+     "at": "एमपी",
+     "camera": {
+      "fit": [
+       "mp"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mp",
+      "label": "पोहा जलेबी",
+      "sticker": "mp.png",
+      "emoji": "🍥"
+     }
+    }
+   ]
+  },
+  {
+   "text": "बिहार का लिट्टी चोखा, और झारखंड का धुस्का।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "br",
+       "jh"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "बिहार",
+     "show": {
+      "state": "br",
+      "label": "लिट्टी चोखा",
+      "sticker": "br.png",
+      "emoji": "🧆",
+      "scale": 0.75
+     }
+    },
+    {
+     "at": "झारखंड",
+     "show": {
+      "state": "jh",
+      "label": "धुस्का",
+      "sticker": "jh.png",
+      "emoji": "🍩",
+      "scale": 0.75
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब आता है रसगुल्ला। इस पर बंगाल और ओडिशा में जी आई टैग की लड़ाई चली, और आखिर में दोनों को टैग मिला!",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "wb",
+       "or"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "बंगाल",
+     "show": {
+      "state": "wb",
+      "label": "बांग्लार रसगुल्ला",
+      "sticker": "wb.png",
+      "emoji": "🍡",
+      "scale": 0.7
+     }
+    },
+    {
+     "at": "ओडिशा",
+     "show": {
+      "state": "or",
+      "label": "ओडिशा रसगोला",
+      "sticker": "or.png",
+      "emoji": "🍡",
+      "scale": 0.7
+     }
+    }
+   ]
+  },
+  {
+   "text": "नॉर्थ ईस्ट चलें? सिक्किम के मोमोज़, असम की मसोर टेंगा, अरुणाचल का थुकपा,",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk",
+       "as",
+       "ar",
+       "nl",
+       "mn",
+       "ml",
+       "mz",
+       "tr"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "सिक्किम",
+     "show": {
+      "state": "sk",
+      "label": "मोमोज़",
+      "sticker": "sk.png",
+      "emoji": "🥟",
+      "scale": 0.85,
+      "dx": -4,
+      "dy": -24
+     },
+     "camera": {
+      "fit": [
+       "sk"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "असम",
+     "show": {
+      "state": "as",
+      "label": "मसोर टेंगा",
+      "sticker": "as.png",
+      "emoji": "🍲",
+      "scale": 0.85
+     },
+     "camera": {
+      "fit": [
+       "as"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "अरुणाचल",
+     "show": {
+      "state": "ar",
+      "label": "थुकपा",
+      "sticker": "ar.png",
+      "emoji": "🍜",
+      "scale": 0.85
+     },
+     "camera": {
+      "fit": [
+       "ar"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly"
+    }
+   ]
+  },
+  {
+   "text": "मेघालय का जादोह, त्रिपुरा का मुई बोरोक, मिज़ोरम का बाई, और मणिपुर की काले चावल की खीर।",
+   "beats": [
+    {
+     "at": "मेघालय",
+     "show": {
+      "state": "ml",
+      "label": "जादोह",
+      "sticker": "ml.png",
+      "emoji": "🍚",
+      "scale": 0.85,
+      "dx": 0,
+      "dy": -20
+     },
+     "camera": {
+      "fit": [
+       "ml"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "त्रिपुरा",
+     "show": {
+      "state": "tr",
+      "label": "मुई बोरोक",
+      "sticker": "tr.png",
+      "emoji": "🐟",
+      "scale": 0.85,
+      "dx": -24,
+      "dy": -10
+     },
+     "camera": {
+      "fit": [
+       "tr"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "मिज़ोरम",
+     "show": {
+      "state": "mz",
+      "label": "बाई",
+      "sticker": "mz.png",
+      "emoji": "🥗",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -6
+     },
+     "camera": {
+      "fit": [
+       "mz"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "मणिपुर",
+     "show": {
+      "state": "mn",
+      "label": "चक-हाओ खीर",
+      "sticker": "mn.png",
+      "emoji": "🍮",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -14
+     },
+     "camera": {
+      "fit": [
+       "mn"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly"
+    }
+   ]
+  },
+  {
+   "text": "और नागालैंड की राजा मिर्च, जो कभी दुनिया की सबसे तीखी मिर्च थी!",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "nl"
+      ],
+      "pad": 1.8
+     },
+     "transition": "fly",
+     "show": {
+      "state": "nl",
+      "label": "राजा मिर्च",
+      "sticker": "nl.png",
+      "emoji": "🌶️",
+      "dx": -20,
+      "dy": -14
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब साउथ। तेलंगाना की हैदराबादी बिरयानी, और आंध्र की तीखी गोंगुरा चटनी।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "tg",
+       "ap"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "तेलंगाना",
+     "show": {
+      "state": "tg",
+      "label": "हैदराबादी बिरयानी",
+      "sticker": "tg.png",
+      "emoji": "🍛",
+      "scale": 0.7
+     }
+    },
+    {
+     "at": "आंध्र",
+     "show": {
+      "state": "ap",
+      "label": "गोंगुरा चटनी",
+      "sticker": "ap.png",
+      "emoji": "🌿",
+      "scale": 0.7,
+      "dy": 30
+     }
+    }
+   ]
+  },
+  {
+   "text": "कर्नाटक का मैसूर पाक, जो मैसूर के राजा की रसोई में बना था।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ka"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ka",
+      "label": "मैसूर पाक",
+      "sticker": "ka.png",
+      "emoji": "🍪"
+     }
+    }
+   ]
+  },
+  {
+   "text": "गोवा की फिश करी राइस, और केरला की सद्या, जिसमें केले के पत्ते पर बीस से ज़्यादा डिशेज़ होती हैं।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ga"
+      ],
+      "max_zoom": 15,
+      "pad": 2.2
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ga",
+      "label": "फिश करी राइस",
+      "sticker": "ga.png",
+      "emoji": "🦐"
+     }
+    },
+    {
+     "at": "केरला",
+     "camera": {
+      "fit": [
+       "kl"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "kl",
+      "label": "ओणम सद्या",
+      "sticker": "kl.png",
+      "emoji": "🍌"
+     }
+    }
+   ]
+  },
+  {
+   "text": "और आखिर में तमिलनाडु का इडली सांभर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "tn"
+      ]
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tn",
+      "label": "इडली सांभर",
+      "sticker": "tn.png",
+      "emoji": "☕"
+     }
+    }
+   ]
+  },
+  {
+   "text": "तो तीस में से आपका स्कोर कितना है? कमेंट में लिखो, और अपने स्टेट की कोई डिश छूट गई हो तो वो भी बताना!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  }
+ ],
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "model": "gemini-3.8-flash-tts",
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber talking to friends. Fast, punchy, smiling voice, with a short pause between paragraphs:",
+  "per_segment": false
+ }
+}

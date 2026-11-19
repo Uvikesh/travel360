@@ -112,8 +112,15 @@ class Timeline:
         t = 0.0
         color_i = 0
         first = True
-        for seg in ep["segments"]:
-            wav, dur, words = tts.synth(seg["text"], voice, rate, ep.get("pitch", "+0Hz"))
+        pre = None
+        if ep.get("tts", {}).get("engine") == "gemini":
+            from . import gemini_tts
+            pre = gemini_tts.narrate(ep)
+        for si, seg in enumerate(ep["segments"]):
+            if pre:
+                wav, dur, words = pre[si]
+            else:
+                wav, dur, words = tts.synth(seg["text"], voice, rate, ep.get("pitch", "+0Hz"))
             beats = seg.get("beats", [])
             lead = 0.0
             b0 = beats[0] if beats else {}
