@@ -32,6 +32,11 @@ The owner uploads these Shorts to earn from Shorts ad revenue. Every decision mu
 7. Voice/script language: Hinglish (Devanagari), conversational, energetic. Not robotic, not a plain list:
    every ~10 s needs a surprise fact, a question or a twist.
 
+## End card (every video)
+The last segment is always the CTA end card (`"beats": [{"endcard": true}]` + the episode's `"endcard"` block):
+big StorySpark logo, "वीडियो पसंद आया?", 👍 लाइक / 🔁 शेयर / 🔔 सब्सक्राइब buttons, and
+"💬 अगली वीडियो किस पर बनाएँ? कमेंट करके बताओ". The narration says the same thing in the Hali voice.
+
 ## Always use a Hindi font (owner's standing rule)
 - **All on-screen text is written in Hindi (Devanagari script) and set in the Hindi font**
   `assets/fonts/NotoSansDevanagari-*.ttf`. That covers name tags, titles, thumbnail text, CTA pills and the watermark.

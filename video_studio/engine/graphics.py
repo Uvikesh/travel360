@@ -166,3 +166,26 @@ def clouds(W, H, seed=3, n_clouds=7):
     rgb = (np.dstack([shade * 255, shade * 255, shade * 258]).clip(0, 255)).astype(np.uint8)
     im = Image.fromarray(np.dstack([rgb, (al * 255).astype(np.uint8)]), "RGBA")
     return im.resize((W, H), Image.BICUBIC)
+
+
+def icon_pill(emoji, text, size=52, fill=(255, 255, 255), fg=(20, 16, 10), outline=(255, 196, 30)):
+    """Rounded button: colour emoji + Hindi text (e.g. 👍 लाइक)."""
+    f = font(size, hindi=True)
+    ef = ImageFont.truetype(EMOJI_FONT, 109)
+    e = Image.new("RGBA", (160, 160), (0, 0, 0, 0))
+    ImageDraw.Draw(e).text((80, 80), emoji, font=ef, embedded_color=True, anchor="mm")
+    e = e.crop(e.getbbox() or (0, 0, 160, 160))
+    es = int(size * 1.15)
+    e = e.resize((int(e.width * es / e.height), es), Image.LANCZOS)
+    d0 = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    l, t, r, b = d0.textbbox((0, 0), text, font=f, anchor="lm")
+    pad = int(size * 0.5)
+    w = pad + e.width + int(size * 0.3) + (r - l) + pad
+    h = int(size * 1.9)
+    im = Image.new("RGBA", (w + 12, h + 16), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle((6, 12, w + 6, h + 12), radius=h // 2, fill=(0, 0, 0, 120))
+    d.rounded_rectangle((6, 4, w + 6, h + 4), radius=h // 2, fill=fill + (255,), outline=outline + (255,), width=6)
+    im.alpha_composite(e, (6 + pad, 4 + (h - e.height) // 2))
+    d.text((6 + pad + e.width + int(size * 0.3) - l, 4 + h // 2), text, font=f, fill=fg, anchor="lm")
+    return im

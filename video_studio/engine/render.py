@@ -71,6 +71,7 @@ class Timeline:
         self.voice = []      # (t, wav_path)
         self.sfx = []        # (t, kind)
         self.captions = []   # (t0, t1, text)
+        self.endcard_t = None
         self.build(ep)
 
     def add_move(self, t0, t1, to, kind):
@@ -151,6 +152,9 @@ class Timeline:
                     color_i += 1
                     self.items.append(self.make_item(sh, bt, color, sticker_h))
                     self.sfx.append((bt, "pop"))
+                if b.get("endcard"):
+                    self.endcard_t = bt
+                    self.sfx.append((bt, "whoosh"))
                 if b.get("collage"):
                     self.make_collage(bt, sticker_h, b.get("collage_scale", 0.3))
             t = seg_t + dur + gap
@@ -206,6 +210,17 @@ def _init_globals(ep, W, H, fps):
         lg = lg.resize((sz, sz), Image.LANCZOS)
         lg.putalpha(lg.getchannel("A").point(lambda v: int(v * 0.95)))
         G["logo"] = lg
+    ec = ep.get("endcard")
+    if ec:
+        s_ = W / 1080
+        G["ec"] = {
+            "title": graphics.title_text(ec.get("title", "वीडियो पसंद आया?"), int(84 * s_), fill=(255, 205, 30)),
+            "buttons": [graphics.icon_pill(e, t, size=int(62 * s_)) for e, t in
+                        ec.get("buttons", [["👍", "लाइक"], ["🔁", "शेयर"], ["🔔", "सब्सक्राइब"]])],
+            "ask": graphics.icon_pill("💬", ec.get("ask", "अगली वीडियो किस पर बनाएँ?"), size=int(56 * s_),
+                                      fill=(255, 196, 30), outline=(255, 255, 255)),
+            "ask2": graphics.title_text(ec.get("ask2", "कमेंट करके बताओ 👇").replace(" 👇", ""), int(64 * s_)),
+        }
     G["W"], G["H"] = W, H
 
 
@@ -326,13 +341,39 @@ def render_frame(i):
         frame.alpha_composite(G["logo"], (int(W * 0.03), int(H * 0.02)))
         # big logo pops in over the final collage (end card)
         t_end = tl.duration - 2.2
-        if t >= t_end:
+        if tl.endcard_t is not None and t >= tl.endcard_t:
+            _endcard(frame, t - tl.endcard_t, W, H)
+        elif tl.endcard_t is None and t >= t_end:
             p = ease_out_back((t - t_end) / 0.5)
             sz = int(W * 0.34 * p)
             if sz > 4:
                 big = G["logo_src"].resize((sz, sz), Image.LANCZOS)
                 _paste(frame, big, (W - sz) // 2, int(H * 0.80) - sz // 2)
     return frame.convert("RGB").tobytes()
+
+
+def _endcard(frame, dt, W, H):
+    """Like / share / subscribe + 'next topic? comment' card with the big logo."""
+    ec = G["ec"]
+    dim = Image.new("RGBA", (W, H), (8, 6, 20, int(175 * smooth(dt / 0.4))))
+    frame.alpha_composite(dim)
+
+    def pop(img, cx, cy, t0, dur=0.45):
+        p = ease_out_back((dt - t0) / dur)
+        if p <= 0.02:
+            return
+        w, h = max(2, int(img.width * p)), max(2, int(img.height * p))
+        _paste(frame, img.resize((w, h), Image.BILINEAR), int(cx - w / 2), int(cy - h / 2))
+
+    sz = int(W * 0.46)
+    pop(G["logo_src"].resize((sz, sz), Image.LANCZOS), W / 2, H * 0.25, 0.0, 0.55)
+    pop(ec["title"], W / 2, H * 0.45, 0.35)
+    for k, b in enumerate(ec["buttons"]):
+        pulse = 1.0 + 0.04 * math.sin((dt - 0.6 - 0.15 * k) * 6) if dt > 1.2 else 1.0
+        img = b if pulse == 1.0 else b.resize((int(b.width * pulse), int(b.height * pulse)), Image.BILINEAR)
+        pop(img, W / 2, H * (0.55 + 0.08 * k), 0.55 + 0.15 * k)
+    pop(ec["ask"], W / 2, H * 0.80, 1.1)
+    pop(ec["ask2"], W / 2, H * 0.87, 1.3)
 
 
 def _paste(dst, src, x, y):

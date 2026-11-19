@@ -171,16 +171,21 @@ def narrate(ep):
     parts = _split(x, [r[1] for r in take_refs])
     refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in texts]
     out = []
-    for i, (p, t) in enumerate(zip(parts, texts)):
-        if t != take_texts[i]:
+    for i, t in enumerate(texts):
+        p = parts[i] if i < len(parts) else None
+        if i >= len(take_texts) or t != take_texts[i]:
+            # edited or appended line -> voice it on its own with the patch model
             pm = tts.get("patch_model", "gemini-3.8-flash-lite-tts")
-            pkey = hashlib.sha1(f"{pm}|{voice}|{t}".encode()).hexdigest()[:16]
-            raw_p = os.path.join(CACHE, f"gempatch_{pkey}.npy")
-            if not os.path.exists(raw_p):
-                print(f"  re-voicing edited line {i + 1} with {pm}")
-                np.save(raw_p, _request(t, voice, pm))  # no instruction text: it tends to get read aloud
-                time.sleep(6)
-            p = _strip_spoken_style(np.load(raw_p), window=5.0, min_pause=0.15, min_lead=1.5)
+            old_raw = os.path.join(CACHE, f"gempatch_{hashlib.sha1(f'{pm}|{voice}|{t}'.encode()).hexdigest()[:16]}.npy")
+            if os.path.exists(old_raw):      # older patches were requested with a (spoken) instruction
+                p = _strip_spoken_style(np.load(old_raw), window=5.0, min_pause=0.15, min_lead=1.5)
+            else:
+                raw_p = os.path.join(CACHE, f"gempatch_{hashlib.sha1(f'{pm}|{voice}|noinst|{t}'.encode()).hexdigest()[:16]}.npy")
+                if not os.path.exists(raw_p):
+                    print(f"  voicing line {i + 1} with {pm}")
+                    np.save(raw_p, _request(t, voice, pm))  # no instruction text: it tends to get read aloud
+                    time.sleep(6)
+                p = np.load(raw_p)
         p = _trim(p)
         wav = os.path.join(CACHE, f"gemini_{key}_{i:02d}_{hashlib.sha1(t.encode()).hexdigest()[:6]}.wav")
         if not os.path.exists(wav):
