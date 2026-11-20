@@ -47,6 +47,9 @@ def smooth(x):
 
 # ------------------------------------------------------------------ camera
 def fit_camera(spec, W, H):
+    if "point" in spec:   # {"point": [lon, lat], "span": svg units visible across the frame width}
+        x, y = geo.project(*spec["point"])
+        return (x + spec.get("dx", 0), y + spec.get("dy", 0), W / spec.get("span", 120))
     if spec.get("fit", "india") == "india":
         ids = [s for s in geo.india_states() if s not in ("an", "ld")]
     else:
@@ -163,7 +166,7 @@ class Timeline:
 
     def make_item(self, sh, bt, color, sticker_h):
         sid = sh["state"]
-        cx, cy = geo.state_centroid(sid)
+        cx, cy = geo.project(*sh["lonlat"]) if sh.get("lonlat") else geo.state_centroid(sid)
         h = int(sticker_h * sh.get("scale", 1.0))
         art = sh.get("sticker")
         art_path = os.path.join(ROOT, "assets", "stickers", art) if art else None

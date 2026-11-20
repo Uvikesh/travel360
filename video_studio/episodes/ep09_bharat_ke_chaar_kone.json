@@ -1,0 +1,304 @@
+{
+ "title": "भारत के चार कोने: सबसे पहला सूर्योदय और सबसे आखिरी सूर्यास्त",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "भारत के",
+   "4 कोने",
+   "2 घंटे का फ़र्क!"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 125,
+  "pill": "यहाँ सबसे पहले सूरज उगता है"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts",
+   "gemini-3.8-flash-lite-tts",
+   "gemini-3.1-flash-tts-preview"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like an excited Indian travel YouTuber telling an amazing story to friends. Curious, punchy, warm voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "जब अरुणाचल में सूरज उगता है, तब गुजरात में अभी अंधेरा होता है! दोनों के बीच करीब दो घंटे का फ़र्क, पर घड़ी पूरे देश में एक ही।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       97.03,
+       28.12
+      ],
+      "span": 170
+     },
+     "transition": "cut",
+     "show": {
+      "state": "ar",
+      "label": "सुबह हो गई",
+      "sticker": "corner_dong.png",
+      "lonlat": [
+       97.03,
+       28.12
+      ],
+      "scale": 0.9,
+      "highlight": false,
+      "dy": 10
+     }
+    },
+    {
+     "at": "गुजरात",
+     "camera": {
+      "point": [
+       68.5424,
+       23.6352
+      ],
+      "span": 170,
+      "dx": 40
+     },
+     "transition": "fly",
+     "show": {
+      "state": "gj",
+      "label": "अभी अंधेरा",
+      "sticker": "corner_guhar.png",
+      "lonlat": [
+       68.5424,
+       23.6352
+      ],
+      "scale": 0.9,
+      "highlight": false,
+      "dx": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो चलते हैं भारत के चारों कोनों के सफ़र पर!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "पूरब में, अरुणाचल का डोंग गाँव। यहाँ भारत में सबसे पहले सूरज की किरणें पहुँचती हैं, और सूर्योदय देखने लोग रात तीन बजे पहाड़ी चढ़ते हैं। दो हज़ार ग्यारह की जनगणना में यहाँ सिर्फ़ पंद्रह लोग रहते थे!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       97.03,
+       28.12
+      ],
+      "span": 110
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "डोंग गाँव • सबसे पहला सूर्योदय",
+      "sticker": "corner_dong.png",
+      "lonlat": [
+       97.03,
+       28.12
+      ],
+      "scale": 0.95
+     }
+    }
+   ]
+  },
+  {
+   "text": "पश्चिम में, गुजरात के कच्छ में गुहार मोती, कोटेश्वर मंदिर के पास। यहाँ भारत में सबसे आखिर में सूरज डूबता है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       68.5424,
+       23.6352
+      ],
+      "span": 110,
+      "dx": 30
+     },
+     "transition": "fly",
+     "show": {
+      "state": "gj",
+      "label": "गुहार मोती • सबसे आखिरी सूर्यास्त",
+      "sticker": "corner_guhar.png",
+      "lonlat": [
+       68.5424,
+       23.6352
+      ],
+      "scale": 0.95,
+      "dx": 30
+     }
+    }
+   ]
+  },
+  {
+   "text": "उत्तर में, लद्दाख के सियाचिन ग्लेशियर के ऊपर इंदिरा कोल, करीब छह हज़ार मीटर की ऊँचाई पर, जहाँ भारत, पाकिस्तान और चीन की सीमाएँ पास आती हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       77.05,
+       35.67
+      ],
+      "span": 130,
+      "dy": 25
+     },
+     "transition": "fly",
+     "show": {
+      "state": "la",
+      "label": "इंदिरा कोल • सियाचिन",
+      "sticker": "corner_col.png",
+      "lonlat": [
+       77.05,
+       35.67
+      ],
+      "scale": 0.95,
+      "dy": 25
+     }
+    }
+   ]
+  },
+  {
+   "text": "और दक्षिण में, ग्रेट निकोबार द्वीप पर इंदिरा पॉइंट, भारत का सबसे दक्षिणी सिरा। ज़मीन पर सबसे दक्षिणी जगह है कन्याकुमारी, जहाँ तीन समंदर मिलते हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       93.84,
+       6.75
+      ],
+      "span": 150,
+      "dy": -20
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "इंदिरा पॉइंट",
+      "sticker": "corner_ip.png",
+      "lonlat": [
+       93.84,
+       6.75
+      ],
+      "scale": 0.95,
+      "highlight": false,
+      "dy": -25
+     }
+    },
+    {
+     "at": "कन्याकुमारी",
+     "camera": {
+      "point": [
+       77.54,
+       8.08
+      ],
+      "span": 150,
+      "dy": -20
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tn",
+      "label": "कन्याकुमारी • तीन समंदर",
+      "sticker": "corner_kanya.png",
+      "lonlat": [
+       77.54,
+       8.08
+      ],
+      "scale": 0.95,
+      "dy": -25
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब सबसे मज़ेदार बात! इतने बड़े देश में घड़ी एक ही है, भारतीय मानक समय। और ये समय तय होता है यूपी के मिर्ज़ापुर के पास से गुज़रने वाली साढ़े बयासी डिग्री देशांतर रेखा से।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       82.57,
+       25.15
+      ],
+      "span": 220
+     },
+     "transition": "fly",
+     "show": {
+      "state": "up",
+      "label": "मिर्ज़ापुर • 82.5° पूर्व",
+      "sticker": "corner_mirz.png",
+      "lonlat": [
+       82.57,
+       25.15
+      ],
+      "scale": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "text": "भारत के इन चार कोनों में से आप कहाँ जाना चाहोगे? कमेंट में बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
