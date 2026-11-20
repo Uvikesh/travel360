@@ -182,13 +182,14 @@ class Timeline:
                 "src": sh, "scale": 1.0}
 
     def make_collage(self, bt, sticker_h, scale):
-        seen = []
+        seen, picks = set(), []
         for it in list(self.items):
-            if it.get("collage") or it["state"] in seen:
+            key = (it["state"], it["src"].get("sticker") or it["src"].get("emoji"), tuple(it["src"].get("lonlat") or ()))
+            if it.get("collage") or key in seen:
                 continue
-            seen.append(it["state"])
-        for k, sid in enumerate(seen):
-            src = next(i for i in self.items if i["state"] == sid)
+            seen.add(key)
+            picks.append(it)
+        for k, src in enumerate(picks):
             it = dict(src)
             it.update(t_in=bt + 0.07 * k, t_out=None, collage=True, scale=scale, label=None)
             self.items.append(it)

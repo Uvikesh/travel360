@@ -1,0 +1,230 @@
+{
+ "title": "भारत की 4 सबसे रहस्यमयी जगहें",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -23,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "भारत की 4",
+   "रहस्यमयी जगहें",
+   "हिम्मत है?"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 122,
+  "pill": "झील में सैकड़ों कंकाल!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts",
+   "gemini-3.8-flash-lite-tts",
+   "gemini-3.1-flash-tts-preview"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a gripping Indian mystery-story YouTuber: suspenseful, curious, slightly hushed but energetic, with dramatic short pauses between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "हिमालय में पाँच हज़ार मीटर की ऊँचाई पर एक झील है, जिसके किनारे सैकड़ों इंसानी कंकाल पड़े मिले! और ये भारत की अकेली रहस्यमयी जगह नहीं है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       79.7317,
+       30.2622
+      ],
+      "span": 120,
+      "dy": -20
+     },
+     "transition": "cut",
+     "show": {
+      "state": "ut",
+      "label": "कंकालों वाली झील?",
+      "sticker": "mystery_roop.png",
+      "lonlat": [
+       79.7317,
+       30.2622
+      ],
+      "scale": 0.95,
+      "dy": -25
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो चलते हैं भारत की चार सबसे रहस्यमयी जगहों पर!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "पहली, उत्तराखंड की रूपकुंड झील, जिसे स्केलेटन लेक भी कहते हैं। पहले माना गया कि ये सब एक ही तूफ़ान में मारे गए, पर वैज्ञानिक जाँच में पता चला कि ये लोग अलग-अलग समय पर मरे, करीब एक हज़ार साल के फ़ासले पर!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       79.7317,
+       30.2622
+      ],
+      "span": 110,
+      "dy": -20
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ut",
+      "label": "रूपकुंड • 5020 मी",
+      "sticker": "mystery_roop.png",
+      "lonlat": [
+       79.7317,
+       30.2622
+      ],
+      "scale": 0.95,
+      "dy": -25
+     }
+    }
+   ]
+  },
+  {
+   "text": "दूसरी, जैसलमेर के पास कुलधरा गाँव। करीब सात सौ साल पहले बसा ये अमीर गाँव, उन्नीसवीं सदी की शुरुआत तक पूरा खाली हो गया। क्यों? कोई कहता है पानी की कमी, कोई भूकंप, और लोककथा कहती है कि एक दीवान के ज़ुल्म से बचने के लिए लोग रातों-रात चले गए।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       70.785,
+       26.87
+      ],
+      "span": 130,
+      "dx": 30
+     },
+     "transition": "fly",
+     "show": {
+      "state": "rj",
+      "label": "कुलधरा • वीरान गाँव",
+      "sticker": "mystery_kul.png",
+      "lonlat": [
+       70.785,
+       26.87
+      ],
+      "scale": 0.95,
+      "dx": 30
+     }
+    }
+   ]
+  },
+  {
+   "text": "तीसरा, अलवर का भानगढ़ किला। सोलहवीं सदी का ये किला भारत की सबसे डरावनी जगहों में गिना जाता है। लोककथा है कि एक साधु ने शाप दिया था, कि कोई भी घर उसकी कुटिया से ऊँचा बना, तो पूरा नगर तबाह हो जाएगा।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       76.2875,
+       27.0958
+      ],
+      "span": 130
+     },
+     "transition": "fly",
+     "show": {
+      "state": "rj",
+      "label": "भानगढ़ किला • अलवर",
+      "sticker": "mystery_bhan.png",
+      "lonlat": [
+       76.2875,
+       27.0958
+      ],
+      "scale": 0.95
+     }
+    }
+   ]
+  },
+  {
+   "text": "और चौथी, महाराष्ट्र की लोनार झील। ये किसी नदी ने नहीं, आसमान से गिरे एक उल्कापिंड ने बनाई है! करीब पौने दो किलोमीटर चौड़ा गड्ढा, और ये भारत की इकलौती ऐसी झील है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       76.5075,
+       19.975
+      ],
+      "span": 130
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mh",
+      "label": "लोनार क्रेटर • अंतरिक्ष से",
+      "sticker": "mystery_lonar.png",
+      "lonlat": [
+       76.5075,
+       19.975
+      ],
+      "scale": 0.95
+     }
+    }
+   ]
+  },
+  {
+   "text": "इनमें से आप कहाँ जाने की हिम्मत करोगे? कमेंट में बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true,
+     "collage_scale": 0.5
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
