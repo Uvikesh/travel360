@@ -1,0 +1,728 @@
+{
+ "title": "भारत के हर राज्य और UT की सबसे ऊँची जगह",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "हर राज्य की",
+   "सबसे ऊँची जगह",
+   "8586 मी बनाम 15 मी!"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 112,
+  "pill": "लक्षद्वीप सिर्फ़ 15 मीटर!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts",
+   "gemini-3.8-flash-lite-tts",
+   "gemini-3.1-flash-tts-preview"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber sharing geography facts with friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "सिक्किम की सबसे ऊँची जगह है कंचनजंगा, साढ़े आठ हज़ार मीटर से भी ऊँची! और लक्षद्वीप की सबसे ऊँची जगह? सिर्फ़ पंद्रह मीटर!",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk"
+      ],
+      "pad": 2.6,
+      "max_zoom": 12
+     },
+     "transition": "cut",
+     "show": {
+      "state": "sk",
+      "label": "कंचनजंगा • 8586 मी",
+      "sticker": "peak_sk.png",
+      "scale": 0.95,
+      "dx": -4,
+      "dy": -24
+     }
+    },
+    {
+     "at": "लक्षद्वीप",
+     "camera": {
+      "fit": [
+       "ld"
+      ],
+      "pad": 3.0,
+      "max_zoom": 10
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ld",
+      "label": "अगत्ती द्वीप • 15 मी",
+      "sticker": "peak_ld.png",
+      "scale": 0.9,
+      "dx": 12
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो देखते हैं अट्ठाईस राज्य और आठ केंद्र शासित प्रदेश, हर एक की सबसे ऊँची जगह!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं ऊपर से। जम्मू-कश्मीर में नून चोटी, सात हज़ार मीटर से ऊँची। और लद्दाख में साल्तोरो कांगड़ी, जबकि भारत के नक्शे में दुनिया की दूसरी सबसे ऊँची चोटी K2 भी लद्दाख में ही है।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jk",
+       "la"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "जम्मू",
+     "show": {
+      "state": "jk",
+      "label": "नून • 7135 मी",
+      "sticker": "peak_jk.png",
+      "scale": 0.7,
+      "dx": -10
+     }
+    },
+    {
+     "at": "लद्दाख",
+     "show": {
+      "state": "la",
+      "label": "साल्तोरो कांगड़ी • 7742 मी",
+      "sticker": "peak_la.png",
+      "scale": 0.7,
+      "dx": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "हिमाचल में रियो पुरगिल, और उत्तराखंड में नंदा देवी, लगभग सात हज़ार आठ सौ मीटर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "hp",
+       "ut"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "हिमाचल",
+     "show": {
+      "state": "hp",
+      "label": "रियो पुरगिल • 6816 मी",
+      "sticker": "peak_hp.png",
+      "scale": 0.66,
+      "dx": -26,
+      "dy": 12
+     }
+    },
+    {
+     "at": "उत्तराखंड",
+     "show": {
+      "state": "ut",
+      "label": "नंदा देवी • 7817 मी",
+      "sticker": "peak_ut.png",
+      "scale": 0.66,
+      "dx": 40,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "पंजाब, चंडीगढ़ और हरियाणा में शिवालिक की पहाड़ियाँ, और दिल्ली की सबसे ऊँची जगह सिर्फ़ तीन सौ पंद्रह मीटर, अरावली की रिज पर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "pb",
+       "ch",
+       "hr",
+       "dl"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "पंजाब",
+     "show": {
+      "state": "pb",
+      "label": "शिवालिक • ~1000 मी",
+      "sticker": "peak_pb.png",
+      "scale": 0.56,
+      "dx": -14,
+      "dy": -10
+     }
+    },
+    {
+     "at": "चंडीगढ़",
+     "show": {
+      "state": "ch",
+      "label": "शिवालिक • 479 मी",
+      "sticker": "peak_ch.png",
+      "scale": 0.5,
+      "dx": 24,
+      "dy": -20
+     }
+    },
+    {
+     "at": "हरियाणा",
+     "show": {
+      "state": "hr",
+      "label": "करोह चोटी • 1467 मी",
+      "sticker": "peak_hr.png",
+      "scale": 0.56,
+      "dx": -40,
+      "dy": 40
+     }
+    },
+    {
+     "at": "दिल्ली",
+     "show": {
+      "state": "dl",
+      "label": "दिल्ली रिज • 315 मी",
+      "sticker": "peak_dl.png",
+      "scale": 0.5,
+      "dx": 20,
+      "dy": 60
+     }
+    }
+   ]
+  },
+  {
+   "text": "यूपी में अमसोत चोटी, और राजस्थान में माउंट आबू का गुरु शिखर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "up",
+       "rj"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "यूपी",
+     "show": {
+      "state": "up",
+      "label": "अमसोत • 957 मी",
+      "sticker": "peak_up.png",
+      "scale": 0.7,
+      "dx": 30,
+      "dy": 30
+     }
+    },
+    {
+     "at": "राजस्थान",
+     "show": {
+      "state": "rj",
+      "label": "गुरु शिखर • 1722 मी",
+      "sticker": "peak_rj.png",
+      "scale": 0.7,
+      "dx": -50,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "गुजरात में गिरनार, दादरा नगर हवेली की पहाड़ियाँ, और महाराष्ट्र में कलसूबाई।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "gj",
+       "dh",
+       "mh"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "गुजरात",
+     "show": {
+      "state": "gj",
+      "label": "गिरनार • 1145 मी",
+      "sticker": "peak_gj.png",
+      "scale": 0.66,
+      "dx": -20,
+      "dy": -20
+     }
+    },
+    {
+     "at": "दादरा",
+     "show": {
+      "state": "dh",
+      "label": "दादरा की पहाड़ियाँ • 465 मी",
+      "sticker": "peak_dh.png",
+      "scale": 0.5,
+      "dx": -10,
+      "dy": 70
+     }
+    },
+    {
+     "at": "महाराष्ट्र",
+     "show": {
+      "state": "mh",
+      "label": "कलसूबाई • 1646 मी",
+      "sticker": "peak_mh.png",
+      "scale": 0.62,
+      "dx": 20,
+      "dy": 20
+     }
+    }
+   ]
+  },
+  {
+   "text": "मध्य प्रदेश में पचमढ़ी का धूपगढ़, छत्तीसगढ़ में बैलाडीला की नंदीराज चोटी, बिहार में सोमेश्वर, और झारखंड में पारसनाथ।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mp",
+       "ct",
+       "br",
+       "jh"
+      ],
+      "pad": 1.1
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "मध्य",
+     "show": {
+      "state": "mp",
+      "label": "धूपगढ़ • 1352 मी",
+      "sticker": "peak_mp.png",
+      "scale": 0.58
+     }
+    },
+    {
+     "at": "छत्तीसगढ़",
+     "show": {
+      "state": "ct",
+      "label": "नंदीराज • 1276 मी",
+      "sticker": "peak_ct.png",
+      "scale": 0.56
+     }
+    },
+    {
+     "at": "बिहार",
+     "show": {
+      "state": "br",
+      "label": "सोमेश्वर • 880 मी",
+      "sticker": "peak_br.png",
+      "scale": 0.54
+     }
+    },
+    {
+     "at": "झारखंड",
+     "show": {
+      "state": "jh",
+      "label": "पारसनाथ • 1365 मी",
+      "sticker": "peak_jh.png",
+      "scale": 0.54,
+      "dx": -6
+     }
+    }
+   ]
+  },
+  {
+   "text": "बंगाल में संदकफू, जहाँ से एवरेस्ट भी दिखता है, और ओडिशा में देओमाली।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "wb",
+       "or"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "बंगाल",
+     "show": {
+      "state": "wb",
+      "label": "संदकफू • 3636 मी",
+      "sticker": "peak_wb.png",
+      "scale": 0.66,
+      "dx": 10,
+      "dy": 20
+     }
+    },
+    {
+     "at": "ओडिशा",
+     "show": {
+      "state": "or",
+      "label": "देओमाली • 1672 मी",
+      "sticker": "peak_or.png",
+      "scale": 0.66
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब नॉर्थ ईस्ट! अरुणाचल में कांगतो, सात हज़ार मीटर से ऊँचा। नागालैंड में सारामती, और असम में दिमा हसाओ की पहाड़ियाँ।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk",
+       "as",
+       "ar",
+       "nl",
+       "mn",
+       "ml",
+       "mz",
+       "tr"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "अरुणाचल",
+     "camera": {
+      "fit": [
+       "ar"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "कांगतो • 7090 मी",
+      "sticker": "peak_ar.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "नागालैंड",
+     "camera": {
+      "fit": [
+       "nl"
+      ],
+      "pad": 1.8,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "nl",
+      "label": "सारामती • 3826 मी",
+      "sticker": "peak_nl.png",
+      "scale": 0.85,
+      "dx": -26,
+      "dy": -30
+     }
+    },
+    {
+     "at": "असम",
+     "camera": {
+      "fit": [
+       "as"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "as",
+      "label": "दिमा हसाओ • 1960 मी",
+      "sticker": "peak_as.png",
+      "scale": 0.85
+     }
+    }
+   ]
+  },
+  {
+   "text": "मणिपुर में माउंट टेम्पू, मिज़ोरम में फौंगपुई, मेघालय में शिलांग पीक, और त्रिपुरा में बेतलिंगछिप।",
+   "beats": [
+    {
+     "at": "मणिपुर",
+     "camera": {
+      "fit": [
+       "mn"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mn",
+      "label": "टेम्पू • 2994 मी",
+      "sticker": "peak_mn.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -14
+     }
+    },
+    {
+     "at": "मिज़ोरम",
+     "camera": {
+      "fit": [
+       "mz"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mz",
+      "label": "फौंगपुई • 2157 मी",
+      "sticker": "peak_mz.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -6
+     }
+    },
+    {
+     "at": "मेघालय",
+     "camera": {
+      "fit": [
+       "ml"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "शिलांग पीक • 1965 मी",
+      "sticker": "peak_ml.png",
+      "scale": 0.85,
+      "dy": -34
+     }
+    },
+    {
+     "at": "त्रिपुरा",
+     "camera": {
+      "fit": [
+       "tr"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tr",
+      "label": "बेतलिंगछिप • 930 मी",
+      "sticker": "peak_tr.png",
+      "scale": 0.85,
+      "dx": -24,
+      "dy": -10
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब साउथ। तेलंगाना में डोली गुट्टा, और आंध्र में पूर्वी घाट की सबसे ऊँची चोटी, अरमा कोंडा।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "tg",
+       "ap"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "तेलंगाना",
+     "show": {
+      "state": "tg",
+      "label": "डोली गुट्टा • 965 मी",
+      "sticker": "peak_tg.png",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "आंध्र",
+     "show": {
+      "state": "ap",
+      "label": "अरमा कोंडा • 1680 मी",
+      "sticker": "peak_ap.png",
+      "scale": 0.72,
+      "dx": 10,
+      "dy": 70
+     }
+    }
+   ]
+  },
+  {
+   "text": "कर्नाटक में मुल्लयनगिरी, गोवा में सोनसोगोर, केरला में अनामुडी, जो हिमालय के बाहर भारत की सबसे ऊँची चोटी है! तमिलनाडु में दोड्डाबेट्टा, और पुडुचेरी सिर्फ़ सड़सठ मीटर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ka",
+       "ga",
+       "kl",
+       "tn",
+       "py"
+      ],
+      "pad": 1.08
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कर्नाटक",
+     "show": {
+      "state": "ka",
+      "label": "मुल्लयनगिरी • 1925 मी",
+      "sticker": "peak_ka.png",
+      "scale": 0.54,
+      "dx": 40,
+      "dy": -10
+     }
+    },
+    {
+     "at": "गोवा",
+     "show": {
+      "state": "ga",
+      "label": "सोनसोगोर • 1026 मी",
+      "sticker": "peak_ga.png",
+      "scale": 0.48,
+      "dx": -40,
+      "dy": -10
+     }
+    },
+    {
+     "at": "केरला",
+     "show": {
+      "state": "kl",
+      "label": "अनामुडी • 2695 मी",
+      "sticker": "peak_kl.png",
+      "scale": 0.5,
+      "dx": -10
+     }
+    },
+    {
+     "at": "तमिलनाडु",
+     "show": {
+      "state": "tn",
+      "label": "दोड्डाबेट्टा • 2637 मी",
+      "sticker": "peak_tn.png",
+      "scale": 0.54,
+      "dy": -10
+     }
+    },
+    {
+     "at": "पुडुचेरी",
+     "show": {
+      "state": "py",
+      "label": "पुडुचेरी • 67 मी",
+      "sticker": "peak_py.png",
+      "scale": 0.48,
+      "dx": 26,
+      "dy": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "और अंडमान निकोबार में सैडल पीक, सात सौ बत्तीस मीटर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "an"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "सैडल पीक • 732 मी",
+      "sticker": "peak_an.png",
+      "scale": 0.85,
+      "dx": -20
+     }
+    }
+   ]
+  },
+  {
+   "text": "इनमें से आप किस चोटी पर चढ़ना चाहोगे? कमेंट में ज़रूर बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
