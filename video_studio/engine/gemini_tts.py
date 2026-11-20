@@ -339,7 +339,7 @@ def narrate(ep):
         p = parts[i] if i < len(parts) else None
         if i >= len(take_texts) or t != take_texts[i]:
             # edited or appended line -> voice it on its own with the patch model
-            pm = tts.get("patch_model", "gemini-3.8-flash-lite-tts")
+            pm = tts.get("patch_model", "gemini-3.8-flash-tts")
             old_raw = os.path.join(CACHE, f"gempatch_{hashlib.sha1(f'{pm}|{voice}|{t}'.encode()).hexdigest()[:16]}.npy")
             if os.path.exists(old_raw):      # older patches were requested with a (spoken) instruction
                 p = _strip_spoken_style(np.load(old_raw), window=5.0, min_pause=0.15, min_lead=1.5)

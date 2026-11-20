@@ -30,9 +30,7 @@
   "engine": "gemini",
   "voice": "Hali",
   "models": [
-   "gemini-3.8-flash-tts",
-   "gemini-3.8-flash-lite-tts",
-   "gemini-3.1-flash-tts-preview"
+   "gemini-3.8-flash-tts"
   ],
   "model": "gemini-3.8-flash-tts",
   "per_segment": false,

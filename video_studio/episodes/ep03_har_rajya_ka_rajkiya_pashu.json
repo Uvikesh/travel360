@@ -29,9 +29,12 @@
  "tts": {
   "engine": "gemini",
   "voice": "Hali",
-  "model": "gemini-3.8-flash-lite-tts",
+  "model": "gemini-3.8-flash-tts",
   "per_segment": false,
-  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber sharing amazing facts with friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber sharing amazing facts with friends. Fast, punchy, smiling voice, with a short pause between paragraphs:",
+  "models": [
+   "gemini-3.8-flash-tts"
+  ]
  },
  "logo": "assets/brand/storyspark_logo.png",
  "logo_size": 150,

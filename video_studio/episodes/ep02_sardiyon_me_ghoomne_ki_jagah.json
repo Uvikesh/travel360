@@ -29,7 +29,7 @@
  "tts": {
   "engine": "gemini",
   "voice": "Hali",
-  "model": "gemini-3.8-flash-lite-tts",
+  "model": "gemini-3.8-flash-tts",
   "per_segment": false,
   "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber talking to friends. Fast, punchy, smiling voice, with a short pause between paragraphs:",
   "take_texts": [
@@ -53,7 +53,9 @@
    "इनमें से आप कहाँ जाना चाहोगे? कमेंट में लिखो, और जिसके साथ जाना है उसे ये वीडियो भेजो!",
    "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!"
   ],
-  "patch_model": "gemini-3.8-flash-lite-tts"
+  "models": [
+   "gemini-3.8-flash-tts"
+  ]
  },
  "logo": "assets/brand/storyspark_logo.png",
  "logo_size": 150,

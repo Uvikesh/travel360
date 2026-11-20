@@ -2,6 +2,7 @@
 
 **Channel / brand: The StorySpark** ("हर कहानी में छिपी है एक चिंगारी…"). Logo: `assets/brand/storyspark_logo.png`.
 Put it on every video (top-left corner + a big logo on the end card) and on every thumbnail. Do not use a text watermark.
+Voice: Google AI Studio (Gemini TTS) **Hali, ONLY with the main model gemini-3.8-flash-tts**. Never fall back to the lite or preview TTS models: they sound different and the owner noticed. If the daily quota is used up, wait for the reset (midnight Pacific ≈ 1:30 PM IST) and tell the owner.
 Preferred voice: Google AI Studio (Gemini TTS) **Hali**, via `"tts": {"engine": "gemini", "voice": "Hali"}`.
 Free tier = 10 TTS requests/day, so make one request per episode (whole script). The API key comes from
 GEMINI_API_KEY / GEMINI_KEY_FILE and is never committed. Gemini may read the style instruction aloud. That part
