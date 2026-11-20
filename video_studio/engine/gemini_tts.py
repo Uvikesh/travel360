@@ -178,6 +178,12 @@ def _split_by_transcript(x, texts, cache_path):
     prev, offset = 0.0, 0.0
     for p in phrases:
         v = float(p["start"])
+        # "mmss.ss" written as a number (104.56 = 1:04.56): a big jump that the mm:ss reading explains
+        if v >= 100 and v - prev > 25:
+            m = int(v // 100)
+            alt = m * 60 + (v - m * 100)
+            if 0 <= v - m * 100 < 60 and abs(alt - prev) < abs(v - prev):
+                v = alt
         cand = v + offset
         if cand + 1.0 < prev:
             m = int(v)
