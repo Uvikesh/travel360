@@ -206,10 +206,10 @@
      "show": {
       "state": "pb",
       "label": "शिवालिक • ~1000 मी",
-      "sticker": "peak_pb.png",
       "scale": 0.56,
       "dx": -14,
-      "dy": -10
+      "dy": -10,
+      "emoji": "⛰️"
      }
     },
     {
@@ -227,10 +227,10 @@
      "at": "हरियाणा",
      "show": {
       "state": "hr",
-      "label": "करोह चोटी • 1467 मी",
+      "label": "करोह (मोरनी हिल्स) • 1467 मी",
       "sticker": "peak_hr.png",
       "scale": 0.56,
-      "dx": -40,
+      "dx": -70,
       "dy": 40
      }
     },
@@ -241,8 +241,8 @@
       "label": "दिल्ली रिज • 315 मी",
       "sticker": "peak_dl.png",
       "scale": 0.5,
-      "dx": 20,
-      "dy": 60
+      "dx": 40,
+      "dy": 80
      }
     }
    ]
@@ -265,10 +265,10 @@
      "show": {
       "state": "up",
       "label": "अमसोत • 957 मी",
-      "sticker": "peak_up.png",
       "scale": 0.7,
       "dx": 30,
-      "dy": 30
+      "dy": 30,
+      "emoji": "⛰️"
      }
     },
     {
@@ -314,10 +314,10 @@
      "show": {
       "state": "dh",
       "label": "दादरा की पहाड़ियाँ • 465 मी",
-      "sticker": "peak_dh.png",
       "scale": 0.5,
       "dx": -10,
-      "dy": 70
+      "dy": 70,
+      "emoji": "⛰️"
      }
     },
     {
@@ -354,7 +354,9 @@
       "state": "mp",
       "label": "धूपगढ़ • 1352 मी",
       "sticker": "peak_mp.png",
-      "scale": 0.58
+      "scale": 0.58,
+      "dx": -40,
+      "dy": 0
      }
     },
     {
@@ -363,7 +365,9 @@
       "state": "ct",
       "label": "नंदीराज • 1276 मी",
       "sticker": "peak_ct.png",
-      "scale": 0.56
+      "scale": 0.56,
+      "dx": 20,
+      "dy": 70
      }
     },
     {
@@ -371,8 +375,10 @@
      "show": {
       "state": "br",
       "label": "सोमेश्वर • 880 मी",
-      "sticker": "peak_br.png",
-      "scale": 0.54
+      "scale": 0.54,
+      "emoji": "⛰️",
+      "dx": 0,
+      "dy": -40
      }
     },
     {
@@ -382,7 +388,8 @@
       "label": "पारसनाथ • 1365 मी",
       "sticker": "peak_jh.png",
       "scale": 0.54,
-      "dx": -6
+      "dx": 50,
+      "dy": 20
      }
     }
    ]
@@ -471,10 +478,10 @@
      "show": {
       "state": "nl",
       "label": "सारामती • 3826 मी",
-      "sticker": "peak_nl.png",
       "scale": 0.85,
       "dx": -26,
-      "dy": -30
+      "dy": -30,
+      "emoji": "⛰️"
      }
     },
     {
@@ -512,10 +519,10 @@
      "show": {
       "state": "mn",
       "label": "टेम्पू • 2994 मी",
-      "sticker": "peak_mn.png",
       "scale": 0.85,
       "dx": -22,
-      "dy": -14
+      "dy": -14,
+      "emoji": "⛰️"
      }
     },
     {
@@ -549,7 +556,7 @@
      "transition": "fly",
      "show": {
       "state": "ml",
-      "label": "शिलांग पीक • 1965 मी",
+      "label": "शिलांग पीक से नज़ारा • 1965 मी",
       "sticker": "peak_ml.png",
       "scale": 0.85,
       "dy": -34
@@ -594,8 +601,8 @@
      "show": {
       "state": "tg",
       "label": "डोली गुट्टा • 965 मी",
-      "sticker": "peak_tg.png",
-      "scale": 0.72
+      "scale": 0.72,
+      "emoji": "⛰️"
      }
     },
     {
@@ -643,10 +650,10 @@
      "show": {
       "state": "ga",
       "label": "सोनसोगोर • 1026 मी",
-      "sticker": "peak_ga.png",
       "scale": 0.48,
       "dx": -40,
-      "dy": -10
+      "dy": -10,
+      "emoji": "⛰️"
      }
     },
     {
