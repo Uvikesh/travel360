@@ -75,17 +75,20 @@
      "at": "दिल्ली",
      "camera": {
       "fit": [
-       "dl"
+       "dl",
+       "hr",
+       "up"
       ],
-      "pad": 3.0,
-      "max_zoom": 14
+      "pad": 1.6
      },
      "transition": "fly",
      "show": {
       "state": "dl",
       "label": "गौरैया",
       "sticker": "bird_passer.png",
-      "scale": 0.9
+      "scale": 0.9,
+      "dx": 40,
+      "dy": -70
      }
     }
    ]
@@ -154,7 +157,7 @@
      "at": "हिमाचल",
      "show": {
       "state": "hp",
-      "label": "जुजुराना",
+      "label": "जुजुराना (वेस्टर्न ट्रैगोपैन)",
       "sticker": "bird_tragopan_mel.png",
       "scale": 0.66,
       "dx": -26,
@@ -303,8 +306,8 @@
       "label": "?",
       "emoji": "❓",
       "scale": 0.5,
-      "dx": -30,
-      "dy": -10
+      "dx": -10,
+      "dy": 70
      }
     }
    ]

@@ -7,3 +7,4 @@
 | 3 | 2026-11-19 | हर राज्य का राजकीय पशु (30 regions) | `episodes/ep03_har_rajya_ka_rajkiya_pashu.json` | `output/ep03_har_rajya_ka_rajkiya_pashu/ep03_har_rajya_ka_rajkiya_pashu.mp4` |
 | 4 | 2026-11-19 | भारत के सभी 36 राज्य/UT की राजधानी (28+8) | `episodes/ep04_36_rajdhaniyan.json` | `output/ep04_36_rajdhaniyan/ep04_36_rajdhaniyan.mp4` |
 | 5 | 2026-11-19 | भारत के 36 राज्य/UT के मशहूर नृत्य | `episodes/ep05_har_rajya_ka_nritya.json` | `output/ep05_har_rajya_ka_nritya/ep05_har_rajya_ka_nritya.mp4` |
+| 6 | 2026-11-20 | भारत के 36 राज्य/UT के राजकीय पक्षी | `episodes/ep06_har_rajya_ka_rajkiya_pakshi.json` | `output/ep06_har_rajya_ka_rajkiya_pakshi/ep06_har_rajya_ka_rajkiya_pakshi.mp4` |
