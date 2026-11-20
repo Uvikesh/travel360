@@ -71,6 +71,31 @@ def _silences(x):
     return runs, speech[0] * hop, speech[-1] * hop
 
 
+ASK_MODELS = ["gemini-3.8-flash", "gemini-2.5-flash", "gemini-3.1-flash-lite"]
+
+
+def _ask(body):
+    """Text/audio-understanding call (transcripts, checks). Falls back across models (separate free quotas)."""
+    last = None
+    for m in ASK_MODELS:
+        for attempt in range(3):
+            req = urllib.request.Request(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
+                data=json.dumps(body).encode(), headers={"x-goog-api-key": _key(), "Content-Type": "application/json"})
+            try:
+                return json.load(urllib.request.urlopen(req, timeout=400))
+            except urllib.error.HTTPError as e:
+                last = f"{m}: {e.code}"
+                if e.code == 429 and attempt < 2 and "per day" not in e.read().decode(errors="ignore").lower():
+                    time.sleep(30)
+                    continue
+                break
+            except Exception as e:  # timeouts
+                last = f"{m}: {e}"
+                time.sleep(5)
+    raise RuntimeError(f"all analysis models failed ({last})")
+
+
 def _request_any(text, voice, models):
     """Try the models in order (each has its own free daily quota)."""
     last = None
@@ -137,10 +162,7 @@ def _split_by_transcript(x, texts, cache_path):
                      "sentence end). Answer only JSON: {\"phrases\": [{\"start\": seconds_with_2_decimals, "
                      "\"text\": \"...\"}, ...]}"}]}],
             "generationConfig": {"responseMimeType": "application/json"}}
-        req = urllib.request.Request(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
-            data=json.dumps(body).encode(), headers={"x-goog-api-key": _key(), "Content-Type": "application/json"})
-        d = json.load(urllib.request.urlopen(req, timeout=400))
+        d = _ask(body)
         json.dump(json.loads(d["candidates"][0]["content"]["parts"][0]["text"]), open(meta, "w"), ensure_ascii=False)
     phrases = json.load(open(meta))["phrases"]
     dur = len(x) / SR
@@ -216,10 +238,7 @@ def _strip_spoken_prefix_checked(x, cache_path):
                      "e.g. 'Read this in Hindi like...') before the actual Hindi content? Answer only JSON: "
                      '{"instruction_spoken": true|false, "hindi_start_sec": <seconds where the Hindi content starts>}'}]}],
             "generationConfig": {"responseMimeType": "application/json"}}
-        req = urllib.request.Request(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
-            data=json.dumps(body).encode(), headers={"x-goog-api-key": _key(), "Content-Type": "application/json"})
-        d = json.load(urllib.request.urlopen(req, timeout=300))
+        d = _ask(body)
         ans = json.loads(d["candidates"][0]["content"]["parts"][0]["text"])
         json.dump(ans, open(meta, "w"))
     ans = json.load(open(meta))
@@ -303,6 +322,17 @@ def narrate(ep):
             print("  transcript alignment failed, using pause DP:", e)
     if parts is None:
         parts = _split(x, [r[1] for r in take_refs])
+    bad = [i for i, (p, r) in enumerate(zip(parts, take_refs)) if len(p) / SR > 1.8 * r[1] + 1.5]
+    if bad and tts.get("_retry", 0) < 2:
+        # the model repeated or added text (seen in practice) -> throw this take away and record a new one
+        print(f"  narration lines {[b + 1 for b in bad]} are far too long (repeated text?) -> new take")
+        os.rename(raw, raw.replace(".npy", f"_bad{tts.get('_retry', 0)}.npy"))
+        for f in os.listdir(CACHE):
+            if f.startswith(os.path.basename(raw)[:-4] + "_"):
+                os.remove(os.path.join(CACHE, f))
+        tts["_retry"] = tts.get("_retry", 0) + 1
+        time.sleep(5)
+        return narrate(ep)
     refs = [edge.synth(t, "hi-IN-MadhurNeural", "+22%") for t in texts]
     out = []
     for i, t in enumerate(texts):

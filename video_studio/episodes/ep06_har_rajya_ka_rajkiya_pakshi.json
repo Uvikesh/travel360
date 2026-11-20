@@ -1,0 +1,741 @@
+{
+ "title": "भारत के हर राज्य और UT का राजकीय पक्षी",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "36 राज्य/UT",
+   "36 राजकीय पक्षी",
+   "कितने पहचाने?"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 118,
+  "pill": "दिल्ली का = गौरैया!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts",
+   "gemini-3.8-flash-lite-tts",
+   "gemini-3.1-flash-tts-preview"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian YouTuber sharing nature facts with friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "मोर तो हमारा राष्ट्रीय पक्षी है, पर क्या आप जानते हैं कि दिल्ली का राजकीय पक्षी एक छोटी सी गौरैया है?",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    },
+    {
+     "at": "दिल्ली",
+     "camera": {
+      "fit": [
+       "dl"
+      ],
+      "pad": 3.0,
+      "max_zoom": 14
+     },
+     "transition": "fly",
+     "show": {
+      "state": "dl",
+      "label": "गौरैया",
+      "sticker": "bird_passer.png",
+      "scale": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "text": "चलो देखते हैं अट्ठाईस राज्य और आठ केंद्र शासित प्रदेश, हर एक का राजकीय पक्षी!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं ऊपर से। जम्मू-कश्मीर का कलीज तीतर, और लद्दाख का काली गर्दन वाला सारस।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "jk",
+       "la"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "जम्मू",
+     "show": {
+      "state": "jk",
+      "label": "कलीज तीतर",
+      "sticker": "bird_lophura.png",
+      "scale": 0.72,
+      "dx": -10
+     }
+    },
+    {
+     "at": "लद्दाख",
+     "show": {
+      "state": "la",
+      "label": "काली गर्दन वाला सारस",
+      "sticker": "bird_grus_nigricollis.png",
+      "scale": 0.72,
+      "dx": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "हिमाचल का जुजुराना, और उत्तराखंड का रंग-बिरंगा मोनाल।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "hp",
+       "ut"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "हिमाचल",
+     "show": {
+      "state": "hp",
+      "label": "जुजुराना",
+      "sticker": "bird_tragopan_mel.png",
+      "scale": 0.66,
+      "dx": -26,
+      "dy": 12
+     }
+    },
+    {
+     "at": "उत्तराखंड",
+     "show": {
+      "state": "ut",
+      "label": "मोनाल",
+      "sticker": "bird_lophophorus.png",
+      "scale": 0.66,
+      "dx": 40,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "पंजाब का बाज़, चंडीगढ़ का धूसर धनेश, और हरियाणा का काला तीतर।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "pb",
+       "ch",
+       "hr"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "पंजाब",
+     "show": {
+      "state": "pb",
+      "label": "बाज़",
+      "sticker": "bird_accipiter.png",
+      "scale": 0.62,
+      "dx": -14,
+      "dy": -10
+     }
+    },
+    {
+     "at": "चंडीगढ़",
+     "show": {
+      "state": "ch",
+      "label": "धूसर धनेश",
+      "sticker": "bird_ocyceros.png",
+      "scale": 0.56,
+      "dx": 24,
+      "dy": -20
+     }
+    },
+    {
+     "at": "हरियाणा",
+     "show": {
+      "state": "hr",
+      "label": "काला तीतर",
+      "sticker": "bird_francolinus.png",
+      "scale": 0.6,
+      "dx": -40,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "यूपी का सारस, जो दुनिया का सबसे ऊँचा उड़ने वाला पक्षी है, और राजस्थान का गोडावण, जो अब गिनती के ही बचे हैं।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "up",
+       "rj"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "यूपी",
+     "show": {
+      "state": "up",
+      "label": "सारस",
+      "sticker": "bird_grus_antigone.png",
+      "scale": 0.7,
+      "dx": 30,
+      "dy": 30
+     }
+    },
+    {
+     "at": "राजस्थान",
+     "show": {
+      "state": "rj",
+      "label": "गोडावण",
+      "sticker": "bird_ardeotis.png",
+      "scale": 0.7,
+      "dx": -50,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "गुजरात का राजहंस यानी फ्लेमिंगो, महाराष्ट्र का हरियल कबूतर, और दादरा नगर हवेली और दमन दीव का राजकीय पक्षी? अगर आप जानते हैं तो कमेंट में बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "gj",
+       "dh",
+       "mh"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "गुजरात",
+     "show": {
+      "state": "gj",
+      "label": "राजहंस (फ्लेमिंगो)",
+      "sticker": "bird_phoenicopterus.png",
+      "scale": 0.66,
+      "dx": -20,
+      "dy": -20
+     }
+    },
+    {
+     "at": "महाराष्ट्र",
+     "show": {
+      "state": "mh",
+      "label": "हरियल",
+      "sticker": "bird_treron.png",
+      "scale": 0.62,
+      "dx": 20,
+      "dy": 20
+     }
+    },
+    {
+     "at": "दादरा",
+     "show": {
+      "state": "dh",
+      "label": "?",
+      "emoji": "❓",
+      "scale": 0.5,
+      "dx": -30,
+      "dy": -10
+     }
+    }
+   ]
+  },
+  {
+   "text": "मध्य प्रदेश का दूधराज, छत्तीसगढ़ की पहाड़ी मैना, बिहार की गौरैया, और झारखंड की कोयल।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mp",
+       "ct",
+       "br",
+       "jh"
+      ],
+      "pad": 1.1
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "मध्य",
+     "show": {
+      "state": "mp",
+      "label": "दूधराज",
+      "sticker": "bird_terpsiphone.png",
+      "scale": 0.6
+     }
+    },
+    {
+     "at": "छत्तीसगढ़",
+     "show": {
+      "state": "ct",
+      "label": "पहाड़ी मैना",
+      "sticker": "bird_gracula.png",
+      "scale": 0.58
+     }
+    },
+    {
+     "at": "बिहार",
+     "show": {
+      "state": "br",
+      "label": "गौरैया",
+      "sticker": "bird_passer.png",
+      "scale": 0.56
+     }
+    },
+    {
+     "at": "झारखंड",
+     "show": {
+      "state": "jh",
+      "label": "कोयल",
+      "sticker": "bird_eudynamys.png",
+      "scale": 0.56,
+      "dx": -6
+     }
+    }
+   ]
+  },
+  {
+   "text": "बंगाल का सफ़ेद गले वाला किंगफ़िशर, और ओडिशा का नीलकंठ।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "wb",
+       "or"
+      ],
+      "pad": 1.15
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "बंगाल",
+     "show": {
+      "state": "wb",
+      "label": "किंगफ़िशर",
+      "sticker": "bird_halcyon.png",
+      "scale": 0.66,
+      "dx": 10,
+      "dy": 20
+     }
+    },
+    {
+     "at": "ओडिशा",
+     "show": {
+      "state": "or",
+      "label": "नीलकंठ",
+      "sticker": "bird_coracias.png",
+      "scale": 0.66
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब नॉर्थ ईस्ट! असम की देव हांस बत्तख, सिक्किम का ब्लड फ़ेज़ेंट, अरुणाचल का बड़ा धनेश, और नागालैंड का ब्लिथ ट्रैगोपैन।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk",
+       "as",
+       "ar",
+       "nl",
+       "mn",
+       "ml",
+       "mz",
+       "tr"
+      ],
+      "pad": 1.12
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "असम",
+     "camera": {
+      "fit": [
+       "as"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "as",
+      "label": "देव हांस",
+      "sticker": "bird_asarcornis.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "सिक्किम",
+     "camera": {
+      "fit": [
+       "sk"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "sk",
+      "label": "ब्लड फ़ेज़ेंट",
+      "sticker": "bird_ithaginis.png",
+      "scale": 0.85,
+      "dx": -4,
+      "dy": -24
+     }
+    },
+    {
+     "at": "अरुणाचल",
+     "camera": {
+      "fit": [
+       "ar"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "बड़ा धनेश",
+      "sticker": "bird_buceros_bicornis.png",
+      "scale": 0.85
+     }
+    },
+    {
+     "at": "नागालैंड",
+     "camera": {
+      "fit": [
+       "nl"
+      ],
+      "pad": 1.8,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "nl",
+      "label": "ब्लिथ ट्रैगोपैन",
+      "sticker": "bird_tragopan_bly.png",
+      "scale": 0.85,
+      "dx": -26,
+      "dy": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "मणिपुर और मिज़ोरम, दोनों का मिसेज़ ह्यूम फ़ेज़ेंट, मेघालय की पहाड़ी मैना, और त्रिपुरा का हरा शाही कबूतर।",
+   "beats": [
+    {
+     "at": "मणिपुर",
+     "camera": {
+      "fit": [
+       "mn"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mn",
+      "label": "मिसेज़ ह्यूम फ़ेज़ेंट",
+      "sticker": "bird_syrmaticus.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -14
+     }
+    },
+    {
+     "at": "मिज़ोरम",
+     "camera": {
+      "fit": [
+       "mz"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mz",
+      "label": "मिसेज़ ह्यूम फ़ेज़ेंट",
+      "sticker": "bird_syrmaticus.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -6
+     }
+    },
+    {
+     "at": "मेघालय",
+     "camera": {
+      "fit": [
+       "ml"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "पहाड़ी मैना",
+      "sticker": "bird_gracula.png",
+      "scale": 0.85,
+      "dy": -34
+     }
+    },
+    {
+     "at": "त्रिपुरा",
+     "camera": {
+      "fit": [
+       "tr"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tr",
+      "label": "हरा शाही कबूतर",
+      "sticker": "bird_ducula.png",
+      "scale": 0.85,
+      "dx": -24,
+      "dy": -10
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब साउथ। तेलंगाना का नीलकंठ, और आंध्र का हरा तोता।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "tg",
+       "ap"
+      ],
+      "pad": 1.2
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "तेलंगाना",
+     "show": {
+      "state": "tg",
+      "label": "नीलकंठ",
+      "sticker": "bird_coracias.png",
+      "scale": 0.72
+     }
+    },
+    {
+     "at": "आंध्र",
+     "show": {
+      "state": "ap",
+      "label": "हरा तोता",
+      "sticker": "bird_psittacula_krameri.png",
+      "scale": 0.72,
+      "dx": 10,
+      "dy": 70
+     }
+    }
+   ]
+  },
+  {
+   "text": "कर्नाटक का भी नीलकंठ, यानी तीन राज्यों का एक ही पक्षी! गोवा की बुलबुल, केरला का बड़ा धनेश, तमिलनाडु का पन्ना कबूतर, और पुडुचेरी की कोयल।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ka",
+       "ga",
+       "kl",
+       "tn",
+       "py"
+      ],
+      "pad": 1.08
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "कर्नाटक",
+     "show": {
+      "state": "ka",
+      "label": "नीलकंठ",
+      "sticker": "bird_coracias.png",
+      "scale": 0.56,
+      "dx": 40,
+      "dy": -10
+     }
+    },
+    {
+     "at": "गोवा",
+     "show": {
+      "state": "ga",
+      "label": "बुलबुल",
+      "sticker": "bird_pycnonotus_gularis.png",
+      "scale": 0.5,
+      "dx": -40,
+      "dy": -10
+     }
+    },
+    {
+     "at": "केरला",
+     "show": {
+      "state": "kl",
+      "label": "बड़ा धनेश",
+      "sticker": "bird_buceros_bicornis.png",
+      "scale": 0.5,
+      "dx": -10
+     }
+    },
+    {
+     "at": "तमिलनाडु",
+     "show": {
+      "state": "tn",
+      "label": "पन्ना कबूतर",
+      "sticker": "bird_chalcophaps.png",
+      "scale": 0.56,
+      "dy": -10
+     }
+    },
+    {
+     "at": "पुडुचेरी",
+     "show": {
+      "state": "py",
+      "label": "कोयल",
+      "sticker": "bird_eudynamys.png",
+      "scale": 0.5,
+      "dx": 26,
+      "dy": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "और समंदर के बीच, लक्षद्वीप का भूरा नोडी, और अंडमान निकोबार का अंडमान वुड पिजन।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ld"
+      ],
+      "pad": 3.0,
+      "max_zoom": 10
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ld",
+      "label": "भूरा नोडी",
+      "sticker": "bird_anous.png",
+      "scale": 0.85,
+      "dx": 12
+     }
+    },
+    {
+     "at": "अंडमान",
+     "camera": {
+      "fit": [
+       "an"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "अंडमान वुड पिजन",
+      "sticker": "bird_columba_palumboides.png",
+      "scale": 0.85,
+      "dx": -20
+     }
+    }
+   ]
+  },
+  {
+   "text": "तो इनमें से आपने कितने पक्षी देखे हैं? और आपके राज्य का पक्षी कौन सा है? कमेंट में ज़रूर बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
