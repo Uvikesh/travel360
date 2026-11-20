@@ -77,5 +77,9 @@ big StorySpark logo, "वीडियो पसंद आया?", 👍 ला�
 ## Practical
 - Render: `python3 -m engine.render episodes/<ep>.json [--preview|--stills 1,5]` (from `video_studio/`).
 - edge-tts goes through `HTTPS_PROXY` automatically. The free endpoint is flaky, so retries are built in.
-- Cover ALL 36: 28 states + 8 UTs (owner's rule). The map is assets/map/india36_osm.geojson (Ladakh separate, DNHDD merged,
-  official depiction; credit "© OpenStreetMap contributors (ODbL)"). Ids: an ap ar as br ch ct dh dl ga gj hp hr jh jk ka kl la ld mh ml mn mp mz nl or pb py rj sk tg tn tr up ut wb.
+- Topic choice (owner's update, 2026-11-20): do NOT force "every state / all 36" lists any more, because it made
+  topics repetitive. Pick the most interesting, curiosity-driven topic (surprising places, records, mysteries,
+  "did you know" travel facts, history on the map), using as many or as few places as the story needs. When a topic IS
+  a full state list, cover all 28 states + 8 UTs. Vary the format so videos don't look mass-produced.
+- Map: assets/map/india36_osm.geojson (Ladakh separate, DNHDD merged, official depiction; credit
+  "© OpenStreetMap contributors (ODbL)"). Ids: an ap ar as br ch ct dh dl ga gj hp hr jh jk ka kl la ld mh ml mn mp mz nl or pb py rj sk tg tn tr up ut wb.

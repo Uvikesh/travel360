@@ -1,0 +1,315 @@
+{
+ "title": "भारत की वो जगहें जहाँ भारतीयों को भी परमिट चाहिए",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "भारत में ही",
+   "भारतीयों को",
+   "परमिट चाहिए!"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 122,
+  "pill": "एक जगह जाना मना!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts",
+   "gemini-3.8-flash-lite-tts",
+   "gemini-3.1-flash-tts-preview"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like an excited Indian travel YouTuber revealing surprising secrets to friends. Curious, punchy, energetic voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "भारत में कुछ जगहें ऐसी हैं, जहाँ आप भारतीय होकर भी बिना परमिट के नहीं जा सकते! और एक जगह तो ऐसी है, जहाँ जाना ही मना है।",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    },
+    {
+     "at": "एक",
+     "camera": {
+      "fit": [
+       "an"
+      ],
+      "pad": 1.4
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "कौन सी जगह?",
+      "sticker": "permit_ns.png",
+      "scale": 0.9,
+      "dx": -30,
+      "highlight": false
+     }
+    }
+   ]
+  },
+  {
+   "text": "ये नियम अंग्रेज़ों ने अठारह सौ तिहत्तर में बनाया था, नाम है इनर लाइन परमिट। और आज भी चार राज्यों में लागू है।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk",
+       "as",
+       "ar",
+       "nl",
+       "mn",
+       "ml",
+       "mz",
+       "tr"
+      ],
+      "pad": 1.12
+     },
+     "transition": "clouds"
+    }
+   ]
+  },
+  {
+   "text": "पहला, अरुणाचल प्रदेश। यहाँ घूमने का परमिट पंद्रह दिन के लिए मिलता है, जिसे बढ़वाया भी जा सकता है।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ar"
+      ],
+      "pad": 1.5,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "अरुणाचल • परमिट 15 दिन",
+      "sticker": "winter_ar.png",
+      "scale": 0.85
+     }
+    }
+   ]
+  },
+  {
+   "text": "दूसरा, नागालैंड। भारतीयों के लिए परमिट की फ़ीस सिर्फ़ दो सौ रुपये।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "nl"
+      ],
+      "pad": 1.8,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "nl",
+      "label": "नागालैंड • ₹200",
+      "sticker": "winter_nl.png",
+      "scale": 0.85,
+      "dx": -26,
+      "dy": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "तीसरा, मिज़ोरम। अच्छी बात ये कि हवाई जहाज़ से आओ तो परमिट एयरपोर्ट पर ही मिल जाता है।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mz"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mz",
+      "label": "मिज़ोरम • एयरपोर्ट पर परमिट",
+      "sticker": "capital_mz.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -6
+     }
+    }
+   ]
+  },
+  {
+   "text": "और चौथा, मणिपुर, जहाँ ये नियम सबसे नया है, दिसंबर दो हज़ार उन्नीस से।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "mn"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mn",
+      "label": "मणिपुर • 2019 से",
+      "sticker": "winter_mn.png",
+      "scale": 0.85,
+      "dx": -22,
+      "dy": -14
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब ट्विस्ट! सिक्किम में इनर लाइन परमिट नहीं है, पर त्सोमगो झील, नाथुला, और गुरुडोंगमार झील जैसी बॉर्डर वाली जगहों के लिए भारतीयों को भी अलग परमिट लेना पड़ता है।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "sk"
+      ],
+      "pad": 2.4,
+      "max_zoom": 12
+     },
+     "transition": "fly",
+     "show": {
+      "state": "sk",
+      "label": "गुरुडोंगमार झील • परमिट",
+      "sticker": "permit_sk.png",
+      "scale": 0.85,
+      "dx": -4,
+      "dy": -24
+     }
+    }
+   ]
+  },
+  {
+   "text": "समंदर के बीच लक्षद्वीप जाने के लिए भी एंट्री परमिट चाहिए।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "ld"
+      ],
+      "pad": 3.0,
+      "max_zoom": 10
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ld",
+      "label": "लक्षद्वीप • एंट्री परमिट",
+      "sticker": "permit_ld.png",
+      "scale": 0.85,
+      "dx": 12
+     }
+    }
+   ]
+  },
+  {
+   "text": "और लद्दाख में पहले कई जगहों के लिए परमिट लगता था, पर दो हज़ार इक्कीस में ये नियम भारतीयों के लिए हटा दिया गया।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "la"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly",
+     "show": {
+      "state": "la",
+      "label": "लद्दाख • 2021 से परमिट नहीं",
+      "sticker": "capital_la.png",
+      "scale": 0.85,
+      "dx": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "और अब वो जगह, जहाँ जाना मना है! अंडमान का नॉर्थ सेंटिनल द्वीप। यहाँ रहने वाली जनजाति बाहरी दुनिया से बिल्कुल अलग रहती है, और कानून के मुताबिक इस द्वीप के पाँच किलोमीटर के अंदर जाना भी मना है।",
+   "beats": [
+    {
+     "camera": {
+      "fit": [
+       "an"
+      ],
+      "pad": 1.3
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "नॉर्थ सेंटिनल • 5 किमी तक मना",
+      "sticker": "permit_ns.png",
+      "scale": 0.95,
+      "dx": -30,
+      "highlight": false
+     }
+    }
+   ]
+  },
+  {
+   "text": "इनमें से आप कहाँ जाना चाहोगे? परमिट बनवाने का पूरा तरीका जानना है तो कमेंट में लिखो!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}

@@ -1312,5 +1312,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Countryside_scene_near_Pondichery.jpg",
   "license": "Public domain",
   "artist": "Alexandre de Bar"
+ },
+ "permit_ns.png": {
+  "title": "File:North Sentinel Island.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:North_Sentinel_Island.jpg",
+  "license": "Public domain",
+  "artist": "NASA Earth Observatory image created by Jesse Allen, using data provided by the NASA EO-1 team."
+ },
+ "permit_ld.png": {
+  "title": "File:Blue-Lagoons-In-Kalpeni-Lakshadweep.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Blue-Lagoons-In-Kalpeni-Lakshadweep.JPG",
+  "license": "CC BY 3.0",
+  "artist": "Vaikoovery"
+ },
+ "permit_sk.png": {
+  "title": "File:Gurudongmar Lake Sikkim, India (edit).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Gurudongmar_Lake_Sikkim,_India_(edit).jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Original:  Yoghya\n\nDerivative work:  UnpetitproleX"
  }
 }
