@@ -1,0 +1,394 @@
+{
+ "title": "नए साल पर घूमने के लिए भारत की 12 बेस्ट जगहें",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "नए साल पर",
+   "कहाँ जाएँ?",
+   "12 बेस्ट जगहें"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 122,
+  "pill": "वीडियो सेव कर लो!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber talking to friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "नए साल की प्लानिंग हो गई? अगर नहीं, तो ये वीडियो सेव कर लो! भारत की बारह जगहें, जहाँ नया साल यादगार बन जाएगा।",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    },
+    {
+     "at": "बारह",
+     "camera": {
+      "point": [
+       92.964,
+       11.982
+      ],
+      "span": 170,
+      "dy": -20
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "नया साल यहाँ?",
+      "sticker": "ny_radha.png",
+      "lonlat": [
+       92.964,
+       11.982
+      ],
+      "scale": 0.9,
+      "highlight": false,
+      "dy": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "शुरू करते हैं पहाड़ों से। उत्तराखंड का ऋषिकेश, योग की राजधानी। यहाँ गंगा किनारे शांति से नया साल मनाइए, क्योंकि ये शहर पूरी तरह शाकाहारी और शराब-मुक्त है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       78.297,
+       30.108
+      ],
+      "span": 120
+     },
+     "transition": "clouds",
+     "show": {
+      "state": "ut",
+      "label": "ऋषिकेश • योग की राजधानी",
+      "sticker": "ny_rishi.png",
+      "lonlat": [
+       78.297,
+       30.108
+      ],
+      "scale": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "text": "हिमाचल में मैक्लोडगंज, जिसे छोटा ल्हासा कहते हैं, क्योंकि यहाँ तिब्बती लोगों की बड़ी आबादी रहती है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       76.324,
+       32.239
+      ],
+      "span": 120
+     },
+     "transition": "fly",
+     "show": {
+      "state": "hp",
+      "label": "मैक्लोडगंज • छोटा ल्हासा",
+      "sticker": "ny_mcleod.png",
+      "lonlat": [
+       76.324,
+       32.239
+      ],
+      "scale": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब राजस्थान! झीलों का शहर उदयपुर, जैसलमेर में सम के रेत के टीलों पर ऊँट की सवारी, और पुष्कर, जो भारत के सबसे पुराने शहरों में गिना जाता है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       72.6,
+       25.7
+      ],
+      "span": 330
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "उदयपुर",
+     "show": {
+      "state": "rj",
+      "label": "उदयपुर • झीलों का शहर",
+      "sticker": "ny_udaipur.png",
+      "lonlat": [
+       73.68,
+       24.58
+      ],
+      "scale": 0.62,
+      "dx": 10,
+      "dy": 30
+     }
+    },
+    {
+     "at": "जैसलमेर",
+     "show": {
+      "state": "rj",
+      "label": "सम के टीले",
+      "sticker": "ny_sam.png",
+      "lonlat": [
+       70.54,
+       26.84
+      ],
+      "scale": 0.62,
+      "dx": -10
+     }
+    },
+    {
+     "at": "पुष्कर",
+     "show": {
+      "state": "rj",
+      "label": "पुष्कर",
+      "sticker": "ny_pushkar.png",
+      "lonlat": [
+       74.556,
+       26.488
+      ],
+      "scale": 0.62,
+      "dx": 30,
+      "dy": -40
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब समंदर की तरफ़ चलें। कर्नाटक में गोकर्ण का शांत बीच, और कूर्ग के कॉफ़ी वाले पहाड़ों में झरने।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       75.1,
+       13.5
+      ],
+      "span": 230
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "गोकर्ण",
+     "show": {
+      "state": "ka",
+      "label": "गोकर्ण",
+      "sticker": "ny_gokarna.png",
+      "lonlat": [
+       74.32,
+       14.55
+      ],
+      "scale": 0.7,
+      "dx": -20,
+      "dy": -30
+     }
+    },
+    {
+     "at": "कूर्ग",
+     "show": {
+      "state": "ka",
+      "label": "कूर्ग",
+      "sticker": "ny_coorg.png",
+      "lonlat": [
+       75.74,
+       12.42
+      ],
+      "scale": 0.7,
+      "dx": 20,
+      "dy": 30
+     }
+    }
+   ]
+  },
+  {
+   "text": "केरला में मुन्नार, सोलह सौ मीटर की ऊँचाई पर चाय के बागान, और वर्कला, जहाँ समंदर के ऊपर ऊँची चट्टानें हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       76.9,
+       9.4
+      ],
+      "span": 200
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "मुन्नार",
+     "show": {
+      "state": "kl",
+      "label": "मुन्नार • चाय बागान",
+      "sticker": "ny_munnar.png",
+      "lonlat": [
+       77.06,
+       10.089
+      ],
+      "scale": 0.72,
+      "dx": 30,
+      "dy": -20
+     }
+    },
+    {
+     "at": "वर्कला",
+     "show": {
+      "state": "kl",
+      "label": "वर्कला",
+      "sticker": "ny_varkala.png",
+      "lonlat": [
+       76.71,
+       8.73
+      ],
+      "scale": 0.72,
+      "dx": -30,
+      "dy": 20
+     }
+    }
+   ]
+  },
+  {
+   "text": "पुडुचेरी में फ़्रेंच क्वार्टर की रंगीन गलियाँ, और नॉर्थ ईस्ट में शिलांग के पास उमियम झील।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       79.83,
+       11.93
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "py",
+      "label": "पुडुचेरी • फ़्रेंच क्वार्टर",
+      "sticker": "ny_pondy.png",
+      "lonlat": [
+       79.83,
+       11.93
+      ],
+      "scale": 0.9
+     }
+    },
+    {
+     "at": "शिलांग",
+     "camera": {
+      "point": [
+       91.89,
+       25.65
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "उमियम झील • शिलांग",
+      "sticker": "ny_shillong.png",
+      "lonlat": [
+       91.89,
+       25.65
+      ],
+      "scale": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "text": "और आखिर में अंडमान का राधानगर बीच, जिसे ब्लू फ़्लैग मिला है, यानी साफ़-सफ़ाई और सुरक्षा का अंतरराष्ट्रीय सर्टिफ़िकेट!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       92.964,
+       11.982
+      ],
+      "span": 150,
+      "dy": -20
+     },
+     "transition": "fly",
+     "show": {
+      "state": "an",
+      "label": "राधानगर बीच • ब्लू फ़्लैग",
+      "sticker": "ny_radha.png",
+      "lonlat": [
+       92.964,
+       11.982
+      ],
+      "scale": 0.95,
+      "highlight": false,
+      "dy": -30
+     }
+    }
+   ]
+  },
+  {
+   "text": "इनमें से आप नया साल कहाँ मनाओगे? कमेंट में लिखो, और जिसके साथ जाना है उसे ये वीडियो भेजो!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true,
+     "collage_scale": 0.32
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}

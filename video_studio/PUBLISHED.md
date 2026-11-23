@@ -12,3 +12,4 @@
 | 8 | 2026-11-20 | भारत की वो जगहें जहाँ भारतीयों को भी परमिट चाहिए (ILP + नॉर्थ सेंटिनल) | `episodes/ep08_permit_wali_jagah.json` | `output/ep08_permit_wali_jagah/ep08_permit_wali_jagah.mp4` |
 | 9 | 2026-11-20 | भारत के 4 कोने: पहला सूर्योदय, आखिरी सूर्यास्त, एक टाइम ज़ोन | `episodes/ep09_bharat_ke_chaar_kone.json` | `output/ep09_bharat_ke_chaar_kone/ep09_bharat_ke_chaar_kone.mp4` |
 | 10 | 2026-11-20 | भारत की 4 रहस्यमयी जगहें (रूपकुंड, कुलधरा, भानगढ़, लोनार) | `episodes/ep10_rahasyamayi_jagah.json` | `output/ep10_rahasyamayi_jagah/ep10_rahasyamayi_jagah.mp4` |
+| 11 | 2026-11-23 | नए साल पर घूमने के लिए भारत की 12 बेस्ट जगहें | `episodes/ep11_naye_saal_ki_jagah.json` | `output/ep11_naye_saal_ki_jagah/ep11_naye_saal_ki_jagah.mp4` |
