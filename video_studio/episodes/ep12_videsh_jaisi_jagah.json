@@ -1,0 +1,369 @@
+{
+ "title": "भारत की वो जगहें जो विदेश जैसी लगती हैं",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "विदेश जैसी",
+   "भारत की जगहें",
+   "पासपोर्ट नहीं चाहिए!"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 112,
+  "pill": "स्विट्ज़रलैंड भारत में!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber talking to friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "स्विट्ज़रलैंड, स्कॉटलैंड, मालदीव, ग्रैंड कैनियन... ये सब देखने के लिए पासपोर्ट नहीं चाहिए! भारत में ही ऐसी जगहें हैं, जो बिल्कुल विदेश जैसी लगती हैं।",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    },
+    {
+     "at": "मालदीव",
+     "camera": {
+      "point": [
+       72.29,
+       10.95
+      ],
+      "span": 170
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ld",
+      "label": "विदेश? नहीं, भारत!",
+      "sticker": "abroad_lakshadweep.png",
+      "lonlat": [
+       72.29,
+       10.95
+      ],
+      "scale": 0.92,
+      "highlight": false,
+      "dx": 20
+     }
+    }
+   ]
+  },
+  {
+   "text": "पहली, हिमाचल का खज्जियार। दो हज़ार मीटर की ऊँचाई पर हरे मैदान और देवदार के जंगल, देखकर लगेगा जैसे स्विट्ज़रलैंड पहुँच गए!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       76.058,
+       32.546
+      ],
+      "span": 130
+     },
+     "transition": "clouds",
+     "show": {
+      "state": "hp",
+      "label": "खज्जियार • मिनी स्विट्ज़रलैंड",
+      "sticker": "abroad_khajjiar.png",
+      "lonlat": [
+       76.058,
+       32.546
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "आंध्र प्रदेश का गंडिकोटा। पेन्ना नदी के किनारे लाल चट्टानों की गहरी घाटी, जिसे देखकर अमेरिका का ग्रैंड कैनियन याद आ जाता है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       78.287,
+       14.815
+      ],
+      "span": 130
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ap",
+      "label": "गंडिकोटा • भारत का ग्रैंड कैनियन",
+      "sticker": "abroad_gandikota.png",
+      "lonlat": [
+       78.287,
+       14.815
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "मेघालय का शिलांग। यहाँ की पहाड़ियाँ देखकर अंग्रेज़ों को स्कॉटलैंड याद आता था, इसलिए इसे पूरब का स्कॉटलैंड कहते हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       91.894,
+       25.582
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "शिलांग • पूरब का स्कॉटलैंड",
+      "sticker": "abroad_shillong.png",
+      "lonlat": [
+       91.894,
+       25.582
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "मालदीव जाने की क्या ज़रूरत? लक्षद्वीप के छत्तीस द्वीप और नीला-हरा समंदर, सब भारत में!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       72.29,
+       10.95
+      ],
+      "span": 170
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ld",
+      "label": "लक्षद्वीप • भारत का मालदीव",
+      "sticker": "abroad_lakshadweep.png",
+      "lonlat": [
+       72.29,
+       10.95
+      ],
+      "scale": 0.92,
+      "dx": 20
+     }
+    }
+   ]
+  },
+  {
+   "text": "लद्दाख की पैंगोंग झील, चार हज़ार तीन सौ मीटर की ऊँचाई पर, एक सौ चौंतीस किलोमीटर लंबी, और सर्दियों में पूरी जम जाती है। और हिमाचल का स्पीति, बर्फ़ीला रेगिस्तान, जो तिब्बत जैसा लगता है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       78.5,
+       33.0
+      ],
+      "span": 220
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "पैंगोंग",
+     "show": {
+      "state": "la",
+      "label": "पैंगोंग झील • 4300 मी",
+      "sticker": "abroad_pangong.png",
+      "lonlat": [
+       78.897,
+       33.718
+      ],
+      "scale": 0.75,
+      "dx": 20,
+      "dy": -30
+     }
+    },
+    {
+     "at": "स्पीति",
+     "show": {
+      "state": "hp",
+      "label": "स्पीति • ठंडा रेगिस्तान",
+      "sticker": "abroad_spiti.png",
+      "lonlat": [
+       78.052,
+       32.247
+      ],
+      "scale": 0.75,
+      "dx": -10,
+      "dy": 40
+     }
+    }
+   ]
+  },
+  {
+   "text": "सिक्किम की युमथांग घाटी, जिसे फूलों की घाटी कहते हैं, साढ़े तीन हज़ार मीटर से ऊपर।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       88.696,
+       27.827
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "sk",
+      "label": "युमथांग • फूलों की घाटी",
+      "sticker": "abroad_yumthang.png",
+      "lonlat": [
+       88.696,
+       27.827
+      ],
+      "scale": 0.92,
+      "dx": -10,
+      "dy": -20
+     }
+    }
+   ]
+  },
+  {
+   "text": "आंध्र प्रदेश का लम्बासिंगी, जिसे आंध्र का कश्मीर कहते हैं। सर्दियों की सुबह यहाँ बादल ज़मीन पर उतर आते हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       82.493,
+       17.819
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ap",
+      "label": "लम्बासिंगी • आंध्र का कश्मीर",
+      "sticker": "abroad_lambasingi.png",
+      "lonlat": [
+       82.493,
+       17.819
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "मेघालय का मावलिननॉन्ग, जिसे एशिया के सबसे साफ़ गाँव का खिताब मिला। यूरोप के गाँव भी फ़ेल!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       91.88,
+       25.2
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "मावलिननॉन्ग • एशिया का सबसे साफ़ गाँव",
+      "sticker": "abroad_mawlynnong.png",
+      "lonlat": [
+       91.88,
+       25.2
+      ],
+      "scale": 0.92,
+      "dy": 30
+     }
+    }
+   ]
+  },
+  {
+   "text": "और असम का माजुली, ब्रह्मपुत्र नदी के बीच बसा द्वीप, जो दो हज़ार सोलह में भारत का पहला द्वीप ज़िला बना।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       94.217,
+       27.0
+      ],
+      "span": 150
+     },
+     "transition": "fly",
+     "show": {
+      "state": "as",
+      "label": "माजुली • नदी में बसा द्वीप",
+      "sticker": "abroad_majuli.png",
+      "lonlat": [
+       94.217,
+       27.0
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "तो पासपोर्ट छोड़ो, बैग उठाओ! इनमें से आप सबसे पहले कहाँ जाओगे? कमेंट में बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true,
+     "collage_scale": 0.34
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
