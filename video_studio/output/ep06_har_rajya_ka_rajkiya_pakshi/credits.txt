@@ -28,5 +28,5 @@
 - Tragopan melanocephalus adult male Hardwicke.jpg — Thomas Hardwicke — Public domain — https://commons.wikimedia.org/wiki/File:Tragopan_melanocephalus_adult_male_Hardwicke.jpg
 - Yellow-footed green pigeon (Treron phoenicopterus) near Nasirpur, Patiala 03.jpg — Satdeep Gill — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Yellow-footed_green_pigeon_(Treron_phoenicopterus)_near_Nasirpur,_Patiala_03.jpg
 
-मैप: © OpenStreetMap contributors (ODbL), via vardhan-maps; Natural Earth.
+मैप: @svg-maps/india (CC BY 4.0), Natural Earth.
 आवाज़: AI (Google Gemini TTS).

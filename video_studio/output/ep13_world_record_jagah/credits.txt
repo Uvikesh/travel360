@@ -7,5 +7,5 @@
 - Harmandir Sahib in the night.jpg — Jeremy Vandel — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Harmandir_Sahib_in_the_night.jpg
 - The Phumdis on Loktak Lake.jpg — Ishani Nath — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:The_Phumdis_on_Loktak_Lake.jpg
 
-मैप: © OpenStreetMap contributors (ODbL), via vardhan-maps; Natural Earth.
+मैप: @svg-maps/india (CC BY 4.0), Natural Earth.
 आवाज़: AI (Google Gemini TTS).
