@@ -1,0 +1,273 @@
+{
+ "title": "भारत के 7 वर्ल्ड रिकॉर्ड वाले टूरिस्ट स्पॉट",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "भारत के 7",
+   "वर्ल्ड रिकॉर्ड",
+   "टूरिस्ट स्पॉट"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 122,
+  "pill": "एफ़िल टावर से ऊँचा पुल!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber sharing amazing records with friends. Fast, punchy, proud, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "दुनिया की सबसे ऊँची मूर्ति, दुनिया का सबसे ऊँचा रेलवे पुल, और दुनिया की सबसे गीली जगह, तीनों भारत में हैं! चलो देखते हैं भारत के सात वर्ल्ड रिकॉर्ड वाले टूरिस्ट स्पॉट।",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    }
+   ]
+  },
+  {
+   "text": "पहला, गुजरात में स्टैच्यू ऑफ़ यूनिटी। एक सौ बयासी मीटर ऊँची सरदार पटेल की ये मूर्ति, दुनिया की सबसे ऊँची मूर्ति है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       73.7191,
+       21.838
+      ],
+      "span": 140
+     },
+     "transition": "clouds",
+     "show": {
+      "state": "gj",
+      "label": "स्टैच्यू ऑफ़ यूनिटी • 182 मी",
+      "sticker": "rec_unity.png",
+      "lonlat": [
+       73.7191,
+       21.838
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "दूसरा, जम्मू-कश्मीर में चिनाब पुल। नदी से तीन सौ उनसठ मीटर ऊपर, ये दुनिया का सबसे ऊँचा रेलवे पुल है। यानी एफ़िल टावर से भी ऊँचा!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       74.88,
+       33.15
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "jk",
+      "label": "चिनाब पुल • 359 मी (निर्माण के समय)",
+      "sticker": "rec_chenab.png",
+      "lonlat": [
+       74.88,
+       33.15
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "तीसरा, हिमाचल में मनाली के पास अटल टनल। करीब नौ किलोमीटर लंबी, ये दस हज़ार फ़ीट से ऊपर दुनिया की सबसे लंबी सिंगल-ट्यूब हाईवे सुरंग है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       77.148,
+       32.401
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "hp",
+      "label": "अटल टनल • 9.02 किमी",
+      "sticker": "rec_atal.png",
+      "lonlat": [
+       77.148,
+       32.401
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "चौथा, लद्दाख में उमलिंग ला। करीब पाँच हज़ार आठ सौ मीटर की ऊँचाई, जहाँ तक लोग बाइक और गाड़ी से पहुँचते हैं!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       79.2715,
+       32.6931
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "la",
+      "label": "उमलिंग ला • 5799 मी",
+      "sticker": "rec_umling.png",
+      "lonlat": [
+       79.2715,
+       32.6931
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "पाँचवाँ, अमृतसर का स्वर्ण मंदिर। यहाँ हर दिन डेढ़ लाख से ज़्यादा लोग आते हैं, और लंगर में हर किसी को मुफ़्त खाना मिलता है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       74.876,
+       31.62
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "pb",
+      "label": "स्वर्ण मंदिर • रोज़ 1.5 लाख+ लोग",
+      "sticker": "rec_golden.png",
+      "lonlat": [
+       74.876,
+       31.62
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "छठा, मेघालय का मौसिनराम, जिसे धरती की सबसे गीली जगह कहा जाता है। गिनीज़ बुक के मुताबिक उन्नीस सौ पचासी में यहाँ छब्बीस हज़ार मिलीमीटर बारिश हुई थी!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       91.581,
+       25.299
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ml",
+      "label": "मौसिनराम • सबसे गीली जगह",
+      "sticker": "rec_mawsynram.png",
+      "lonlat": [
+       91.581,
+       25.299
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "और सातवाँ, मणिपुर में लोकटक झील पर तैरता केइबुल लामजाओ, दुनिया का इकलौता तैरता नेशनल पार्क!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       93.767,
+       24.5
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mn",
+      "label": "केइबुल लामजाओ • तैरता नेशनल पार्क",
+      "sticker": "rec_loktak.png",
+      "lonlat": [
+       93.767,
+       24.5
+      ],
+      "scale": 0.92,
+      "dx": -10
+     }
+    }
+   ]
+  },
+  {
+   "text": "इनमें से आपने कितने देखे हैं? और सबसे पहले कहाँ जाओगे? कमेंट में बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true,
+     "collage_scale": 0.4
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
