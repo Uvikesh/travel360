@@ -81,12 +81,26 @@ def candidates(query, key, limit=8):
     return res
 
 
-def pick(key, n, crop=None, out_name=None):
+def pick(key, n, crop=None, out_name=None, fit=False):
     """Make a round photo sticker from candidate n. crop = (cx, cy, size) as fractions of the image."""
     from PIL import Image, ImageDraw
     d = os.path.join(ROOT, "output", "commons", key)
     meta = json.load(open(os.path.join(d, "meta.json")))[n]
     im = Image.open(meta["file"]).convert("RGB")
+    if fit:
+        # show the WHOLE photo (statues, monuments, people): blurred fill behind, full image inside the circle
+        from PIL import ImageFilter
+        S = 720
+        bg = im.copy()
+        side = min(bg.size)
+        bg = bg.crop(((bg.width - side) // 2, (bg.height - side) // 2, (bg.width - side) // 2 + side,
+                      (bg.height - side) // 2 + side)).resize((S, S), Image.LANCZOS)
+        bg = bg.filter(ImageFilter.GaussianBlur(18))
+        inner = int(S * 0.86)          # keep corners of the photo inside the round mask
+        fg = im.copy()
+        fg.thumbnail((inner, inner), Image.LANCZOS)
+        bg.paste(fg, ((S - fg.width) // 2, (S - fg.height) // 2))
+        im = bg
     w, h = im.size
     cx, cy, s = crop or (0.5, 0.5, 1.0)
     side = int(min(w, h) * s)

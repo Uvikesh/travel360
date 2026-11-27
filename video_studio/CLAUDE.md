@@ -75,6 +75,11 @@ big StorySpark logo, "वीडियो पसंद आया?", 👍 ला�
 - **Talk to the owner in Hindi written in Devanagari** in chat (not Roman Hinglish). Technical names such as
   files, commands and code may stay in English.
 
+## Stickers: never cut people, statues or monuments (owner's rule)
+Round stickers center-crop photos. For tall/portrait photos, statues, towers, people and birds, use
+`commons.pick(..., fit=True)` so the WHOLE subject (head to feet / top to bottom) is visible. Check every sticker
+before rendering: no cut heads, faces, tops of monuments or statues.
+
 ## Practical
 - Render: `python3 -m engine.render episodes/<ep>.json [--preview|--stills 1,5]` (from `video_studio/`).
 - edge-tts goes through `HTTPS_PROXY` automatically. The free endpoint is flaky, so retries are built in.
