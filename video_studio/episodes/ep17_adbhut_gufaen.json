@@ -1,0 +1,242 @@
+{
+ "title": "भारत की 6 अद्भुत गुफाएँ",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "भारत की 6",
+   "अद्भुत",
+   "गुफाएँ"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 126,
+  "pill": "पहाड़ काटकर बने मंदिर!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber telling amazing history to friends. Fast, punchy, curious, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "दो हज़ार साल पहले, बिना किसी मशीन के, लोगों ने पूरे-पूरे पहाड़ काटकर मंदिर और घर बना दिए! चलो देखते हैं भारत की छह अद्भुत गुफाएँ।",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    }
+   ]
+  },
+  {
+   "text": "पहली, महाराष्ट्र की अजंता गुफाएँ। चट्टान काटकर बनी तीस बौद्ध गुफाएँ, जिनकी चित्रकारी को प्राचीन भारतीय कला के सबसे बेहतरीन नमूनों में गिना जाता है। ये यूनेस्को विश्व धरोहर हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       75.7,
+       20.553
+      ],
+      "span": 140
+     },
+     "transition": "clouds",
+     "show": {
+      "state": "mh",
+      "label": "अजंता • 30 गुफाएँ",
+      "sticker": "cave_ajanta.png",
+      "lonlat": [
+       75.7,
+       20.553
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "दूसरी, मुंबई के पास समंदर में एक द्वीप पर एलिफेंटा गुफाएँ, भगवान शिव को समर्पित, और ये भी यूनेस्को विश्व धरोहर हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       72.931,
+       18.963
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mh",
+      "label": "एलिफेंटा • त्रिमूर्ति",
+      "sticker": "cave_elephanta.png",
+      "lonlat": [
+       72.931,
+       18.963
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "अब आंध्र प्रदेश! अराकू घाटी की बोर्रा गुफाएँ, जहाँ चूना पत्थर से बनी अनोखी आकृतियाँ लटकती हैं। और बेलम गुफाएँ, तीन किलोमीटर से ज़्यादा लंबी, भारत का दूसरा सबसे बड़ा गुफा तंत्र!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       80.5,
+       16.6
+      ],
+      "span": 330
+     },
+     "transition": "fly"
+    },
+    {
+     "at": "बोर्रा",
+     "show": {
+      "state": "ap",
+      "label": "बोर्रा गुफाएँ • अराकू",
+      "sticker": "cave_borra.png",
+      "lonlat": [
+       83.0,
+       18.167
+      ],
+      "scale": 0.72,
+      "dx": -10,
+      "dy": -10
+     }
+    },
+    {
+     "at": "बेलम",
+     "show": {
+      "state": "ap",
+      "label": "बेलम • 3.23 किमी",
+      "sticker": "cave_belum.png",
+      "lonlat": [
+       78.131,
+       15.104
+      ],
+      "scale": 0.72,
+      "dx": 10,
+      "dy": 10
+     }
+    }
+   ]
+  },
+  {
+   "text": "कर्नाटक के बादामी की गुफा-मंदिर, छठी सदी में चालुक्य राजाओं के समय बने, जहाँ हिंदू, जैन और बौद्ध, तीनों के मंदिर हैं।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       75.684,
+       15.918
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ka",
+      "label": "बादामी • 6वीं सदी",
+      "sticker": "cave_badami.png",
+      "lonlat": [
+       75.684,
+       15.918
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "और ओडिशा में भुवनेश्वर के पास उदयगिरि और खंडगिरि, दो हज़ार साल से भी पुरानी गुफाएँ, जो जैन साधुओं के रहने के लिए बनाई गई थीं। उदयगिरि का मतलब है, सूर्योदय की पहाड़ी!",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       85.786,
+       20.263
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "or",
+      "label": "उदयगिरि-खंडगिरि",
+      "sticker": "cave_udaygiri.png",
+      "lonlat": [
+       85.786,
+       20.263
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "इनमें से आप कौन सी गुफा देखना चाहोगे? कमेंट में बताओ!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true,
+     "collage_scale": 0.42
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
