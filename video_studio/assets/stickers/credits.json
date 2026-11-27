@@ -1564,5 +1564,47 @@
   "page": "https://commons.wikimedia.org/wiki/File:The_Phumdis_on_Loktak_Lake.jpg",
   "license": "CC BY-SA 4.0",
   "artist": "Ishani Nath"
+ },
+ "rail_darj.png": {
+  "title": "File:Toy Train Darjeeling West Bengal India.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Toy_Train_Darjeeling_West_Bengal_India.jpg",
+  "license": "Public domain",
+  "artist": "unknown"
+ },
+ "rail_kalka.png": {
+  "title": "File:Shimla kalka bridge.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Shimla_kalka_bridge.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Arpit chhonker"
+ },
+ "rail_nilgiri.png": {
+  "title": "File:NMR up train at Kateri Road 05-02-28 04.jpeg",
+  "page": "https://commons.wikimedia.org/wiki/File:NMR_up_train_at_Kateri_Road_05-02-28_04.jpeg",
+  "license": "CC BY 2.5",
+  "artist": "No machine-readable author provided. AHEMSLTD~commonswiki assumed (based on copyright claims)."
+ },
+ "rail_matheran.png": {
+  "title": "File:The toy train of Matheran (52790254454).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:The_toy_train_of_Matheran_(52790254454).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "Dinesh Valke from Thane, India"
+ },
+ "rail_dudh.png": {
+  "title": "File:Dudhsagar falls with train.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Dudhsagar_falls_with_train.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Samson Joseph"
+ },
+ "rail_pamban.png": {
+  "title": "File:Pamban Bridge Train Passing.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Pamban_Bridge_Train_Passing.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Shaswat Nimesh"
+ },
+ "rail_kangra.png": {
+  "title": "File:Kangra Valley train.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Kangra_Valley_train.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Guleri sahil"
  }
 }
