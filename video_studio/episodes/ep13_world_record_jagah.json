@@ -34,7 +34,15 @@
   ],
   "model": "gemini-3.8-flash-tts",
   "per_segment": false,
-  "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber sharing amazing records with friends. Fast, punchy, proud, smiling voice, with a short pause between paragraphs:"
+  "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber sharing amazing records with friends. Fast, punchy, proud, smiling voice, with a short pause between paragraphs:",
+  "revoice": [
+   2,
+   4
+  ],
+  "drop_tail": [
+   1,
+   3
+  ]
  },
  "logo": "assets/brand/storyspark_logo.png",
  "logo_size": 150,

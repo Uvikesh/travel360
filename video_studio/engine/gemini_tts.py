@@ -344,7 +344,7 @@ def narrate(ep):
     out = []
     for i, t in enumerate(texts):
         p = parts[i] if i < len(parts) else None
-        if i >= len(take_texts) or t != take_texts[i]:
+        if i >= len(take_texts) or t != take_texts[i] or i in tts.get("revoice", []):
             # edited or appended line -> voice it on its own with the patch model
             pm = tts.get("patch_model", "gemini-3.8-flash-tts")
             old_raw = os.path.join(CACHE, f"gempatch_{hashlib.sha1(f'{pm}|{voice}|{t}'.encode()).hexdigest()[:16]}.npy")
@@ -357,8 +357,14 @@ def narrate(ep):
                     np.save(raw_p, _request(t, voice, pm))  # no instruction text: it tends to get read aloud
                     time.sleep(6)
                 p = np.load(raw_p)
+        if i in tts.get("drop_tail", []):
+            # remove words that belong to the next line: cut at the last clear pause in the final 3 s
+            runs, first, last = _silences(p)
+            tail = [r for r in runs if r[0] > len(p) - 3 * SR and (r[1] - r[0]) > 0.12 * SR]
+            if tail:
+                p = p[: tail[-1][0] + int(0.08 * SR)]
         p = _trim(p)
-        wav = os.path.join(CACHE, f"gemini_{key}_{i:02d}_{hashlib.sha1(t.encode()).hexdigest()[:6]}.wav")
+        wav = os.path.join(CACHE, f"gemini_{key}_{i:02d}_{hashlib.sha1((t + str(i in tts.get('drop_tail', []))).encode()).hexdigest()[:6]}.wav")
         if not os.path.exists(wav):
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
                             "-ar", "48000", wav], input=p.astype(np.float32).tobytes(), check=True)
