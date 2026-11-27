@@ -16,3 +16,4 @@
 | 12 | 2026-11-24 | विदेश जैसी भारत की 10 जगहें | `episodes/ep12_videsh_jaisi_jagah.json` | `output/ep12_videsh_jaisi_jagah/ep12_videsh_jaisi_jagah.mp4` |
 | 13 | 2026-11-27 | भारत के 7 वर्ल्ड रिकॉर्ड वाले टूरिस्ट स्पॉट | `episodes/ep13_world_record_jagah.json` | `output/ep13_world_record_jagah/ep13_world_record_jagah.mp4` |
 | 14 | 2026-11-27 | भारत के 7 सबसे खूबसूरत ट्रेन सफ़र | `episodes/ep14_khoobsurat_train_safar.json` | `output/ep14_khoobsurat_train_safar/ep14_khoobsurat_train_safar.mp4` |
+| 15 | 2026-11-27 | भारत के 7 सबसे खूबसूरत झरने | `episodes/ep15_khoobsurat_jharne.json` | `output/ep15_khoobsurat_jharne/ep15_khoobsurat_jharne.mp4` |
