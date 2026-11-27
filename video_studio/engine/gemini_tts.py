@@ -221,9 +221,10 @@ def _split_by_transcript(x, texts, cache_path):
     cuts = [max(0, first - int(0.05 * SR))]
     for t in starts[1:]:
         target = int(t * SR)
-        near = [r for r in runs if -0.7 * SR < (r[1] - target) < 0.35 * SR]
-        c = (min(near, key=lambda r: abs(r[1] - target))[0] + min(near, key=lambda r: abs(r[1] - target))[1]) // 2 \
-            if near else target - int(0.1 * SR)
+        # transcript start times can be ~1-2 s late; paragraph breaks are the longest pauses -> prefer those
+        near = [r for r in runs if -2.0 * SR < (r[1] - target) < 0.35 * SR]
+        best = max(near, key=lambda r: (r[1] - r[0]) / SR - 0.35 * abs(r[1] - target) / SR) if near else None
+        c = (best[0] + best[1]) // 2 if best else target - int(0.1 * SR)
         cuts.append(max(c, cuts[-1] + int(0.3 * SR)))
     cuts.append(min(len(x), last + int(0.15 * SR)))
     print("  aligned line starts:", [round(v, 1) for v in starts])
