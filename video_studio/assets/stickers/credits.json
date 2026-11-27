@@ -1690,5 +1690,47 @@
   "page": "https://commons.wikimedia.org/wiki/File:Jaivana_Cannon_jaigarh.jpg",
   "license": "CC BY-SA 4.0",
   "artist": "Sheen00115"
+ },
+ "cave_ajanta.png": {
+  "title": "File:Ajanta Caves from Cave 26.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Ajanta_Caves_from_Cave_26.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Shishirdasika"
+ },
+ "cave_elephanta.png": {
+  "title": "File:Trimurti elephanta.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Trimurti_elephanta.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Milindmc"
+ },
+ "cave_borra.png": {
+  "title": "File:Entrance to Borra caves from above 01.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Entrance_to_Borra_caves_from_above_01.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Pratishkhedekar"
+ },
+ "cave_belum.png": {
+  "title": "File:The Main Caves, Belum, Andhra Pradesh.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Main_Caves,_Belum,_Andhra_Pradesh.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "Naga Praveena Sharma P"
+ },
+ "cave_badami.png": {
+  "title": "File:A-cave-temple-at-badami.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:A-cave-temple-at-badami.JPG",
+  "license": "CC BY-SA 3.0",
+  "artist": "Rajeshodayanchal"
+ },
+ "cave_udaygiri.png": {
+  "title": "File:Udayagiri and Khandagiri Caves 2024 45.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Udayagiri_and_Khandagiri_Caves_2024_45.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Athulvis"
+ },
+ "cave_mawsmai.png": {
+  "title": "File:Mawsmai cave.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mawsmai_cave.jpg",
+  "license": "CC0",
+  "artist": "Wann Majaw"
  }
 }
