@@ -1606,5 +1606,47 @@
   "page": "https://commons.wikimedia.org/wiki/File:Kangra_Valley_train.jpg",
   "license": "CC BY-SA 4.0",
   "artist": "Guleri sahil"
+ },
+ "fall_nohka.png": {
+  "title": "File:Nohkalikai Falls (2).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Nohkalikai_Falls_(2).jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "ANKAN"
+ },
+ "fall_jog.png": {
+  "title": "File:Jog Falls 05092016.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jog_Falls_05092016.jpg",
+  "license": "CC BY 3.0",
+  "artist": "Nikhilb239"
+ },
+ "fall_athi.png": {
+  "title": "File:അതിരപ്പിള്ളി വെള്ളച്ചാട്ടത്തിന്റെ താഴെ നിന്നുള്ള ദൃശ്യം.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:%E0%B4%85%E0%B4%A4%E0%B4%BF%E0%B4%B0%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BF%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%BF_%E0%B4%B5%E0%B5%86%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%86_%E0%B4%A4%E0%B4%BE%E0%B4%B4%E0%B5%86_%E0%B4%A8%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3_%E0%B4%A6%E0%B5%83%E0%B4%B6%E0%B5%8D%E0%B4%AF%E0%B4%82.jpg",
+  "license": "Public domain",
+  "artist": "Irshadpp at Malayalam Wikipedia"
+ },
+ "fall_hogen.png": {
+  "title": "File:Hogenakkal Falls Close.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Hogenakkal_Falls_Close.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "Mithun Kundu"
+ },
+ "fall_dhuan.png": {
+  "title": "File:Dhuandhar falls at Bhedaghat, Madhya Pradesh, India.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Dhuandhar_falls_at_Bhedaghat,_Madhya_Pradesh,_India.jpg",
+  "license": "CC BY 3.0",
+  "artist": "Hariya1234"
+ },
+ "fall_hundru.png": {
+  "title": "File:Hundru Falls, Jharkhand, India.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Hundru_Falls,_Jharkhand,_India.jpg",
+  "license": "CC BY 4.0",
+  "artist": "Kingshuk Mondal"
+ },
+ "fall_nura.png": {
+  "title": "File:Nuranang Waterfall.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Nuranang_Waterfall.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Sdasamdabad"
  }
 }
