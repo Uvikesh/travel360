@@ -1,0 +1,272 @@
+{
+ "title": "भारत के 7 सबसे खूबसूरत झरने",
+ "voice": "hi-IN-MadhurNeural",
+ "rate": "+22%",
+ "gap": 0.04,
+ "watermark": null,
+ "music": "synth",
+ "music_gain_db": -21,
+ "sticker_height": 470,
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "thumbnail": {
+  "lines": [
+   "भारत के 7",
+   "सबसे खूबसूरत",
+   "झरने"
+  ],
+  "colors": [
+   "white",
+   "yellow",
+   "white"
+  ],
+  "size": 124,
+  "pill": "340 मीटर सीधा गिरता झरना!"
+ },
+ "tts": {
+  "engine": "gemini",
+  "voice": "Hali",
+  "models": [
+   "gemini-3.8-flash-tts"
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "per_segment": false,
+  "style": "Read this in Hindi like a fun, energetic, excited Indian travel YouTuber talking to friends. Fast, punchy, smiling voice, with a short pause between paragraphs:"
+ },
+ "logo": "assets/brand/storyspark_logo.png",
+ "logo_size": 150,
+ "endcard": {
+  "title": "वीडियो पसंद आया?",
+  "buttons": [
+   [
+    "👍",
+    "लाइक"
+   ],
+   [
+    "🔁",
+    "शेयर"
+   ],
+   [
+    "🔔",
+    "सब्सक्राइब"
+   ]
+  ],
+  "ask": "अगली वीडियो किस पर बनाएँ?",
+  "ask2": "कमेंट करके बताओ"
+ },
+ "tail": 1.6,
+ "segments": [
+  {
+   "text": "भारत में एक झरना ऐसा है, जो तीन सौ चालीस मीटर की ऊँचाई से सीधा नीचे गिरता है, और नीचे का पानी हरे रंग का है! चलो देखते हैं भारत के सात सबसे खूबसूरत झरने।",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.1
+     },
+     "transition": "cut"
+    }
+   ]
+  },
+  {
+   "text": "पहला, मेघालय में चेरापूंजी के पास नोहकालिकाई। तीन सौ चालीस मीटर, भारत का सबसे ऊँचा सीधा गिरने वाला झरना, और नीचे अनोखे हरे रंग का कुंड।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       91.687,
+       25.276
+      ],
+      "span": 140
+     },
+     "transition": "clouds",
+     "show": {
+      "state": "ml",
+      "label": "नोहकालिकाई • 340 मी",
+      "sticker": "fall_nohka.png",
+      "lonlat": [
+       91.687,
+       25.276
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "दूसरा, कर्नाटक का जोग फ़ॉल्स। शरावती नदी करीब दो सौ तिरेपन मीटर नीचे गिरती है, और चार अलग धाराओं में बँट जाती है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       74.812,
+       14.229
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ka",
+      "label": "जोग फ़ॉल्स • 4 धाराएँ",
+      "sticker": "fall_jog.png",
+      "lonlat": [
+       74.812,
+       14.229
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "तीसरा, केरल का अथिरापिल्ली, केरल का सबसे बड़ा झरना, घने हरे जंगलों के बीच।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       76.569,
+       10.285
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "kl",
+      "label": "अथिरापिल्ली • केरल",
+      "sticker": "fall_athi.png",
+      "lonlat": [
+       76.569,
+       10.285
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "चौथा, तमिलनाडु और कर्नाटक की सीमा पर कावेरी नदी का होगेनक्कल झरना।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       77.774,
+       12.118
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "tn",
+      "label": "होगेनक्कल • कावेरी नदी",
+      "sticker": "fall_hogen.png",
+      "lonlat": [
+       77.774,
+       12.118
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "पाँचवाँ, मध्य प्रदेश में जबलपुर का धुआँधार झरना। नाम ही बताता है, पानी गिरते ही धुएँ जैसी फुहार उठती है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       79.808,
+       23.126
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "mp",
+      "label": "धुआँधार • जबलपुर",
+      "sticker": "fall_dhuan.png",
+      "lonlat": [
+       79.808,
+       23.126
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "छठा, झारखंड में राँची का हुंडरू झरना, जो इस इलाके की सबसे मशहूर घूमने की जगहों में से एक है।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       85.65,
+       23.45
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "jh",
+      "label": "हुंडरू • राँची",
+      "sticker": "fall_hundru.png",
+      "lonlat": [
+       85.65,
+       23.45
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "और सातवाँ, अरुणाचल में तवांग के पास नूरानांग झरना। सौ मीटर ऊँचा, और बादलों से घिरे पहाड़ों के बीच।",
+   "beats": [
+    {
+     "camera": {
+      "point": [
+       91.984,
+       27.59
+      ],
+      "span": 140
+     },
+     "transition": "fly",
+     "show": {
+      "state": "ar",
+      "label": "नूरानांग • 100 मी",
+      "sticker": "fall_nura.png",
+      "lonlat": [
+       91.984,
+       27.59
+      ],
+      "scale": 0.92
+     }
+    }
+   ]
+  },
+  {
+   "text": "इनमें से आप सबसे पहले कौन सा झरना देखना चाहोगे? कमेंट में बताओ, और जिसके साथ जाना है उसे ये वीडियो भेजो!",
+   "beats": [
+    {
+     "camera": {
+      "fit": "india",
+      "pad": 1.04
+     },
+     "transition": "clouds",
+     "collage": true,
+     "collage_scale": 0.4
+    }
+   ]
+  },
+  {
+   "text": "वीडियो अच्छा लगा तो लाइक, शेयर और सब्सक्राइब ज़रूर करना। और कमेंट करके बताओ, अगली वीडियो किस टॉपिक पर बनाएँ!",
+   "beats": [
+    {
+     "endcard": true
+    }
+   ]
+  }
+ ]
+}
