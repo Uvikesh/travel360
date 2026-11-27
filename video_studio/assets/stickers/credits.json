@@ -1522,5 +1522,47 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pangong_Tso_in_eastern_Ladakh(Changthang).jpg",
   "license": "CC BY-SA 4.0",
   "artist": "Stanzin1945"
+ },
+ "rec_unity.png": {
+  "title": "File:Statue of Unity.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Statue_of_Unity.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Snehrashmi"
+ },
+ "rec_chenab.png": {
+  "title": "File:View of Kauri side, Chenab Bridge in 2013 - 7770b (9288239078).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:View_of_Kauri_side,_Chenab_Bridge_in_2013_-_7770b_(9288239078).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "bhisham pratap padha from Jammu, India"
+ },
+ "rec_atal.png": {
+  "title": "File:Atal Tunnel 01 (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Atal_Tunnel_01_(cropped).jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Jagseer S Sidhu"
+ },
+ "rec_umling.png": {
+  "title": "File:Umling La Summit - Rickshaws.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Umling_La_Summit_-_Rickshaws.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Newspinal"
+ },
+ "rec_mawsynram.png": {
+  "title": "File:Mawsynram, Meghalaya.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mawsynram,_Meghalaya.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Donvikro"
+ },
+ "rec_golden.png": {
+  "title": "File:Harmandir Sahib in the night.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Harmandir_Sahib_in_the_night.jpg",
+  "license": "CC BY 2.0",
+  "artist": "Jeremy Vandel"
+ },
+ "rec_loktak.png": {
+  "title": "File:The Phumdis on Loktak Lake.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Phumdis_on_Loktak_Lake.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Ishani Nath"
  }
 }
